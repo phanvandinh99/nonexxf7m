@@ -1,0 +1,92 @@
+@charset "utf-8";
+@import url(common.css);
+
+body{
+	background:url(//img.7m.com.cn/nimgs/indexbg_red.gif) repeat-x #ffffff;
+}
+.box{
+	background:url(//img.7m.com.cn/nimgs/indexbg_red.gif) repeat-x #ffffff;
+	width:100%;
+	margin:0 auto;
+}
+a,a:link{
+	text-decoration:none;
+	color:#333;
+}
+a:hover{
+	color:#b90200;
+}
+.header_l{
+	background:url(//img.7m.com.cn/nimgs/logobg_red.jpg) no-repeat;
+	float:left;
+	width:202px;
+	height:93px;
+	padding:34px 0 0 41px;
+}
+.skin_blue,.skin_red,
+.skin_green,.skin_gray,
+.skin_purple{
+	background:url(//img.7m.com.cn/nimgs/skin.gif) no-repeat;
+	float:left;
+	width:10px;
+	height:9px;
+	overflow:hidden;
+	margin-left:4px;
+}
+.skin_blue{
+	background-position:0 0;
+}
+.skin_red{
+	background-position:0 -27px;
+}
+.skin_green{
+	background-position:0 -36px;
+}
+.skin_gray{
+	background-position:0 -54px;
+}
+.skin_purple{
+	background-position:0 -72px;
+}
+.fbtv_title,.fblive_title,.bball_title{
+	background:#b00605;
+}
+.fbtv_title a,.fbtv_title a:hover,
+.fblive_title a,.fblive_title a:hover,
+.bball_title a,.bball_title a:hover{
+	color:#fff;
+}
+.fbtv_title a:hover,
+.fblive_title a:hover,
+.bball_title a:hover{
+	text-decoration:underline;
+}
+.fbtv_title,.fblive_title,.bball_title,.data2_title,.fbtop_title,.bbtop_title,.shop_title{
+	background:#b00605;
+}
+.fbtv_title a,.fbtv_title a:hover,
+.fblive_title a,.fblive_title a:hover,
+.bball_title a,.bball_title a:hover,
+.data2_title a,.data2_title a:hover,
+.fbtop_title a,.fbtop_title a:hover,
+.bbtop_title a,.bbtop_title a:hover,
+.shop_title a,.shop_title a:hover{
+	color:#fff;
+}
+.fbtv_title a:hover,
+.fblive_title a:hover,
+.bball_title a:hover,
+.data2_title a:hover,
+.fbtop_title a:hover,
+.bbtop_title a:hover,
+.shop_title a:hover{
+	text-decoration:underline;
+}
+.links{
+	border-top:2px solid #b00605;
+}
+
+
+
+
+

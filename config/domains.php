@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'bf' => '//bf.7m.com.cn',
+    'basket' => '//basket.7m.com.cn',
+    'data' => '//data.7m.com.cn',
+    'news' => '//news.7m.com.cn',
+    'lq' => '//lq.7m.com.cn',
+    'tv' => '//tv.7m.com.cn',
+    'bwlive' => '//bwlive.7m.com.cn',
+    'freelive' => '//freelive.7m.com.cn',
+    'tennis' => '//tennis.7m.com.cn',
+    'bdata' => '//bdata.7m.com.cn',
+    'bab' => '//bab.7m.com.cn',
+    'amf' => '//amf.7m.com.cn',
+    'app' => '//app.7m.com.cn',
+    'wlive' => '//wlive.7m.com.cn',
+    'accounts' => '//accounts.7m.com.cn',
+    'sitemap' => '//sitemap.7m.com.cn',
+    'mobile' => '//m.7m.com.cn',
+    'passport' => '//passport.7m.com.cn',
+    'help' => '//help.7m.com.cn',
+    'count' => '//count.7m.com.cn',
+    'main' => '//www.7m.com.cn',
+    'photo' => '//photo.7m.com.cn',
+    'video' => '//video.7m.com.cn',
+    'img' => '//img.7m.com.cn',
+];

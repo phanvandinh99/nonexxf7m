@@ -1,0 +1,72 @@
+# Laravel
+/.env
+/.env.backup
+/.env.production
+/.phpunit.result.cache
+/phpunit.xml.bak
+
+# Dependencies
+/vendor
+/node_modules
+
+# Build assets
+/public/build
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# Storage & Logs
+/storage/*.key
+/storage/pail
+/storage/logs/*.log
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/app/*
+!storage/app/.gitkeep
+!storage/app/public/.gitkeep
+!storage/app/private/.gitkeep
+
+# Bootstrap cache
+/bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+
+# Database (SQLite - nếu có)
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.db
+
+# IDE & Editors
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.phpactor.json
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Laravel Sail
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Testing
+/.phpunit.cache
+coverage
+.phpunit.result.cache
+
+# Misc
+*.log
+*.cache
+*.tmp
+*.swp
+*~

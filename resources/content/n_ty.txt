@@ -1,0 +1,188 @@
+            <div class="n_ty">
+                <script>
+                    function CheckIsPhone(posa, posi, posn, posw, urla, urli, urln, urlw) {
+                        var u = navigator.userAgent;
+                        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+                        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+                        var isWeixin = window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i);
+                        var a = '';
+                        if (isAndroid && isWeixin != 'micromessenger') {
+                            a = urla;
+                        } else if (isiOS && isWeixin != 'micromessenger') {
+                            a = urli;
+                        } else if (isWeixin == 'micromessenger') {
+                            a = urlw;
+                        } else {
+                            a = urln;
+                        }
+                        window.open(a);
+                    }
+                </script>
+                <div class="box">
+                    <ul class="tab_nav" id="search" style="display: none;">
+                        <li id="search_news" index="0">新&nbsp;闻</li>
+                        <li id="search_team" index="1" style="display:none;"><a href="javascript:">球&nbsp;队</a></li>
+                        <li id="search_player" index="2" style="display:none;"><a href="javascript:">球&nbsp;员</a></li>
+                    </ul>
+                    <div class="tab_content" style="display: none;">
+                        <div id="t_1">
+                            <div class="srk">
+                                <form action="http://so.7m.com.cn/cse/search" method="get" target="_blank" class="bdcs-search-form" id="bdcs-search-form">
+                                    <input type="hidden" name="s" id="bdcs-search-form-s" value="13413958429287951139">
+                                    <input type="hidden" name="entry" id="bdcs-search-form-entry" value="1">
+                                    <input type="text" name="q" class="searchinput" id="bdcs-search-form-input" placeholder="请输入关键词">
+                                    <input type="submit" class="searchaction" id="bdcs-search-form-submit" value="">
+                                </form>
+                                <form action="//search.7m.com.cn/search_gb.aspx" method="get" id="search_form" style="display:none;">
+                                    <input type="text" name="key" class="searchinput" id="key" tip="7m站内搜索，请输入相关文字" onblur="searchBlur()" onfocus="searchFocus()" value="7m站内搜索，请输入相关文字" />
+                                    <input type="submit" class="searchaction" value="" />
+                                    <input type="hidden" name="news" index="0" value="on" />
+                                    <input type="hidden" name="team" index="1" value="" />
+                                    <input type="hidden" name="player" index="2" value="" />
+                                    <input type="hidden" id="searchVal" value="0" />
+                                </form>
+                            </div>
+                            <!--关键字显示不能过行-->
+                            <div index="0" type="key" id="bdcs-search-form-keyword">
+                                <script type="text/javascript">
+                                    if (typeof(loadJs) != 'undefined') {
+                                        loadJs('//news.7m.com.cn/js/1.1/search_key.js?' + Number(new Date()), function() {
+                                            if (typeof(search_key) != 'undefined')
+                                                $("#bdcs-search-form-keyword").html(search_key);
+                                        });
+                                    }
+                                </script>
+                            </div>
+                            <div index="1" type="key" style="display:none">
+                                <a href="javascript:search('巴塞罗那 ',1)">巴塞罗那</a>
+                                <a href="javascript:search('皇家马德里',1)">皇家马德里</a>
+                                <a href="javascript:search('曼联',1)">曼联</a>
+                                <a href="javascript:search('切尔西',1)">切尔西</a>
+                            </div>
+                            <div index="2" type="key" style="display:none">
+                                <a href="javascript:search('梅西',2)">梅西</a>
+                                <a href="javascript:search('C罗',2)">C罗</a>
+                                <a href="javascript:search('范佩西',2)">范佩西</a>
+                                <a href="javascript:search('鲁尼',2)">鲁尼</a>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .box {
+                            display: none !important;
+                        }
+                    </style>
+                </div>
+                <div class="b_b" style=""><strong class="fx_z">今日国际足球头条</strong>
+                    <p class="fx_y"><a href="/list/1/">更多</a>
+                </div>
+                <div class="ny_tt" style="">
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251213/710197.shtml" target="_blank" title="罗马诺:邓弗里斯更换经纪人 2026年可能离开国米">邓弗里斯明年可能离开国米</a></p>
+                        <a href="/news/20251213/710197.shtml" target="_blank" title="罗马诺:邓弗里斯更换经纪人 2026年可能离开国米"><img src="/detail/static/picture/2025121310561517390.jpg" /></a>
+                        <div class="ny_bw">记者罗马诺报道，在更换经纪人后，邓弗里斯可能在2026年离开 ……<a href="/news/20251213/710197.shtml" target="_blank">[详细]</a></div>
+                    </div>
+                    <ul>
+                        <li><a href="/news/20251213/710196.shtml" target="_blank" title="那不勒斯有意博卡小将佩雷拉 目前处于评估阶段">那不勒斯有意小将佩雷拉</a></li>
+
+                        <li><a href="/news/20251213/710195.shtml" target="_blank" title="德泽尔比:格林伍德能拿金球奖 看他是否全力以赴">德泽尔比评价格林伍德</a></li>
+
+                        <li><a href="/news/20251213/710194.shtml" target="_blank" title="邮报:萨拉赫和利物浦会继续沟通 离队可能性降低">萨拉赫离队可能性降低</a></li>
+
+                        <li><a href="/news/20251213/710193.shtml" target="_blank" title="伊尔迪兹本季已为尤文打进9球 追平上季的进球数">伊尔迪兹已为尤文打进9球</a></li>
+
+                        <li><a href="/news/20251213/710192.shtml" target="_blank" title="都体:奇克想参加世界杯 可能冬窗会离开米兰">都体:奇克想参加世界杯</a></li>
+                    </ul>
+                </div>
+                <div class="clear" style=""></div>
+
+                <div class="b_b"><strong class="fx_z">热点推荐</strong></div>
+                <div class="ny_tt">
+                    <div class="gz_xb">
+                        <h6>关注</h6>
+                    </div>
+                    <div class="ny_yba">
+                        <p><a href="/news/20251212/710090.shtml" target="_blank" title="默森:我支持萨拉赫 如果没他利物浦什么都赢不了">默森:我支持萨拉赫</a></p>
+                        <a href="/news/20251212/710090.shtml" target="_blank" title="默森:我支持萨拉赫 如果没他利物浦什么都赢不了"><img src="/detail/static/picture/2025121210501621983.jpg" /></a>
+                        <div class="ny_bw">
+                            在天空体育的专栏中，阿森纳名宿默森谈到了利物浦前锋萨拉赫的 ……
+                            <a href="/news/20251212/710090.shtml" target="_blank" title="默森:我支持萨拉赫 如果没他利物浦什么都赢不了">[详细]</a>
+                        </div>
+                    </div>
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251212/710086.shtml" target="_blank" title="帕克:萨拉赫表现配不上首发 劳模型基耶萨值得信任">帕克:萨拉赫配不上首发</a></p>
+                        <a href="/news/20251212/710086.shtml" target="_blank" title="帕克:萨拉赫表现配不上首发 劳模型基耶萨值得信任"><img src="/detail/static/picture/2025121210482928365.jpg" /></a>
+                        <div class="ny_bw">
+                            日前，前曼联与英格兰球星保罗·帕克在接受媒体采访时，他谈到 ……
+                            <a href="/news/20251212/710086.shtml" target="_blank" title="帕克:萨拉赫表现配不上首发 劳模型基耶萨值得信任">[详细]</a>
+                        </div>
+                    </div>
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251212/710116.shtml" target="_blank" title="尼斯欧战8连败追平马赛的法甲球队欧战连败纪录">尼斯欧战8连败追平纪录</a></p>
+                        <a href="/news/20251212/710116.shtml" target="_blank" title="尼斯欧战8连败追平马赛的法甲球队欧战连败纪录"><img src="/detail/static/picture/2025121211484130796.jpg" /></a>
+                        <div class="ny_bw">
+                            在本轮欧联杯，法甲尼斯0-1不敌布拉加。据统计，尼斯已经遭 ……
+                            <a href="/news/20251212/710116.shtml" target="_blank" title="尼斯欧战8连败追平马赛的法甲球队欧战连败纪录">[详细]</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="gz_xb">
+                        <h6>赛后</h6>
+                    </div>
+                    <div class="ny_yba">
+                        <p><a href="/news/20251211/709935.shtml" target="_blank" title="曼城2-1逆转皇马 吕迪格抱摔送点哈兰德点射">曼城2-1逆转皇马升第四</a></p>
+                        <a href="/news/20251211/709935.shtml" target="_blank" title="曼城2-1逆转皇马 吕迪格抱摔送点哈兰德点射"><img src="/detail/static/picture/2025121109291619774.jpg" /></a>
+                        <div class="ny_bw">
+                            北京时间12月11日凌晨4时整，2025-26赛季欧冠联赛 ……
+                            <a href="/news/20251211/709935.shtml" target="_blank" title="曼城2-1逆转皇马 吕迪格抱摔送点哈兰德点射">[详细]</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="gz_xb">
+                        <h6>关注</h6>
+                    </div>
+                    <div class="ny_yba">
+                        <p><a href="/news/20251211/710014.shtml" target="_blank" title="萨拉赫与主帅斯洛特将进行关键会面 以决定未来">萨拉赫与斯洛特将进行会面</a></p>
+                        <a href="/news/20251211/710014.shtml" target="_blank" title="萨拉赫与主帅斯洛特将进行关键会面 以决定未来"><img src="/detail/static/picture/202512110910214129.jpg" /></a>
+                        <div class="ny_bw">
+                            据镜报消息，萨拉赫将与斯洛特在未来48小时内进行关键会面， ……
+                            <a href="/news/20251211/710014.shtml" target="_blank" title="萨拉赫与主帅斯洛特将进行关键会面 以决定未来">[详细]</a>
+                        </div>
+                    </div>
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251211/710011.shtml" target="_blank" title="多古：曼联现在更像团队 我对来球队的第一年满意">多古：曼联现在更像团队</a></p>
+                        <a href="/news/20251211/710011.shtml" target="_blank" title="多古：曼联现在更像团队 我对来球队的第一年满意"><img src="/detail/static/picture/202512110826216787.jpg" /></a>
+                        <div class="ny_bw">
+                            多古日前接受曼联官方采访，并谈到球队目前的状态。被问到球队 ……
+                            <a href="/news/20251211/710011.shtml" target="_blank" title="多古：曼联现在更像团队 我对来球队的第一年满意">[详细]</a>
+                        </div>
+                    </div>
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251211/710012.shtml" target="_blank" title="曼晚：切尔基展现战士精神 曼城找到新马赫雷斯">曼晚：切尔基展现战士精神</a></p>
+                        <a href="/news/20251211/710012.shtml" target="_blank" title="曼晚：切尔基展现战士精神 曼城找到新马赫雷斯"><img src="/detail/static/picture/202512110834184665.jpg" /></a>
+                        <div class="ny_bw">
+                            在曼城客场2-1战胜皇马的欧冠比赛后，《曼彻斯特晚报》谈到 ……
+                            <a href="/news/20251211/710012.shtml" target="_blank" title="曼晚：切尔基展现战士精神 曼城找到新马赫雷斯">[详细]</a>
+                        </div>
+                    </div>
+
+                    <div class="ny_yba">
+                        <p><a href="/news/20251211/710010.shtml" target="_blank" title="纽卡门将波普有机会出战桑德兰 维萨有病在身">波普有机会出战桑德兰</a></p>
+                        <a href="/news/20251211/710010.shtml" target="_blank" title="纽卡门将波普有机会出战桑德兰 维萨有病在身"><img src="/detail/static/picture/2025121108085725866.jpg" /></a>
+                        <div class="ny_bw">
+                            北京时间12月14日晚上，纽卡将在英超第16轮比赛中客场对 ……
+                            <a href="/news/20251211/710010.shtml" target="_blank" title="纽卡门将波普有机会出战桑德兰 维萨有病在身">[详细]</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="ad_c">
+                    <!-- content.b -->
+                </div>
+            </div>

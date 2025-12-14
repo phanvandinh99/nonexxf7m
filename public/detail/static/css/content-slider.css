@@ -1,0 +1,262 @@
+/* Content T1 Slider Styles - Enhanced Version */
+
+/* Container adjustments */
+.n_tz {
+    position: relative;
+    overflow: hidden;
+}
+
+.content_t1 {
+    float: right;
+    width: 427px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.tn_img {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 427px;
+    height: 280px;
+    margin-bottom: 1px;
+    border-radius: 4px 4px 0 0;
+}
+
+.tn_img img {
+    border: 0 none;
+    width: 427px;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tn_img:hover img {
+    transform: scale(1.05);
+}
+
+.tn_txt {
+    position: absolute;
+    color: #fff;
+    width: 412px;
+    min-height: 70px;
+    padding: 15px;
+    bottom: 0;
+    z-index: 999;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.tn_txt .alert {
+    width: 400px;
+    overflow: hidden;
+    padding-top: 8px;
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.tn_txt .alert a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tn_txt .alert a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.tn_txt .text {
+    width: 400px;
+    color: #fff;
+    line-height: 18px;
+    text-indent: 2em;
+    overflow: hidden;
+    height: auto;
+    max-height: 54px;
+    font-size: 13px;
+}
+
+.b_layer {
+    float: left;
+    position: absolute;
+    width: 427px;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    bottom: 0;
+    z-index: 111;
+    transition: opacity 0.3s ease;
+}
+
+.tn_img:hover .b_layer {
+    opacity: 0.9;
+}
+
+.s_btn {
+    clear: both;
+    background: #000;
+    width: 427px;
+    height: 60px;
+    display: flex;
+    border-radius: 0 0 4px 4px;
+}
+
+.s_btn li {
+    float: left;
+    width: 106px;
+    height: 60px;
+    border-right: 1px solid #333;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.s_btn li:last-child {
+    border-right: none;
+}
+
+.s_btn li:hover {
+    background: #1a1a1a;
+}
+
+.s_btn li img {
+    width: 106px;
+    height: 70px;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.s_btn .normal img {
+    cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+}
+
+.s_btn .normal:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.s_btn .current {
+    cursor: default;
+    opacity: 1;
+    background: #333;
+}
+
+.s_btn .current img {
+    opacity: 1;
+    border: 2px solid #ffcc00;
+    box-sizing: border-box;
+}
+
+.big_img {
+    overflow: hidden;
+    height: 280px;
+    width: 427px;
+    position: relative;
+}
+
+.big_img div {
+    position: relative;
+    height: 280px;
+    width: 427px;
+}
+
+.big_img div ul {
+    float: left;
+    height: 280px;
+    width: 427px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.big_img li {
+    float: left;
+    height: 280px;
+    width: 427px;
+    display: inline;
+}
+
+.big_img li img {
+    width: 427px;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Adjust ny_zw when content_t1 is present - fallback for browsers without :has() */
+.n_tz.with-slider .ny_zw {
+    float: left;
+    width: 508px;
+    margin-right: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .content_t1 {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    
+    .n_tz.with-slider .ny_zw {
+        margin-right: 0;
+        width: 708px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content_t1 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    
+    .tn_img,
+    .s_btn,
+    .big_img,
+    .big_img li,
+    .tn_img img,
+    .big_img li img {
+        width: 100%;
+    }
+    
+    .tn_txt {
+        width: calc(100% - 30px);
+        padding: 10px 15px;
+    }
+    
+    .tn_txt .alert,
+    .tn_txt .text {
+        width: 100%;
+    }
+    
+    .b_layer {
+        width: 100%;
+    }
+    
+    .s_btn li {
+        width: 25%;
+    }
+    
+    .s_btn li img {
+        width: 100%;
+    }
+}

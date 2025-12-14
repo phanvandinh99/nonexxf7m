@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+#tips * {
+	font-size: 12px;
+	font-family: ;
+}
+#tipbj1 {
+	background: url(../images/tipbj0.gif) no-repeat left;
+}
+#tipbj2 {
+	background: url(../images/tipbj0.gif) no-repeat right;
+}
+#tipbj1, #tipbj2 {
+	float: left;
+	height: 58px;
+	width: 6px
+}
+#tipbg1 {
+	background: #EEE url(../images/tipbg1.gif) repeat-x;
+	width: auto;
+	height: 58px;
+	float: left;
+	padding-top: 4px;
+	line-height: 17px;
+	text-align: left;
+	font-size: 12px;
+}
+
+#tipbg1 a:Link,
+#tipbg1 a:Visited,
+#tipbg1 a:Acitve {
+	color: #000000;
+	text-decoration: none;
+}
+#tipbg1 a:Hover {
+	text-decoration: underline;
+}
+#tips {
+	width: auto;
+	z-index:2;
+	left: 0;
+	position: absolute;
+}

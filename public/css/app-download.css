@@ -1,0 +1,110 @@
+.app_dowload_box {
+	clear: both;
+	width: 176px;
+	height: 184px;
+	padding: 10px 9px 15px;
+	border-left: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
+	background: #f7f7f7;
+}
+.app_dtab {
+	font-size: 0;
+}
+.app_dtab span {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 88px;
+	*width: 87px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+.app_s,
+.app_b {
+	display: block;
+	font-style: normal;
+	border: 1px solid #e2e2e2;
+	cursor: pointer;
+}
+.app_s {
+	color: #f51a25;
+}
+.app_on .app_s {
+	color: #fff;
+	border: 1px solid #3476bc;
+	background: #3476bc;
+	cursor: default;
+}
+.app_on .app_b {
+	color: #fff;
+	border: 1px solid #bb0007;
+	background: #bb0007;
+	cursor: default;
+}
+.code_box {
+	margin: 10px 0 0;
+}
+.app_sbtn,
+.app_bbtn {
+	display: block;
+	width: 174px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 10px;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+}
+.app_sbtn {
+	color: #295b95;
+	border: 1px solid #295b95;
+}
+a.app_sbtn:hover {
+	color: #295b95;
+	border: 1px solid #295b95;
+	background: #d8e0e8;
+}
+.app_bbtn {
+	color: #bb0007;
+	border: 1px solid #bb0007;
+}
+a.app_bbtn:hover {
+	color: #bb0007;
+	border: 1px solid #bb0007;
+	background: #f2e4e4;
+}
+.app_sbox {
+	padding-top: 5px;
+}
+.app_sbox i {
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.app_sbox a {
+	float: right;
+	width: 116px;
+	height: 36px;
+	line-height: 36px;
+	margin-top: 7px;
+	color: #fff;
+	border-radius: 18px;
+	background: #3476bc;
+	text-align: center;
+	text-decoration: none;
+}
+.app_sbox a:hover {
+	box-shadow: 0 0 10px rgba(55, 120, 188, 0.5);
+	color: #3476bc\9;
+	background: #fff\9;
+	border: 1px solid #3476bc\9;
+}
+:root .app_sbox a:hover {
+	border: 0\9;
+	box-shadow: 0 0 10px rgba(55, 120, 188, 0.5)\9;
+	color: #fff\9;
+	background: #3476bc\9;
+}

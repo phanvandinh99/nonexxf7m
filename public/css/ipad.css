@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import url(common.css);
+
+.udbtn163,.udbtn109{
+	width:326px;
+	height:29px;
+	border:1px solid #dfdfdf;
+	border-top:none;
+	padding-left:1px;
+}
+.udbtn163,.udbtn109{
+	border:none;
+	border-top:1px solid #dfdfdf;
+}
+.udbtn163 li,
+.udbtn163 li.on,
+.udbtn109 li,
+.udbtn109 li.on{
+	background:url(//img.7m.com.cn/ipad/udbtnbg.gif) repeat-x;
+	cursor:pointer;
+}
+.udbtn163 li,
+.udbtn109 li{
+	background-position:0 0;
+}
+.udbtn163 li.on,
+.udbtn109 li.on{
+	background-position:0 -28px;
+}
+.udbtn163 li.out,
+.udbtn109 li.out{
+	color:#adadad;
+}
+.udbtn163 li,
+.udbtn109 li{
+	float:left;
+	width:162px;
+	height:28px;
+	line-height:28px;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+	text-align:center;
+}
+.udbtn109{
+	width:218px;
+	padding:0;
+}
+.udbtn109 li{
+	width:108px;
+}
+.fball_con,.bball_con{
+	height:94px;
+}
+.bball_con,.bball_con1{
+	height:126px;
+}
+/*.blive_list{
+	height:234px;
+}*/
+.fbtop_list{
+	/*height:264px;*/
+	height:311px;
+}
+/*.fbtv_list{
+	/*height:233px;
+	height:331px;
+}*/
+/*+ JCC +*/
+.nblive_box{height:316px;overflow-x:hidden;overflow-y:auto;}
+.wnblive_box{height:316px;overflow-x:hidden;overflow-y:auto;}
+.cblive_box{height:316px;overflow:hidden;}
+.fbtv_list{height:288px;}
+.rank_f{clear:both;width:218px;height:403px;overflow-y:auto;}
+.rank_b{clear:both;width:218px;height:157px;overflow-y:auto;}
+/*- JCC -*/

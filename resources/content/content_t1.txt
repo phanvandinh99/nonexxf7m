@@ -1,0 +1,42 @@
+<div class="content_t1">
+<script type="text/javascript">
+ var slide_Img = new Array();
+slide_Img[0] = {"top":"0","title":"开拓者惨负倒一鹈鹕23分 普尔复出22分 墨菲24分","describe":"开拓者客场挑战鹈鹕队，此前开拓者位列西部第十，鹈鹕则排名西部倒数第一。最终鹈鹕143-120力克开拓者，终结7连败。","big_img":"http://news.7m.com.cn/7mhome_img/20251212/2025121212410914328.jpg","pad_img":"http://news.7m.com.cn/7mhome_img/20251212/2025121212410925435_ipad.jpg","url":"https://lq.7m.com.cn/news/20251212/271123.shtml","id":"1765514547"};
+slide_Img[1] = {"top":"0","title":"火箭击退快船 阿门20+9+8 杜兰特16分 哈登22+7","describe":"NBA常规赛，火箭在主场115-113险胜快船。申京22分15板，杜兰特16分，哈登22分7助3断，祖巴茨33分7板。","big_img":"http://news.7m.com.cn/7mhome_img/20251212/202512121155207926.jpg","pad_img":"http://news.7m.com.cn/7mhome_img/20251212/2025121211552012177_ipad.jpg","url":"https://lq.7m.com.cn/news/20251212/271116.shtml","id":"1765511874"};
+slide_Img[2] = {"top":"0","title":"6轮不败！贝蒂斯3-1萨格勒布迪纳摩 安东尼破门","describe":"北京时间12月12日凌晨1时45分，欧罗巴联赛阶段皇家贝蒂斯客场对阵萨格勒布迪纳摩，最终皇家贝蒂斯3-1战胜萨格勒布迪纳摩。","big_img":"http://news.7m.com.cn/7mhome_img/20251212/202512121149388528.jpg","pad_img":"http://news.7m.com.cn/7mhome_img/20251212/2025121211493815123_ipad.jpg","url":"https://news.7m.com.cn/news/20251212/710031.shtml","id":"1765511452"};
+slide_Img[3] = {"top":"0","title":"罗马3-0客胜凯尔特人 弗格森双响曼奇尼造乌龙","describe":"欧联杯联赛阶段第6轮，凯尔特人坐镇主场迎战罗马，凭借前锋弗格森的梅开二度，罗马客场大胜凯尔特人。","big_img":"http://news.7m.com.cn/7mhome_img/20251212/202512121014421908.jpg","pad_img":"http://news.7m.com.cn/7mhome_img/20251212/202512121014424935_ipad.jpg","url":"https://news.7m.com.cn/news/20251212/710041.shtml","id":"1765505740"};</script>
+<div>
+<div class="tn_img" id="bigimg">
+<div class="tn_txt">
+<div class="alert"><a href="http://xiyougs.com/news/20251212/271123.shtml" target="_blank">开拓者惨负倒一鹈鹕23分 普尔复出22分 墨菲24分</a></div>
+<div class="text" id="pic_dtext">开拓者客场挑战鹈鹕队，此前开拓者位列西部第十，鹈鹕则排名西部倒数第一。最终鹈鹕143-120力克开拓者，终结7连败。
+</div>
+</div>
+<div class="b_layer"></div>
+<div class="big_img" id="big_img"><div style="height:1120px;">
+<ul><li><a href="http://cqyfce.com/news/20251212/271123.shtml" target="_blank"><img src="http://news.7m.com.cn/7mhome_img/20251212/2025121212410914328.jpg"/></a></li> </ul>
+<ul><li><a href="http://hnhzqhb.com/news/20251212/271116.shtml" target="_blank"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121155207926.jpg"/></a></li> </ul>
+<ul><li><a href="http://wismated.com/news/20251212/710031.shtml" target="_blank"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121149388528.jpg"/></a></li> </ul>
+<ul><li><a href="http://hnhzqhb.com/news/20251212/710041.shtml" target="_blank"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121014421908.jpg"/></a></li> </ul>
+</div></div></div> <ul class="s_btn" id="smallli" onmousemove="on_move=false" onmouseout="on_move=true">
+<li class="current" onmouseover="picChange(1)"><img src="http://news.7m.com.cn/7mhome_img/20251212/2025121212410914328.jpg"/></li>
+<li class="normal" onmouseover="picChange(2)"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121155207926.jpg"/></li>
+<li class="normal" onmouseover="picChange(3)"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121149388528.jpg"/></li>
+<li class="normal" onmouseover="picChange(4)" style="border:0;"><img src="http://news.7m.com.cn/7mhome_img/20251212/202512121014421908.jpg"/></li>
+</ul>
+</div>
+<script>
+(function() {
+	function loadSlide() {
+		if (typeof $$ === 'function') {
+			var script = document.createElement('script');
+			script.src = '/js/slide.js';
+			document.body.appendChild(script);
+		} else {
+			setTimeout(loadSlide, 100);
+		}
+	}
+	loadSlide();
+})();
+</script>
+</div>

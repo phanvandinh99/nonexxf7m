@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#333;
+}
+.alert,
+.headlines dt,
+.headlines dd,
+.focus_l,
+.focus_list li,
+.app_titlel,
+.headnews_list li,
+.bball_after li,
+.shop_title a{
+	font-size:14px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal; 
+	font-size: 100%;
+}
+ul, ol{
+	list-style-type:none; 
+	margin:0; 
+	padding:0;
+}
+li{
+	vertical-align:bottom;
+}
+img{
+	border:0 none;
+	vertical-align:bottom;
+	-ms-interpolation-mode:bicubic;/*IE7浏览器,修复图片质量*/
+}
+a:focus{
+	-moz-outline:none;
+	outline:none;
+}
+.menu a:hover,.prompt_r a:hover,
+.fdata_tr a:hover,.join a:hover,
+.copyright p.p2 a:hover,a.on:hover,a.user:hover{
+	text-decoration:underline;
+}
+.clear{
+	clear:both;
+}
+.red,a.on,.focus_r a:hover,
+.app_titlel,span.win,.prompt_r a,
+.fdata_tr a,.shop_pd h3 a,.join a,
+.copyright p.p2 a,a.user,
+.flayer1_d span.right a:hover,.logintr h3.forget a:hover,.nav a:hover{
+	color:#b90200;
+}
+.green{
+	color:#14a014;
+}
+
+
