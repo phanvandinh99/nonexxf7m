@@ -118,7 +118,7 @@
 			<div class="content_t">
 				<div class="left">
 					<!-- Start Content T2 -->	
-					{!! load_content('content_t2.txt') !!}
+					{!! load_content('content_t2.txt', true) !!}
 					<!-- End Content T2 -->	
 
 					<!-- Start Content T1 -->	
