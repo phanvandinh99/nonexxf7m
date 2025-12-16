@@ -15,6 +15,92 @@
 	<script src="/js/common.js"></script>
 	<script src="/js/minjs.js"></script>
 	<script src="/js/cookiemin.js"></script>
+	<script>
+		// Override các JavaScript functions để chuyển hướng đến internal paths
+		// Phải đặt TRƯỚC khi các functions này được định nghĩa
+		
+		// Tạo các wrapper functions để chuyển hướng đến internal paths
+		var redirectToInternal = function(path) {
+			window.location.href = path;
+		};
+		
+		// Override Player_gb function - sử dụng Object.defineProperty để đảm bảo không bị ghi đè
+		try {
+			Object.defineProperty(window, 'Player_gb', {
+				value: function(id) {
+					redirectToInternal('/player/' + id + '/index_gb.shtml');
+				},
+				writable: false,
+				configurable: false
+			});
+		} catch(e) {
+			// Nếu không thể define property, sử dụng cách thông thường
+			window.Player_gb = function(id) {
+				redirectToInternal('/player/' + id + '/index_gb.shtml');
+			};
+		}
+		
+		// Override Team_gb function
+		try {
+			Object.defineProperty(window, 'Team_gb', {
+				value: function(id) {
+					redirectToInternal('/team/' + id + '/index_gb.shtml');
+				},
+				writable: false,
+				configurable: false
+			});
+		} catch(e) {
+			window.Team_gb = function(id) {
+				redirectToInternal('/team/' + id + '/index_gb.shtml');
+			};
+		}
+		
+		// Override Player function (từ line.js) - sẽ bị ghi đè bởi line.js, nhưng click handler sẽ xử lý
+		window.Player = function(id) {
+			redirectToInternal('/Player_Data/' + id + '/gb/index.shtml');
+		};
+		
+		// Override Team function (từ line.js)
+		window.Team = function(id) {
+			redirectToInternal('/Team_Data/default_gb.shtml?id=' + id);
+		};
+		
+		// Override ShowDetails function
+		window.ShowDetails = function(id) {
+			redirectToInternal('/goaldata/jt/' + id + '.shtml');
+		};
+		
+		// Override ShowAnalyse function
+		window.ShowAnalyse = function(id) {
+			redirectToInternal('/Analyse/default_gb.shtml?id=' + id);
+		};
+		
+		// Override zlk function
+		window.zlk = function(id) {
+			redirectToInternal('/matches_data/' + id + '/gb/index.shtml');
+		};
+		
+		// Intercept các attempts để ghi đè các functions này
+		// Sử dụng Proxy hoặc setter để bắt các lần gán lại
+		var protectedFunctions = ['Player_gb', 'Team_gb'];
+		protectedFunctions.forEach(function(funcName) {
+			var originalValue = window[funcName];
+			try {
+				Object.defineProperty(window, funcName, {
+					get: function() {
+						return originalValue;
+					},
+					set: function(newValue) {
+						// Không cho phép ghi đè
+						console.warn('Attempt to override ' + funcName + ' blocked');
+					},
+					configurable: false
+				});
+			} catch(e) {
+				// Nếu không thể dùng defineProperty, giữ nguyên
+			}
+		});
+	</script>
 	<script src="/js/skin.js" defer></script>
 	<script src="/js/7mhomead.js" defer></script>
 	<link rel="apple-touch-icon" href="/img/ipad_icon.png" />
@@ -132,7 +218,176 @@
 			<div class="b_line"></div>
 			<div class="a_d7" id="m2"></div>
 			<div class="content_m">
-				<iframe runat="server" src="https://data.7m.com.cn/transfer/homepage.html?t=2025-01-20,11:34:00" width="100%" height="249" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+				<div id="iframe-content-wrapper" style="width:100%; min-height:249px; overflow:auto;">
+					{!! load_iframe_content('https://data.7m.com.cn/transfer/homepage.html?t=' . date('Y-m-d,H:i:s')) !!}
+				</div>
+				<script>
+					// Hàm chuyển đổi external URL thành internal path
+					function convertToInternalPath(href) {
+						if (!href) return null;
+						
+						// Bỏ qua các link đặc biệt
+						if (href.startsWith('#') || 
+							href.startsWith('javascript:') ||
+							href.startsWith('mailto:') ||
+							href.startsWith('tel:')) {
+							return null;
+						}
+						
+						// Xử lý protocol-relative URLs (bắt đầu bằng //)
+						if (href.startsWith('//')) {
+							href = 'https:' + href;
+						}
+						
+						// Nếu đã là internal path, giữ nguyên
+						if (href.startsWith('/')) {
+							return href;
+						}
+						
+						// Nếu là external URL, chuyển thành internal path
+						if (href.startsWith('http://') || href.startsWith('https://')) {
+							try {
+								var url = new URL(href);
+								return url.pathname + (url.search ? url.search : '') + (url.hash ? url.hash : '');
+							} catch(e) {
+								// Nếu parse URL thất bại, trả về null
+								return null;
+							}
+						}
+						
+						// Relative paths, giữ nguyên
+						return href;
+					}
+					
+					// Hàm xử lý một link
+					function processLink(link) {
+						if (!link || link.tagName !== 'A') return;
+						
+						var href = link.getAttribute('href');
+						var internalPath = convertToInternalPath(href);
+						
+						if (internalPath && internalPath.startsWith('/')) {
+							link.setAttribute('href', internalPath);
+							// Bỏ target="_blank"
+							if (link.hasAttribute('target')) {
+								link.removeAttribute('target');
+							}
+						}
+					}
+					
+					// Xử lý tất cả các link hiện có
+					function processAllLinks() {
+						var allLinks = document.querySelectorAll('a[href]');
+						allLinks.forEach(processLink);
+					}
+					
+					// Intercept tất cả click events trên toàn trang
+					document.addEventListener('click', function(e) {
+						var target = e.target;
+						
+						// Tìm thẻ <a> gần nhất
+						while (target && target.tagName !== 'A') {
+							target = target.parentElement;
+						}
+						
+						if (target && target.tagName === 'A') {
+							var href = target.getAttribute('href');
+							
+							// Xử lý các link javascript: (như javascript:Player_gb(337357))
+							if (href && href.startsWith('javascript:')) {
+								var jsCode = href.substring(11); // Bỏ "javascript:"
+								
+								// Kiểm tra nếu là Player_gb hoặc Team_gb
+								var playerGbMatch = jsCode.match(/Player_gb\s*\(\s*(\d+)\s*\)/);
+								if (playerGbMatch) {
+									e.preventDefault();
+									e.stopPropagation();
+									var id = playerGbMatch[1];
+									var path = '/player/' + id + '/index_gb.shtml';
+									window.location.href = path;
+									return false;
+								}
+								
+								var teamGbMatch = jsCode.match(/Team_gb\s*\(\s*(\d+)\s*\)/);
+								if (teamGbMatch) {
+									e.preventDefault();
+									e.stopPropagation();
+									var id = teamGbMatch[1];
+									var path = '/team/' + id + '/index_gb.shtml';
+									window.location.href = path;
+									return false;
+								}
+								
+								// Xử lý các JavaScript functions khác
+								var playerMatch = jsCode.match(/Player\s*\(\s*(\d+)\s*\)/);
+								if (playerMatch) {
+									e.preventDefault();
+									e.stopPropagation();
+									var id = playerMatch[1];
+									var path = '/Player_Data/' + id + '/gb/index.shtml';
+									window.location.href = path;
+									return false;
+								}
+								
+								var teamMatch = jsCode.match(/Team\s*\(\s*(\d+)\s*\)/);
+								if (teamMatch) {
+									e.preventDefault();
+									e.stopPropagation();
+									var id = teamMatch[1];
+									var path = '/Team_Data/default_gb.shtml?id=' + id;
+									window.location.href = path;
+									return false;
+								}
+							}
+							
+							var internalPath = convertToInternalPath(href);
+							
+							// Nếu là external URL, chuyển hướng đến internal path
+							if (internalPath && internalPath.startsWith('/')) {
+								e.preventDefault();
+								e.stopPropagation();
+								window.location.href = internalPath;
+								return false;
+							}
+						}
+					}, true); // Use capture phase để bắt sớm hơn
+					
+					// Sử dụng MutationObserver để theo dõi các link được thêm động
+					if (window.MutationObserver) {
+						var observer = new MutationObserver(function(mutations) {
+							mutations.forEach(function(mutation) {
+								mutation.addedNodes.forEach(function(node) {
+									if (node.nodeType === 1) { // Element node
+										// Xử lý node mới nếu là link
+										if (node.tagName === 'A') {
+											processLink(node);
+										}
+										// Xử lý tất cả link con
+										var links = node.querySelectorAll ? node.querySelectorAll('a[href]') : [];
+										links.forEach(processLink);
+									}
+								});
+							});
+						});
+						
+						observer.observe(document.body, {
+							childList: true,
+							subtree: true
+						});
+					}
+					
+					// Xử lý các link khi DOM ready
+					if (document.readyState === 'loading') {
+						document.addEventListener('DOMContentLoaded', processAllLinks);
+					} else {
+						processAllLinks();
+					}
+					
+					// Xử lý lại sau một khoảng thời gian để bắt các link được tạo sau
+					setTimeout(processAllLinks, 500);
+					setTimeout(processAllLinks, 1000);
+					setTimeout(processAllLinks, 2000);
+				</script>
 				<div class="b_line"></div>
 				<div class="left">
 					<!-- Start Content M2 -->	
