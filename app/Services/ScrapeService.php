@@ -19,15 +19,14 @@ class ScrapeService
     }
 
     /**
-     * Load danh sách domain từ file domains.txt
+     * Load lit domain to file domains.txt
      */
     private function loadDomains(): void
     {
         $domainsFile = base_path('domains.txt');
         
         if (!File::exists($domainsFile)) {
-            Log::warning("File domains.txt không tồn tại. Tạo file mẫu...");
-            File::put($domainsFile, "# Danh sách domain để thay thế ngẫu nhiên (mỗi domain một dòng)\n# Dòng bắt đầu bằng # sẽ bị bỏ qua\n\n");
+            Log::warning("File domains.txt can't found. Create domain.txt");
             return;
         }
 
@@ -38,15 +37,12 @@ class ScrapeService
             ->toArray();
 
         if (empty($this->domains)) {
-            Log::warning("File domains.txt không chứa domain nào.");
+            Log::warning("File domains.txt");
         } else {
             Log::info("Đã tải " . count($this->domains) . " domain từ file domains.txt");
         }
     }
 
-    /**
-     * Chuẩn hóa URL: thêm https:// nếu thiếu
-     */
     private function normalizeUrl(string $url): string
     {
         if (str_starts_with($url, '//')) {
@@ -57,9 +53,6 @@ class ScrapeService
         return $url;
     }
 
-    /**
-     * Thay thế domain trong các thẻ <a> bằng domain ngẫu nhiên
-     */
     private function replaceLinksInHtml(string $html, array $domains): string
     {
         if (empty($domains)) {
@@ -78,7 +71,6 @@ class ScrapeService
             $href = $link->getAttribute('href');
             $hrefLower = strtolower(trim($href));
 
-            // Bỏ qua javascript:, #, hoặc link không có //
             if (str_starts_with($hrefLower, 'javascript:') || 
                 $hrefLower === '#' || 
                 str_starts_with($hrefLower, '#') ||
@@ -86,7 +78,6 @@ class ScrapeService
                 continue;
             }
 
-            // Tìm vị trí dấu // và dấu / thứ 3
             $doubleSlashPos = strpos($href, '//');
             if ($doubleSlashPos === false) {
                 continue;
@@ -102,23 +93,17 @@ class ScrapeService
                 $path = '/' . $path;
             }
 
-            // Thay domain bằng domain ngẫu nhiên
             $randomDomain = $domains[array_rand($domains)];
             $link->setAttribute('href', "http://{$randomDomain}{$path}");
         }
 
-        // Lấy HTML sau khi thay đổi
         $html = $dom->saveHTML();
-        
-        // Loại bỏ XML declaration nếu có
+
         $html = preg_replace('/<\?xml[^>]*\?>/', '', $html);
         
         return $html;
     }
 
-    /**
-     * Format HTML với indent
-     */
     private function formatHtml(string $html): string
     {
         if (empty(trim($html))) {
@@ -131,10 +116,9 @@ class ScrapeService
             $dom->preserveWhiteSpace = false;
             $dom->formatOutput = true;
             @$dom->loadHTML('<?xml encoding="UTF-8">' . $html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-            
+
             $formatted = $dom->saveHTML();
-            
-            // Loại bỏ XML declaration
+
             $formatted = preg_replace('/<\?xml[^>]*\?>/', '', $formatted);
             
             return trim($formatted);
@@ -144,9 +128,6 @@ class ScrapeService
         }
     }
 
-    /**
-     * Scrape HTML từ URL
-     */
     private function scrapeUrl(string $url): ?\DOMDocument
     {
         $normalizedUrl = $this->normalizeUrl($url);
@@ -155,7 +136,6 @@ class ScrapeService
         try {
             $html = null;
 
-            // Thử dùng cURL trực tiếp trước (nếu có)
             if (function_exists('curl_init')) {
                 $ch = curl_init();
                 curl_setopt_array($ch, [
@@ -188,7 +168,6 @@ class ScrapeService
                 }
             }
 
-            // Nếu cURL không được, dùng file_get_contents
             if ($html === null) {
                 $context = stream_context_create([
                     'http' => [
@@ -226,9 +205,6 @@ class ScrapeService
         }
     }
 
-    /**
-     * Scrape và lưu nội dung từ trang chủ
-     */
     public function scrapeAndSave(): bool
     {
         if (empty($this->domains)) {
@@ -236,7 +212,6 @@ class ScrapeService
             return false;
         }
 
-        // Tạo thư mục output nếu chưa có
         if (!File::isDirectory($this->outputDir)) {
             File::makeDirectory($this->outputDir, 0755, true);
         }
@@ -250,7 +225,6 @@ class ScrapeService
         $xpath = new \DOMXPath($dom);
         $allContent = [];
 
-        // Lấy nội dung từng class
         foreach ($this->classes as $className) {
             $allContent[$className] = [];
             $elements = $xpath->query("//*[contains(@class, '{$className}')]");
@@ -269,7 +243,6 @@ class ScrapeService
             }
         }
 
-        // Lưu vào file
         Log::info("Đang lưu nội dung vào các file...");
 
         foreach ($allContent as $className => $contents) {
@@ -291,9 +264,6 @@ class ScrapeService
         return true;
     }
 
-    /**
-     * Scrape n_ty từ URL cụ thể (cho trang detail)
-     */
     public function scrapeNTy(string $url): bool
     {
         if (empty($this->domains)) {

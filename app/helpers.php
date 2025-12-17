@@ -2,10 +2,10 @@
 
 if (!function_exists('load_content')) {
     /**
-     * Load content from file in resources/content directory
-     * 
+     * Load content from a file in the resources/content directory.
+     *
      * @param string $filename
-     * @param bool $convertLinks Nếu true, chuyển đổi tất cả thẻ <a> href thành internal links
+     * @param bool $convertLinks If true, convert all <a> href attributes to internal links.
      * @return string
      */
     function load_content($filename, $convertLinks = false)
@@ -18,47 +18,47 @@ if (!function_exists('load_content')) {
         
         $content = file_get_contents($path);
         
-        // Nếu không cần convert links, trả về ngay
+        // If we don't need to convert links, return the raw content
         if (!$convertLinks) {
             return $content;
         }
         
-        // Chuyển đổi các thẻ <a> href thành internal links
+        // Convert <a> href attributes to internal links
         return convert_external_links_to_internal($content);
     }
 }
 
 if (!function_exists('convert_external_links_to_internal')) {
     /**
-     * Chuyển đổi tất cả thẻ <a> có href là external URL thành internal links
-     * để điều hướng đến trang detail.blade.php
+     * Convert all <a> tags whose href is an external URL into internal links
+     * so that navigation always goes through detail.blade.php.
      *
      * @param string $html
      * @return string
      */
     function convert_external_links_to_internal($html)
     {
-        // Sử dụng DOMDocument để parse HTML
+        // Use DOMDocument to parse HTML
         libxml_use_internal_errors(true);
         $dom = new \DOMDocument();
         
-        // Wrap content trong một div để xử lý fragment HTML
+        // Wrap content in a <div> so we can safely parse HTML fragments
         $wrappedHtml = '<div>' . $html . '</div>';
         
-        // Load HTML với encoding UTF-8
+        // Load HTML with UTF-8 encoding
         @$dom->loadHTML('<?xml encoding="UTF-8">' . $wrappedHtml, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         
         // Clear libxml errors
         libxml_clear_errors();
         
-        // Tìm tất cả thẻ <a>
+        // Find all <a> elements
         $xpath = new \DOMXPath($dom);
         $links = $xpath->query('//a[@href]');
         
         foreach ($links as $link) {
             $href = $link->getAttribute('href');
             
-            // Bỏ qua các link đã là internal (bắt đầu bằng /) hoặc javascript:, #, mailto:, etc.
+            // Skip links that are already internal (/...), or javascript:, #, mailto:, tel:, etc.
             if (empty($href) || 
                 str_starts_with($href, '/') || 
                 str_starts_with($href, '#') || 
@@ -68,27 +68,27 @@ if (!function_exists('convert_external_links_to_internal')) {
                 continue;
             }
             
-            // Parse URL để lấy path
+            // Parse URL to extract the path
             $parsedUrl = parse_url($href);
             
-            // Nếu có path, chuyển thành internal route
+            // If there is a path, turn it into an internal route
             if (isset($parsedUrl['path'])) {
                 $internalPath = $parsedUrl['path'];
                 
-                // Thêm query string nếu có
+                // Append query string if present
                 if (isset($parsedUrl['query'])) {
                     $internalPath .= '?' . $parsedUrl['query'];
                 }
                 
-                // Thêm fragment nếu có
+                // Append fragment if present
                 if (isset($parsedUrl['fragment'])) {
                     $internalPath .= '#' . $parsedUrl['fragment'];
                 }
                 
-                // Cập nhật href thành internal path
+                // Update href to the internal path
                 $link->setAttribute('href', $internalPath);
                 
-                // Bỏ target="_blank" để link mở trong cùng tab
+                // Remove target="_blank" so the link opens in the same tab
                 if ($link->hasAttribute('target')) {
                     $link->removeAttribute('target');
                 }
@@ -111,16 +111,16 @@ if (!function_exists('convert_external_links_to_internal')) {
 if (!function_exists('domain')) {
     /**
      * Get domain URL by key
-     * Trả về internal route để route catch-all xử lý
+     * Returns an internal route that will be handled by the catch‑all route.
      *
      * @param string $key
      * @return string
      */
     function domain($key)
     {
-        // Trả về internal route thay vì external domain
-        // URL sẽ là /{key} và route catch-all sẽ trả về detail.blade.php
-        // Nhưng URL hiển thị vẫn giữ nguyên
+        // Return an internal route instead of the external domain.
+        // The URL will be /{key} and the catch‑all route will render detail.blade.php.
+        // The visible URL structure is preserved.
         return '/' . $key;
     }
 }
@@ -128,7 +128,7 @@ if (!function_exists('domain')) {
 if (!function_exists('domain_url')) {
     /**
      * Get full URL with domain and path
-     * Trả về internal route để route catch-all xử lý
+     * Returns an internal route that will be handled by the catch‑all route.
      *
      * @param string $key Domain key
      * @param string $path URL path
@@ -136,9 +136,9 @@ if (!function_exists('domain_url')) {
      */
     function domain_url($key, $path = '')
     {
-        // Trả về internal route thay vì external domain
-        // URL sẽ là /{key}/{path} và route catch-all sẽ trả về detail.blade.php
-        // Nhưng URL hiển thị vẫn giữ nguyên
+        // Return an internal route instead of the external domain.
+        // The URL will be /{key}/{path} and the catch‑all route will render detail.blade.php.
+        // The visible URL structure is preserved.
         
         if (empty($path)) {
             return '/' . $key;
@@ -153,15 +153,16 @@ if (!function_exists('domain_url')) {
 
 if (!function_exists('load_iframe_content')) {
     /**
-     * Fetch nội dung từ iframe URL và xử lý tất cả các link để chuyển hướng đến detail.blade.php
+     * Fetch content from an iframe URL and post‑process all links
+     * so that navigation goes through detail.blade.php.
      * 
-     * @param string $url URL của iframe
-     * @return string HTML content đã được xử lý
+     * @param string $url Iframe URL
+     * @return string Processed HTML content
      */
     function load_iframe_content($url)
     {
         try {
-            // Fetch nội dung từ URL
+            // Fetch raw HTML from the given URL
             $context = stream_context_create([
                 'http' => [
                     'method' => 'GET',
@@ -183,7 +184,7 @@ if (!function_exists('load_iframe_content')) {
             $html = @file_get_contents($url, false, $context);
             
             if ($html === false) {
-                // Fallback: thử dùng cURL
+                // Fallback: try using cURL
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -197,37 +198,37 @@ if (!function_exists('load_iframe_content')) {
                 curl_close($ch);
                 
                 if ($html === false || !empty($error)) {
-                    return '<div style="padding:20px;text-align:center;">Không thể tải nội dung</div>';
+                    return '<div style="padding:20px;text-align:center;">Unable to load content</div>';
                 }
             }
             
-            // Xử lý tất cả các link trong nội dung
+            // Process all links inside the HTML
             return convert_all_links_to_internal($html);
             
         } catch (\Exception $e) {
-            return '<div style="padding:20px;text-align:center;">Lỗi khi tải nội dung: ' . htmlspecialchars($e->getMessage()) . '</div>';
+            return '<div style="padding:20px;text-align:center;">Error while loading content: ' . htmlspecialchars($e->getMessage()) . '</div>';
         }
     }
 }
 
 if (!function_exists('convert_all_links_to_internal')) {
     /**
-     * Chuyển đổi TẤT CẢ các link (cả internal và external) thành internal links
-     * và xử lý hình ảnh để hiển thị đúng khi đổi domain
+     * Convert ALL links (internal and external) to internal links
+     * and adjust images so they render correctly when the domain changes.
      * 
      * @param string $html
      * @return string
      */
     function convert_all_links_to_internal($html)
     {
-        // Sử dụng DOMDocument để parse HTML
+        // Use DOMDocument to parse HTML
         libxml_use_internal_errors(true);
         $dom = new \DOMDocument();
         
-        // Wrap content trong một div để xử lý fragment HTML
+        // Wrap content in a <div> so we can handle HTML fragments
         $wrappedHtml = '<div>' . $html . '</div>';
         
-        // Load HTML với encoding UTF-8
+        // Load HTML with UTF-8 encoding
         @$dom->loadHTML('<?xml encoding="UTF-8">' . $wrappedHtml, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         
         // Clear libxml errors
@@ -235,13 +236,13 @@ if (!function_exists('convert_all_links_to_internal')) {
         
         $xpath = new \DOMXPath($dom);
         
-        // ========== XỬ LÝ TẤT CẢ CÁC LINK <a> ==========
+        // ========== HANDLE ALL <a> LINKS ==========
         $links = $xpath->query('//a[@href]');
         
         foreach ($links as $link) {
             $href = $link->getAttribute('href');
             
-            // Bỏ qua các link đặc biệt
+            // Skip special links
             if (empty($href) || 
                 str_starts_with($href, '#') || 
                 str_starts_with($href, 'javascript:') ||
@@ -250,30 +251,30 @@ if (!function_exists('convert_all_links_to_internal')) {
                 continue;
             }
             
-            // Xử lý cả internal links (bắt đầu bằng /) và external links
+            // Handle both internal links (starting with /) and external links
             $internalPath = '';
             
-            // Xử lý protocol-relative URLs (bắt đầu bằng //)
+            // Handle protocol‑relative URLs (starting with //)
             if (str_starts_with($href, '//')) {
                 $href = 'https:' . $href;
             }
             
             if (str_starts_with($href, '/')) {
-                // Internal link: giữ nguyên path (đã được route catch-all xử lý)
+                // Internal link: keep the path (it will be handled by the catch‑all route)
                 $internalPath = $href;
             } elseif (str_starts_with($href, 'http://') || str_starts_with($href, 'https://')) {
-                // External link: parse URL để lấy path
+                // External link: parse URL and keep only the path/query/fragment
                 $parsedUrl = parse_url($href);
                 
                 if (isset($parsedUrl['path'])) {
                     $internalPath = $parsedUrl['path'];
                     
-                    // Thêm query string nếu có
+                    // Append query string if present
                     if (isset($parsedUrl['query'])) {
                         $internalPath .= '?' . $parsedUrl['query'];
                     }
                     
-                    // Thêm fragment nếu có
+                    // Append fragment if present
                     if (isset($parsedUrl['fragment'])) {
                         $internalPath .= '#' . $parsedUrl['fragment'];
                     }
@@ -282,27 +283,26 @@ if (!function_exists('convert_all_links_to_internal')) {
                     continue;
                 }
             } else {
-                // Các link khác (relative paths), giữ nguyên
+                // Other links (relative paths) – keep as is
                 $internalPath = $href;
             }
             
-            // Cập nhật href thành internal path
+            // Update href with the internal path
             if (!empty($internalPath)) {
                 $link->setAttribute('href', $internalPath);
                 
-                // Bỏ target="_blank" để link mở trong cùng tab
+                // Remove target="_blank" so the link opens in the same tab
                 if ($link->hasAttribute('target')) {
                     $link->removeAttribute('target');
                 }
             }
         }
         
-        // ========== XỬ LÝ TẤT CẢ CÁC HÌNH ẢNH <img> ==========
-        // Chuyển đổi relative paths thành full URLs từ domain gốc để hiển thị được
+        // ========== HANDLE ALL <img> TAGS ==========
+        // Convert relative paths to full URLs based on the original domains
         $images = $xpath->query('//img[@src]');
         
-        // Domain gốc cho hình ảnh (từ iframe content)
-        // Có thể là data.7m.com.cn, news.7m.com.cn, hoặc các domain khác
+        // Base domains for images coming from the original site
         $imageBaseUrls = [
             'https://data.7m.com.cn',
             'https://news.7m.com.cn',
@@ -317,47 +317,47 @@ if (!function_exists('convert_all_links_to_internal')) {
                 continue;
             }
             
-            // Xử lý protocol-relative URLs (bắt đầu bằng //)
+            // Handle protocol‑relative URLs (starting with //)
             if (str_starts_with($src, '//')) {
                 $img->setAttribute('src', 'https:' . $src);
             }
-            // Xử lý relative paths bắt đầu bằng / (như /player_data/..., /photo/...)
+            // Handle relative paths starting with / (e.g. /player_data/..., /photo/...)
             elseif (str_starts_with($src, '/') && !str_starts_with($src, '//')) {
-                // Xác định domain phù hợp dựa trên path
+                // Choose the most appropriate base domain according to the path
                 $baseUrl = 'https://data.7m.com.cn'; // Default
                 
-                // Nếu là player_data, dùng data.7m.com.cn
+                // Player data images live under data.7m.com.cn
                 if (str_contains($src, '/player_data/')) {
                     $baseUrl = 'https://data.7m.com.cn';
                 }
-                // Nếu là photo, có thể là news.7m.com.cn
+                // News photos usually live under news.7m.com.cn
                 elseif (str_contains($src, '/photo/')) {
                     $baseUrl = 'https://news.7m.com.cn';
                 }
-                // Nếu là img, dùng img.7m.com.cn
+                // Generic images / sprites usually live under img.7m.com.cn
                 elseif (str_contains($src, '/img/') || str_contains($src, '/nimgs/')) {
                     $baseUrl = 'https://img.7m.com.cn';
                 }
                 
-                // Chuyển thành full URL từ domain gốc
+                // Build a full URL from the chosen base domain
                 $img->setAttribute('src', $baseUrl . $src);
             }
-            // GIỮ NGUYÊN external URLs (http://, https://)
-            // GIỮ NGUYÊN relative paths không bắt đầu bằng / (như player_data/...)
+            // Keep existing external URLs (http://, https://) as‑is.
+            // Keep non‑root‑relative paths (e.g. player_data/...) as‑is.
         }
         
-        // ========== XỬ LÝ CÁC THẺ KHÁC CÓ URL (như <link>, <script>, etc.) ==========
-        // Xử lý background-image trong style attributes nếu cần
+        // ========== HANDLE OTHER URL‑CONTAINING ATTRIBUTES (like inline styles) ==========
+        // Rewrite background-image URLs in style attributes if needed
         $elementsWithStyle = $xpath->query('//*[@style]');
         foreach ($elementsWithStyle as $element) {
             $style = $element->getAttribute('style');
             if (!empty($style) && (str_contains($style, 'url(') || str_contains($style, 'url("'))) {
-                // Xử lý background-image URLs trong style
+                // Rewrite URLs inside background-image declarations
                 $style = preg_replace_callback(
                     '/url\(["\']?([^"\']+)["\']?\)/i',
                     function($matches) {
                         $url = $matches[1];
-                        // Nếu là external URL, giữ nguyên hoặc chuyển đổi tùy nhu cầu
+                        // For protocol‑relative URLs, force https
                         if (str_starts_with($url, '//')) {
                             $url = 'https:' . $url;
                         }
@@ -369,7 +369,7 @@ if (!function_exists('convert_all_links_to_internal')) {
             }
         }
         
-        // Lấy HTML đã được sửa đổi
+        // Return the modified HTML
         $modifiedHtml = '';
         $body = $dom->getElementsByTagName('div')->item(0);
         if ($body) {
