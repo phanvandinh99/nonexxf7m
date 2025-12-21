@@ -1,46 +1,189 @@
-# 7M Sports Website
+# Hướng dẫn chạy dự án Laravel - nonexxf7m
 
-Website đọc nội dung từ file txt và json, không sử dụng database.
+## Yêu cầu hệ thống
 
-## 📁 Cấu trúc Project
+- **PHP**: >= 8.2
+- **Composer**: >= 2.0
+- **Node.js**: >= 18.x và npm (tùy chọn, chỉ cần nếu build frontend assets)
+- **Database**: Không cần thiết (dự án không sử dụng database)
 
-- **Trang chủ**: `resources/views/index7m.blade.php`
-- **Trang chi tiết**: `resources/views/detail.blade.php`
-- **Content files**: `resources/content/` (txt và json)
-- **Helper functions**: `app/helpers.php`
+## Đặc điểm
 
-## 🚀 Hướng dẫn Deploy
+- ✅ Không cần cấu hình database (không dùng MySQL/PostgreSQL)
+- ✅ Không cần migrations hay seeders
+- ✅ Session, Cache, Queue sử dụng file storage
+- ✅ Nội dung động được load từ JSON files
+- ✅ URL catch-all để hiển thị nội dung động
 
-**Xem file: [BAOTA-SETUP-GUIDE.md](BAOTA-SETUP-GUIDE.md)** để có hướng dẫn đầy đủ về cách setup và deploy lên Baota Panel.
+## Cài đặt
 
-### Tóm tắt nhanh:
+### Bước 1: Cài đặt dependencies
 
-1. Upload code lên server
-2. Cài Composer và dependencies
-3. Cấu hình Laravel (.env, permissions)
-4. Cấu hình Website trong Baota Panel (运行目录 = `/public`, 伪静态)
-5. Bật PHP extensions
-6. Test website
+```bash
+cd nonexxf7m
+composer install
+```
 
-## 📝 Các file quan trọng
+### Bước 2: Cấu hình môi trường
 
-- `BAOTA-SETUP-GUIDE.md` - Hướng dẫn setup đầy đủ trên Baota Panel
-- `routes/web.php` - Routing (trang chủ và catch-all)
-- `app/helpers.php` - Helper functions (load_content, load_article_from_json, domain, domain_url)
-- `resources/content/` - Thư mục chứa file content (txt và json)
+Tạo file `.env` từ file mẫu:
 
-## 🔧 Yêu cầu hệ thống
+```bash
+copy .env.example .env
+```
 
-- PHP 8.2+
-- Composer 2.2+
-- Nginx/Apache
-- PHP extensions: fileinfo, openssl, mbstring, tokenizer, xml, ctype, json
+Hoặc trên Linux/Mac:
+```bash
+cp .env.example .env
+```
 
-## 📖 Cách hoạt động
+### Bước 3: Tạo Application Key
 
-1. **Trang chủ** (`/`): Load nội dung từ các file `.txt` trong `resources/content/`
-2. **Trang chi tiết** (`/{path}`): Load bài viết từ file JSON dựa trên URL path (deterministic - cùng URL luôn trả về cùng bài viết)
+```bash
+php artisan key:generate
+```
 
-## 🐛 Troubleshooting
+### Bước 4: Cài đặt NPM dependencies (tùy chọn - chỉ cần nếu build frontend assets)
 
-Xem phần Troubleshooting trong file `BAOTA-SETUP-GUIDE.md`
+```bash
+npm install
+```
+
+## Chạy dự án
+
+### Cách 1: Sử dụng Artisan Serve (Development)
+
+```bash
+php artisan serve
+```
+
+Ứng dụng sẽ chạy tại: `http://localhost:8000`
+
+### Cách 2: Sử dụng script dev (Development với Vite)
+
+```bash
+composer run dev
+```
+
+Lệnh này sẽ chạy đồng thời:
+- Laravel server
+- Queue worker
+- Pail (log viewer)
+- Vite dev server
+
+### Cách 3: Build production assets
+
+```bash
+npm run build
+```
+
+Sau đó chạy:
+```bash
+php artisan serve
+```
+
+## Các lệnh hữu ích
+
+### Clear cache
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+```
+
+### Tạo Storage Link (cho file uploads)
+```bash
+php artisan storage:link
+```
+
+## Chạy Tests
+
+```bash
+composer run test
+```
+
+Hoặc:
+```bash
+php artisan test
+```
+
+## Cấu trúc thư mục
+
+```
+nonexxf7m/
+├── app/
+│   ├── Helpers/      # Helper classes (ContentHelper)
+│   ├── Http/
+│   │   └── Controllers/
+│   ├── Services/     # Services (DomainService)
+│   ├── Providers/
+│   └── helpers.php   # Global helper functions
+├── bootstrap/        # Bootstrap files
+├── config/           # Configuration files
+├── database/         # SQLite file (nếu có)
+├── public/           # Public entry point, static assets
+├── resources/
+│   ├── content/      # JSON và text files chứa nội dung
+│   ├── css/
+│   ├── js/
+│   └── views/        # Blade templates
+├── routes/           # Route definitions
+├── storage/          # Logs, cache, sessions (file-based)
+└── tests/            # Test files
+```
+
+## Ghi chú về Database
+
+Dự án này **không sử dụng database** để lưu trữ dữ liệu. Tất cả nội dung được load từ:
+- JSON files trong `resources/content/` (ví dụ: `rich_sports_news_cn_v2.json`)
+- Text files trong `resources/content/`
+
+Session, Cache, và Queue được lưu trong file system, không cần database.
+
+## Troubleshooting
+
+### Lỗi permission (Linux/Mac)
+```bash
+chmod -R 775 storage bootstrap/cache
+chown -R www-data:www-data storage bootstrap/cache
+```
+
+### Lỗi composer
+```bash
+composer clear-cache
+composer install --no-cache
+```
+
+### Lỗi npm
+```bash
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+## 📚 Tài liệu hướng dẫn
+
+- **[SCRAPE-GUIDE.md](SCRAPE-GUIDE.md)** - Hướng dẫn đầy đủ về Scrape Content và Auto Schedule
+- **[QUICK-START.md](QUICK-START.md)** - Hướng dẫn nhanh setup auto scrape
+- **[SCHEDULER-SETUP.md](SCHEDULER-SETUP.md)** - Hướng dẫn setup Laravel Scheduler trên Baota Panel
+
+## 🔄 Auto Scrape Content
+
+Website tự động scrape nội dung từ 7m.com.cn và cập nhật vào `resources/content/`.
+
+**Chạy thủ công:**
+```bash
+php artisan scrape:content
+```
+
+**Setup auto schedule:** Xem [SCRAPE-GUIDE.md](SCRAPE-GUIDE.md)
+
+## Tài liệu tham khảo
+
+- [Laravel Documentation](https://laravel.com/docs)
+- [Laravel Learn](https://laravel.com/learn)
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
