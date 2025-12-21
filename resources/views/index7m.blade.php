@@ -15,92 +15,6 @@
 	<script src="/js/common.js"></script>
 	<script src="/js/minjs.js"></script>
 	<script src="/js/cookiemin.js"></script>
-	<script>
-		// Override các JavaScript functions để chuyển hướng đến internal paths
-		// Phải đặt TRƯỚC khi các functions này được định nghĩa
-		
-		// Tạo các wrapper functions để chuyển hướng đến internal paths
-		var redirectToInternal = function(path) {
-			window.location.href = path;
-		};
-		
-		// Override Player_gb function - sử dụng Object.defineProperty để đảm bảo không bị ghi đè
-		try {
-			Object.defineProperty(window, 'Player_gb', {
-				value: function(id) {
-					redirectToInternal('/player/' + id + '/index_gb.shtml');
-				},
-				writable: false,
-				configurable: false
-			});
-		} catch(e) {
-			// Nếu không thể define property, sử dụng cách thông thường
-			window.Player_gb = function(id) {
-				redirectToInternal('/player/' + id + '/index_gb.shtml');
-			};
-		}
-		
-		// Override Team_gb function
-		try {
-			Object.defineProperty(window, 'Team_gb', {
-				value: function(id) {
-					redirectToInternal('/team/' + id + '/index_gb.shtml');
-				},
-				writable: false,
-				configurable: false
-			});
-		} catch(e) {
-			window.Team_gb = function(id) {
-				redirectToInternal('/team/' + id + '/index_gb.shtml');
-			};
-		}
-		
-		// Override Player function (từ line.js) - sẽ bị ghi đè bởi line.js, nhưng click handler sẽ xử lý
-		window.Player = function(id) {
-			redirectToInternal('/Player_Data/' + id + '/gb/index.shtml');
-		};
-		
-		// Override Team function (từ line.js)
-		window.Team = function(id) {
-			redirectToInternal('/Team_Data/default_gb.shtml?id=' + id);
-		};
-		
-		// Override ShowDetails function
-		window.ShowDetails = function(id) {
-			redirectToInternal('/goaldata/jt/' + id + '.shtml');
-		};
-		
-		// Override ShowAnalyse function
-		window.ShowAnalyse = function(id) {
-			redirectToInternal('/Analyse/default_gb.shtml?id=' + id);
-		};
-		
-		// Override zlk function
-		window.zlk = function(id) {
-			redirectToInternal('/matches_data/' + id + '/gb/index.shtml');
-		};
-		
-		// Intercept các attempts để ghi đè các functions này
-		// Sử dụng Proxy hoặc setter để bắt các lần gán lại
-		var protectedFunctions = ['Player_gb', 'Team_gb'];
-		protectedFunctions.forEach(function(funcName) {
-			var originalValue = window[funcName];
-			try {
-				Object.defineProperty(window, funcName, {
-					get: function() {
-						return originalValue;
-					},
-					set: function(newValue) {
-						// Không cho phép ghi đè
-						console.warn('Attempt to override ' + funcName + ' blocked');
-					},
-					configurable: false
-				});
-			} catch(e) {
-				// Nếu không thể dùng defineProperty, giữ nguyên
-			}
-		});
-	</script>
 	<script src="/js/skin.js" defer></script>
 	<script src="/js/7mhomead.js" defer></script>
 	<link rel="apple-touch-icon" href="/img/ipad_icon.png" />
@@ -108,19 +22,30 @@
 	<script src="/js/line.js" defer></script>
 	<script src="/js/index-optimized.js" defer></script>
 	<meta name="baidu-site-verification" content="codeva-HcfM2YXMCr" />
+	<script src="/js/iframe.js"></script>
 </head>
+
 <body>
 	<div class="box">
 		<div id="main">
 			<div class="header">
-				<div class="header_l"><a href="/" title="7m体育"></a></div>
+				<div class="header_l">
+				    <a href="/" title="7m体育"></a></div>
 				<div class="header_r">
 					<div class="top">
-						<div class="top_l" style="width:auto;"><a href="javascript:void(0);" onclick="setHome(this);" rel="nofollow">设为首页</a>&nbsp;|&nbsp;<a href="javascript:addFavor();" rel="nofollow">加入收藏</a>&nbsp;|&nbsp;<a href="{{ domain('sitemap') }}" target="_blank">网站导航</a>&nbsp;|&nbsp;<a href="{{ domain('mobile') }}">手机版</a>&nbsp;</div>
+						<div class="top_l" style="width:auto;">
+						    <a href="javascript:void(0);" onclick="setHome(this);" rel="nofollow">设为首页</a>&nbsp;|&nbsp;
+						    <a href="javascript:addFavor();" rel="nofollow">加入收藏</a>&nbsp;|&nbsp;
+						    <a href="{{ domain('sitemap') }}" target="_blank">网站导航</a>&nbsp;|&nbsp;
+						    <a href="{{ domain('mobile') }}">手机版</a>&nbsp;</div>
 						<div class="top_r">
 							<div class="top_r1">
 							</div>
-							<div id="divUser_1" class="top_r2" style="display:none;"><span id="spnTimePart"></span> <a id="lnkUser" target="_blank" class="user"></a> 欢迎您！ |&nbsp;&nbsp;<a href="javascript:logout()">退出</a></div>
+							<div id="divUser_1" class="top_r2" style="display:none;">
+							    <span id="spnTimePart"></span>
+							    <a id="lnkUser" target="_blank" class="user"></a> 欢迎您！ |&nbsp;&nbsp;
+							    <a href="javascript:logout()">退出</a>
+							</div>
 							<div id="divUser_2" class="top_r2" style="display:none;">
 								<a id="lnkLogin" href="javascript:window.open('{{ domain_url('accounts', 'login.html?lang=gb&url=') }}'+window.location.href)">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 								<a href="javascript:window.open('{{ domain_url('accounts', 'reg_phone.html?lang=gb&url=') }}'+window.location.href)">注册</a>
@@ -129,11 +54,34 @@
 					</div>
 					<script src="/js/menu.js" defer></script>
 					<div class="menu">
-						<div>
-							<strong>
-							<a href="{{ domain_url('bf', 'default_ft.aspx?Classid=&view=all&match=&line=no') }}" target="_blank" class="to-mobile-link-fb-live">足球</a>
-							</strong>
-							<a id="lnkMenu1" onMouseOver="showMenu('lnkMenu1','mnu1',-105,true)" onmousemove="focuMenu('mnu1')" onMouseOut="closeMenu('mnu1')" href="{{ domain_url('bf', 'default_ft.aspx?Classid=&view=all&b=w3ekjibqwer&match=&line=no') }}" target="_blank" class="to-mobile-link-fb-live">即时比分</a><a href="{{ domain_url('data', 'result_data/') }}" target="_blank" class="to-mobile-link-fb-result">完场</a><a href="{{ domain_url('data', 'fixture_data/') }}" target="_blank" class="to-mobile-link-fb-future">赛程</a><a href="{{ domain_url('data', 'database/index_big.htm') }}" target="_blank" class="to-mobile-link-fb-data">资料库</a><br /><strong><a href="{{ domain_url('basket', 'default_big.aspx?b=w3ekjibqwer') }}" target="_blank" class="to-mobile-link-bb-live">篮球</a></strong><a href="{{ domain_url('basket', 'default_big.aspx?b=w3ekjibqwer') }}" target="_blank" class="to-mobile-link-bb-live">即时比分</a><a href="{{ domain_url('bdata', 'result_data/') }}" target="_blank" class="to-mobile-link-bb-result">完场</a><a href="{{ domain_url('bdata', 'fixture_data/') }}" target="_blank" class="to-mobile-link-bb-future">赛程</a><a href="{{ domain_url('data', 'database/index_big_28.htm') }}" target="_blank" class="to-mobile-link-bb-data">资料库</a></div>
+                    <div>
+                        <strong>
+                            <a href="{{ domain_url('bf', '/Article/details/123422.html') }}" target="_blank" class="to-mobile-link-fb-live">
+                                足球
+                            </a>
+                        </strong>
+                        <a
+                            id="lnkMenu1"
+                            onMouseOver="showMenu('lnkMenu1','mnu1',-105,true)"
+                            onmousemove="focuMenu('mnu1')"
+                            onMouseOut="closeMenu('mnu1')"
+                            href="{{ domain_url('bf', 'default_ft.aspx?Classid=&view=all&b=w3ekjibqwer&match=&line=no') }}"
+                            target="_blank"
+                            class="to-mobile-link-fb-live">即时比分</a>
+                            <a href="{{ domain_url('data', 'result_data/') }}" target="_blank" class="to-mobile-link-fb-result">完场</a>
+                            <a href="{{ domain_url('data', 'fixture_data/') }}" target="_blank" class="to-mobile-link-fb-future">赛程</a>
+                            <a href="{{ domain_url('data', 'database/index_big.htm') }}" target="_blank" class="to-mobile-link-fb-data">资料库</a><br /><strong>
+                            <a href="{{ domain_url('basket', 'default_big.aspx?b=w3ekjibqwer') }}"
+                                target="_blank"
+                                class="to-mobile-link-bb-live">篮球</a></strong>
+                            <a href="{{ domain_url('basket', 'default_big.aspx?b=w3ekjibqwer') }}"
+                            target="_blank"
+                            class="to-mobile-link-bb-live">即时比分</a>
+                            <a href="{{ domain_url('bdata', 'result_data/') }}" target="_blank" class="to-mobile-link-bb-result">完场</a>
+                            <a href="{{ domain_url('bdata', 'fixture_data/') }}" target="_blank" class="to-mobile-link-bb-future">赛程</a>
+                            <a href="{{ domain_url('data', 'database/index_big_28.htm') }}" target="_blank" class="to-mobile-link-bb-data">资料库
+                            </a>
+                    </div>
 						<div class="line"></div>
 						<div><a href="{{ domain('news') }}" target="_blank">足球新闻</a><br /><a id="lnkMenu5" onMouseOver="showMenu('lnkMenu5','mnu5',-5,true)" onmousemove="focuMenu('mnu5')" onMouseOut="closeMenu('mnu5')" href="{{ domain('lq') }}" target="_blank">篮球新闻</a></div>
 						<div class="line"></div>
@@ -208,194 +156,80 @@
 					<!-- End Content T2 -->	
 
 					<!-- Start Content T1 -->	
-					{!! load_content('content_t1.txt') !!}
+					{!! load_content('content_t1.txt', true) !!}
 					<!-- End Content T1 -->	
 				</div>
 				<!-- Start Content T3 -->	
-				{!! load_content('content_t3.txt') !!}
+				<div id="content-t3-wrapper">
+					{!! load_content('content_t3.txt') !!}
+				</div>
 				<!-- End Content T3 -->	
+				<script>
+					// Redirect all links inside content_t3 to the internal detail route,
+					// while keeping the original path from the link.
+					(function() {
+						var wrapper = document.getElementById('content-t3-wrapper');
+						if (!wrapper) return;
+
+						wrapper.addEventListener('click', function(e) {
+							var target = e.target;
+							while (target && target.tagName !== 'A') {
+								target = target.parentElement;
+							}
+							if (!target || target.tagName !== 'A') {
+								return;
+							}
+
+							var href = target.getAttribute('href');
+							if (!href) return;
+							// Skip special schemes
+							if (href.startsWith('javascript:') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+								return;
+							}
+
+							e.preventDefault();
+							try {
+								// Normalize protocol-relative URLs
+								if (href.startsWith('//')) {
+									href = 'https:' + href;
+								}
+
+								var internalPath = href;
+
+								if (href.startsWith('http://') || href.startsWith('https://')) {
+									var url = new URL(href);
+									internalPath = url.pathname + (url.search || '') + (url.hash || '');
+								}
+
+								if (!internalPath.startsWith('/')) {
+									internalPath = '/' + internalPath.replace(/^\.?\/*/, '');
+								}
+
+								window.location.href = internalPath;
+							} catch (err) {
+								// Fallback: go home if something goes wrong
+								window.location.href = '/';
+							}
+						}, true);
+					})();
+				</script>
 			</div>
 			<div class="b_line"></div>
 			<div class="a_d7" id="m2"></div>
 			<div class="content_m">
+
 				<div id="iframe-content-wrapper" style="width:100%; min-height:249px; overflow:auto;">
 					{!! load_iframe_content('https://data.7m.com.cn/transfer/homepage.html?t=' . date('Y-m-d,H:i:s')) !!}
 				</div>
-				<script>
-					// Hàm chuyển đổi external URL thành internal path
-					function convertToInternalPath(href) {
-						if (!href) return null;
-						
-						// Bỏ qua các link đặc biệt
-						if (href.startsWith('#') || 
-							href.startsWith('javascript:') ||
-							href.startsWith('mailto:') ||
-							href.startsWith('tel:')) {
-							return null;
-						}
-						
-						// Xử lý protocol-relative URLs (bắt đầu bằng //)
-						if (href.startsWith('//')) {
-							href = 'https:' + href;
-						}
-						
-						// Nếu đã là internal path, giữ nguyên
-						if (href.startsWith('/')) {
-							return href;
-						}
-						
-						// Nếu là external URL, chuyển thành internal path
-						if (href.startsWith('http://') || href.startsWith('https://')) {
-							try {
-								var url = new URL(href);
-								return url.pathname + (url.search ? url.search : '') + (url.hash ? url.hash : '');
-							} catch(e) {
-								// Nếu parse URL thất bại, trả về null
-								return null;
-							}
-						}
-						
-						// Relative paths, giữ nguyên
-						return href;
-					}
-					
-					// Hàm xử lý một link
-					function processLink(link) {
-						if (!link || link.tagName !== 'A') return;
-						
-						var href = link.getAttribute('href');
-						var internalPath = convertToInternalPath(href);
-						
-						if (internalPath && internalPath.startsWith('/')) {
-							link.setAttribute('href', internalPath);
-							// Bỏ target="_blank"
-							if (link.hasAttribute('target')) {
-								link.removeAttribute('target');
-							}
-						}
-					}
-					
-					// Xử lý tất cả các link hiện có
-					function processAllLinks() {
-						var allLinks = document.querySelectorAll('a[href]');
-						allLinks.forEach(processLink);
-					}
-					
-					// Intercept tất cả click events trên toàn trang
-					document.addEventListener('click', function(e) {
-						var target = e.target;
-						
-						// Tìm thẻ <a> gần nhất
-						while (target && target.tagName !== 'A') {
-							target = target.parentElement;
-						}
-						
-						if (target && target.tagName === 'A') {
-							var href = target.getAttribute('href');
-							
-							// Xử lý các link javascript: (như javascript:Player_gb(337357))
-							if (href && href.startsWith('javascript:')) {
-								var jsCode = href.substring(11); // Bỏ "javascript:"
-								
-								// Kiểm tra nếu là Player_gb hoặc Team_gb
-								var playerGbMatch = jsCode.match(/Player_gb\s*\(\s*(\d+)\s*\)/);
-								if (playerGbMatch) {
-									e.preventDefault();
-									e.stopPropagation();
-									var id = playerGbMatch[1];
-									var path = '/player/' + id + '/index_gb.shtml';
-									window.location.href = path;
-									return false;
-								}
-								
-								var teamGbMatch = jsCode.match(/Team_gb\s*\(\s*(\d+)\s*\)/);
-								if (teamGbMatch) {
-									e.preventDefault();
-									e.stopPropagation();
-									var id = teamGbMatch[1];
-									var path = '/team/' + id + '/index_gb.shtml';
-									window.location.href = path;
-									return false;
-								}
-								
-								// Xử lý các JavaScript functions khác
-								var playerMatch = jsCode.match(/Player\s*\(\s*(\d+)\s*\)/);
-								if (playerMatch) {
-									e.preventDefault();
-									e.stopPropagation();
-									var id = playerMatch[1];
-									var path = '/Player_Data/' + id + '/gb/index.shtml';
-									window.location.href = path;
-									return false;
-								}
-								
-								var teamMatch = jsCode.match(/Team\s*\(\s*(\d+)\s*\)/);
-								if (teamMatch) {
-									e.preventDefault();
-									e.stopPropagation();
-									var id = teamMatch[1];
-									var path = '/Team_Data/default_gb.shtml?id=' + id;
-									window.location.href = path;
-									return false;
-								}
-							}
-							
-							var internalPath = convertToInternalPath(href);
-							
-							// Nếu là external URL, chuyển hướng đến internal path
-							if (internalPath && internalPath.startsWith('/')) {
-								e.preventDefault();
-								e.stopPropagation();
-								window.location.href = internalPath;
-								return false;
-							}
-						}
-					}, true); // Use capture phase để bắt sớm hơn
-					
-					// Sử dụng MutationObserver để theo dõi các link được thêm động
-					if (window.MutationObserver) {
-						var observer = new MutationObserver(function(mutations) {
-							mutations.forEach(function(mutation) {
-								mutation.addedNodes.forEach(function(node) {
-									if (node.nodeType === 1) { // Element node
-										// Xử lý node mới nếu là link
-										if (node.tagName === 'A') {
-											processLink(node);
-										}
-										// Xử lý tất cả link con
-										var links = node.querySelectorAll ? node.querySelectorAll('a[href]') : [];
-										links.forEach(processLink);
-									}
-								});
-							});
-						});
-						
-						observer.observe(document.body, {
-							childList: true,
-							subtree: true
-						});
-					}
-					
-					// Xử lý các link khi DOM ready
-					if (document.readyState === 'loading') {
-						document.addEventListener('DOMContentLoaded', processAllLinks);
-					} else {
-						processAllLinks();
-					}
-					
-					// Xử lý lại sau một khoảng thời gian để bắt các link được tạo sau
-					setTimeout(processAllLinks, 500);
-					setTimeout(processAllLinks, 1000);
-					setTimeout(processAllLinks, 2000);
-				</script>
+
 				<div class="b_line"></div>
 				<div class="left">
 					<!-- Start Content M2 -->	
-					{!! load_content('content_m2.txt') !!}
+					{!! load_content('content_m2.txt', true) !!}
 					<!-- End Content M3 -->	
 
 					<!-- Start Content M1 -->	
-					{!! load_content('content_m1.txt') !!}
+					{!! load_content('content_m1.txt', true) !!}
 					<!-- End Content M1 -->	
 				</div>
 				<div class="content_m3">
@@ -747,7 +581,6 @@
 				<script src="/js/addmessagediv.js?l=gb" id="spt_message"></script>
 			</div>
 			<script>
-				// Load count script without async to avoid document.write issues
 				(function() {
 					var script = document.createElement('script');
 					script.src = '//count.7m.com.cn/count.js';
@@ -757,5 +590,55 @@
 			</script>
 		</div>
 	</div>
+	<script src="/js/iframee.js"></script>
+	<script>
+	// Global link interceptor: convert any clicked link (any domain) to internal path
+	(function () {
+		document.addEventListener('click', function (e) {
+			var target = e.target;
+			while (target && target.tagName !== 'A') {
+				target = target.parentElement;
+			}
+			if (!target || target.tagName !== 'A') {
+				return;
+			}
+
+			var href = target.getAttribute('href');
+			if (!href) return;
+
+			var lower = href.toLowerCase();
+			// Skip special schemes
+			if (lower.startsWith('javascript:') || lower.startsWith('#') || lower.startsWith('mailto:') || lower.startsWith('tel:')) {
+				return;
+			}
+
+			// Normalize protocol-relative URLs
+			if (href.startsWith('//')) {
+				href = 'https:' + href;
+			}
+
+			var internalPath = href;
+			// If external, strip domain to keep path/query/hash
+			if (href.startsWith('http://') || href.startsWith('https://')) {
+				try {
+					var url = new URL(href);
+					internalPath = url.pathname + (url.search || '') + (url.hash || '');
+				} catch (err) {
+					// If parsing fails, fall back to homepage
+					internalPath = '/';
+				}
+			}
+
+			// Ensure leading slash
+			if (!internalPath.startsWith('/')) {
+				internalPath = '/' + internalPath.replace(/^\.?\/*/, '');
+			}
+
+			e.preventDefault();
+			e.stopPropagation();
+			window.location.href = internalPath;
+		}, true); // capture phase to catch early
+	})();
+	</script>
 </body>
 </html>
