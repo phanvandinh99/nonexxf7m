@@ -50,7 +50,8 @@
                 </div>
             </div>
             <div class="m_menu">
-                <div class="t_m_logo"><a href="{{ domain('news') }}"><img src="/detail/static/picture/news_logo.gif" border="0"></a>
+                <div class="t_m_logo"><a href="{{ domain('Article/details/news') }}">
+                    <img src="/detail/static/picture/news_logo.gif" border="0" alt="7M足球新闻Logo" title="7M足球新闻" loading="eager"></a>
                 </div>
                 <div class="t_m_text">
                     <table border="0" cellpadding="2" cellspacing="0" width="100%" class="head">
@@ -62,24 +63,24 @@
                                     <table border="0" width="100%" align="right">
                                         <tr>
                                             <td class="head1">
-                                                <a href="{{ domain('bf') }}" target="_blank" onmouseover="ShowMenu(this)" style="position:relative" onmouseout="CloseMenu()">足球比分</a>|
-                                                <a href="{{ domain_url('data', 'result_data/index_gb.shtml') }}" target="_blank">足球完场</a>|
-                                                <a href="{{ domain_url('data', 'fixture_data/default_gb.shtml?date=1') }}" target="_blank">足球赛程</a>|
-                                                <a href="{{ domain('news') }}" target="_blank">足球资讯</a>|
-                                                <a href="{{ domain_url('data', 'database/index_gb.htm') }}" target="_blank">资料库</a>|
+                                                <a href="{{ domain('Article/details/bf') }}" target="_blank" onmouseover="ShowMenu(this)" style="position:relative" onmouseout="CloseMenu()">足球比分</a>|
+                                                <a href="{{ domain_url('Article/details/data', 'result_data/index_gb.shtml') }}" target="_blank">足球完场</a>|
+                                                <a href="{{ domain_url('Article/details/data', 'fixture_data/default_gb.shtml?date=1') }}" target="_blank">足球赛程</a>|
+                                                <a href="{{ domain('Article/details/news') }}" target="_blank">足球资讯</a>|
+                                                <a href="{{ domain_url('Article/details/data', 'database/index_gb.htm') }}" target="_blank">资料库</a>|
                                                 <a href="{{ domain_url('freelive', 'apply_jt.shtm') }}" target="_blank">免费调用</a>|
                                                 <a href="{{ domain_url('app', 'm/download.html?ct=default') }}" target="_blank">APP下载</a>|
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="head2">
-                                                <a href="{{ domain_url('basket', 'default_gb.aspx') }}" target="_blank">篮球比分</a>|
-                                                <a href="{{ domain_url('bdata', 'Result_data/index_gb.htm') }}" target="_blank">篮球完场</a>|
-                                                <a href="{{ domain_url('bdata', 'Fixture_data/default_gb.aspx?date=1') }}" target="_blank">篮球赛程</a>|
-                                                <a href="{{ domain('lq') }}" target="_blank">篮球资讯</a>|
-                                                <a href="{{ domain_url('bab', 'default_gb.aspx') }}" target="_blank">棒球比分</a>|
-                                                <a href="{{ domain_url('amf', 'default_gb.aspx') }}" target="_blank">美式足球比分</a>|
-                                                <a href="{{ domain('tennis') }}" target="_blank">网球比分</a>
+                                                <a href="{{ domain_url('Article/details/basket', 'default_gb.aspx') }}" target="_blank">篮球比分</a>|
+                                                <a href="{{ domain_url('Article/details/bdata', 'Result_data/index_gb.htm') }}" target="_blank">篮球完场</a>|
+                                                <a href="{{ domain_url('Article/details/bdata', 'Fixture_data/default_gb.aspx?date=1') }}" target="_blank">篮球赛程</a>|
+                                                <a href="{{ domain('Article/details/lq') }}" target="_blank">篮球资讯</a>|
+                                                <a href="{{ domain_url('Article/details/bab', 'default_gb.aspx') }}" target="_blank">棒球比分</a>|
+                                                <a href="{{ domain_url('Article/details/amf', 'default_gb.aspx') }}" target="_blank">美式足球比分</a>|
+                                                <a href="{{ domain('Article/details/tennis') }}" target="_blank">网球比分</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -104,25 +105,25 @@
     <div class="menu">
         <ul>
             <li class="m_li"><a href="{{ route('home') }}">首页</a></li>
-            <li class="m_li_a"><a href="/list/1/index.shtml">国际足球</a></li>
-            <li class="m_li"><a href="/list/2/index.shtml">中国足球</a></li>
-            <li class="m_li"><a href="/list/3/index.shtml">转会动态</a></li>
-            <li class="m_li"><a href="/list/5/index.shtml">赛前分析</a></li>
-            <li class="m_li"><a href="/list/7m/index.shtml">7M制造</a></li>
-            <li class="m_li"><a href="/prediction/index.shtml">赛事推介</a></li>
-            <li class="m_li"><a href="/report/index_gb.shtml">足球情报</a></li>
-            <li class="rss_li"><a href="/rss.xml" target="_blank"><img src="/detail/static/picture/rss.gif"></a></li>
+            <li class="m_li_a"><a href="/Article/details/list/1/index.shtml">国际足球</a></li>
+            <li class="m_li"><a href="/Article/details/list/2/index.shtml">中国足球</a></li>
+            <li class="m_li"><a href="/Article/details/list/3/index.shtml">转会动态</a></li>
+            <li class="m_li"><a href="/Article/details/list/5/index.shtml">赛前分析</a></li>
+            <li class="m_li"><a href="/Article/details/list/7m/index.shtml">7M制造</a></li>
+            <li class="m_li"><a href="/Article/details/prediction/index.shtml">赛事推介</a></li>
+            <li class="m_li"><a href="/Article/details/report/index_gb.shtml">足球情报</a></li>
+            <li class="rss_li"><a href="/rss.xml" target="_blank" rel="nofollow"><img src="/detail/static/picture/rss.gif" alt="RSS订阅" title="RSS订阅" loading="lazy"></a></li>
         </ul>
     </div>
     <div>
         <ul class="smenu">
             <li class="s_li">
-                <a href="/list/6/index.shtml" class="xza">英超</a>
-                <a href="/list/7/index.shtml" class="">意甲</a>
-                <a href="/list/8/index.shtml" class="">西甲</a>
-                <a href="/list/9/index.shtml" class="">德甲</a>
-                <a href="/list/10/index.shtml" class="">欧冠</a>
-                <a href="/list/11/index.shtml" class="">欧联</a>
+                <a href="/Article/details/list/6/index.shtml" class="xza">英超</a>
+                <a href="/Article/details/list/7/index.shtml" class="">意甲</a>
+                <a href="/Article/details/list/8/index.shtml" class="">西甲</a>
+                <a href="/Article/details/list/9/index.shtml" class="">德甲</a>
+                <a href="/Article/details/list/10/index.shtml" class="">欧冠</a>
+                <a href="/Article/details/list/11/index.shtml" class="">欧联</a>
             </li>
         </ul>
     </div>
@@ -163,7 +164,6 @@
                             @if(isset($article['image']) && $article['image'])
                                 <p align="center">
                                     @php
-                                        // Xử lý image path: nếu bắt đầu bằng /img/ thì giữ nguyên, nếu không thì thêm /detail/static/picture/
                                         $imagePath = $article['image'];
                                         if (!str_starts_with($imagePath, '/img/') && !str_starts_with($imagePath, 'http')) {
                                             $imagePath = '/detail/static/picture/' . basename($imagePath);
@@ -189,7 +189,6 @@
                             @endif
                         </div>
                     @else
-                        {{-- Fallback nếu không load được article --}}
                         <div class="zw_bt">
                             <p class="ba">
                                 齐尔克泽向曼联提离队申请 罗马希望3000万签他
@@ -229,8 +228,7 @@
                     <!--相关推介-->
 
                     <div id="div-recommend" style="display: none;">
-                        <div class="ny_b" style="position: relative;margin-top: 40px">相关推介<a class="more_a" href="javascript:void(0)"
-                                onclick="toRecommendMore()">更多推介</a></div>
+                        <div class="ny_b" style="position: relative;margin-top: 40px">相关推介<a class="more_a" href="https://tips.7m.com.cn/" rel="nofollow" target="_blank" aria-label="更多推介">更多推介</a></div>
                         <div class="infoUl">
                             <ul id="ul-recommend"></ul>
                         </div>
@@ -238,58 +236,59 @@
                     </div>
                     <div class="ny_b">相关新闻</div>
                     <!-- Start Content ny_xg -->	
-                    {!! load_content('ny_xg.txt') !!}
+                    {!! load_content('ny_xg.txt', true) !!}
                     <!-- End Content ny_xg -->	
                     <div class="clear"></div>
                     <div class="ny_b">曼彻斯特联动态</div>
                     <div class="ny_xg">
 
                         <div class="ny_pbt">
-                            <a href="/news/20251212/710064.shtml" target="_blank"><img src="/detail/static/picture/2025121210265826771.jpg" /></a>
-                            <p><a href="/news/20251212/710064.shtml" target="_blank">官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯</a></p>
-                            <div class="jxa">曼联官方宣布签下13岁中卫索克拉蒂斯（Socrates）。索克拉蒂斯来自伦敦精英青训学院（EliteLondonAcademy），此前他在阿森纳、热刺以及水晶宫都有试训经 ……<a href="/news/20251212/710064.shtml" target="_blank">[详细]</a></div>
+                            <a href="/Article/details/710064.shtml" target="_blank"><img src="/detail/static/picture/2025121210265826771.jpg" alt="官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯" title="官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯" loading="lazy" /></a>
+                            <p><a href="/Article/details/710064.shtml" target="_blank">官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯</a></p>
+                            <div class="jxa">曼联官方宣布签下13岁中卫索克拉蒂斯（Socrates）。索克拉蒂斯来自伦敦精英青训学院（EliteLondonAcademy），此前他在阿森纳、热刺以及水晶宫都有试训经 ……
+                            <a href="/Article/details/710064.shtml" target="_blank">[详细]</a></div>
                         </div>
 
                         <div class="ny_pbt">
-                            <a href="/news/20251212/710030.shtml" target="_blank"><img src="/detail/static/picture/2025121209472532013.jpg" /></a>
-                            <p><a href="/news/20251212/710030.shtml" target="_blank">曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式</a></p>
-                            <div class="jxa">现年39岁的拉莫斯与蒙特雷合同将于本月底到期后离队。据ESPN消息人士透露，曼联已经明确无意签下拉莫斯。外界一度将其与老特拉福德联系在一起，但曼联方面否认了相关传闻，双方 ……<a href="/news/20251212/710030.shtml" target="_blank">[详细]</a></div>
+                            <a href="/Article/details/710030.shtml" target="_blank"><img src="/detail/static/picture/2025121209472532013.jpg" alt="曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式" title="曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式" loading="lazy" /></a>
+                            <p><a href="/Article/details/710030.shtml" target="_blank">曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式</a></p>
+                            <div class="jxa">现年39岁的拉莫斯与蒙特雷合同将于本月底到期后离队。据ESPN消息人士透露，曼联已经明确无意签下拉莫斯。外界一度将其与老特拉福德联系在一起，但曼联方面否认了相关传闻，双方 ……<a href="/Article/details/710030.shtml" target="_blank">[详细]</a></div>
                         </div>
 
                         <ul>
 
                             <li>
-                                <a href="/news/20251211/710011.shtml" target="_blank">多古：曼联现在更像团队 我对来球队的第一年满意</a>
+                                <a href="/Article/details/710011.shtml" target="_blank">多古：曼联现在更像团队 我对来球队的第一年满意</a>
                                 <span class="gz_fa">12-11</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251211/710006.shtml" target="_blank">名宿：B费配得上队长袖标 但他需要控制比赛节奏</a>
+                                <a href="/Article/details/710006.shtml" target="_blank">名宿：B费配得上队长袖标 但他需要控制比赛节奏</a>
                                 <span class="gz_fa">12-11</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251210/709847.shtml" target="_blank">经纪人:谢什科说要是当初没选曼联 会后悔一辈子</a>
+                                <a href="/Article/details/709847.shtml" target="_blank">经纪人:谢什科说要是当初没选曼联 会后悔一辈子</a>
                                 <span class="gz_fa">12-10</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251209/709826.shtml" target="_blank">罗马冬窗想签前锋 首选齐尔克泽</a>
+                                <a href="/Article/details/709826.shtml" target="_blank">罗马冬窗想签前锋 首选齐尔克泽</a>
                                 <span class="gz_fa">12-09</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251209/709825.shtml" target="_blank">官方：B费当选曼联4-1狼队的队内最佳</a>
+                                <a href="/Article/details/709825.shtml" target="_blank">官方：B费当选曼联4-1狼队的队内最佳</a>
                                 <span class="gz_fa">12-09</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251209/709810.shtml" target="_blank">记者:芒特非常优秀 他在无球状态下的贡献被忽视</a>
+                                <a href="/Article/details/709810.shtml" target="_blank">记者:芒特非常优秀 他在无球状态下的贡献被忽视</a>
                                 <span class="gz_fa">12-09</span>
                             </li>
 
                             <li>
-                                <a href="/news/20251209/709808.shtml" target="_blank">巴特:曼联把梅努毁了 我很担心切尔西会签下他</a>
+                                <a href="/Article/details/709808.shtml" target="_blank">巴特:曼联把梅努毁了 我很担心切尔西会签下他</a>
                                 <span class="gz_fa">12-09</span>
                             </li>
 
@@ -297,7 +296,7 @@
                     </div>
                     <div class="ny_xg">
                     <!-- Start Content T1 -->	
-					{!! load_content('content_t2.txt') !!}
+					{!! load_content('content_t2.txt', true) !!}
 					<!-- End Content T1 -->	
                     </div>
                     <div class="clear"></div>
@@ -305,7 +304,7 @@
                 <!-- End Content -->	
             </div>
             <!-- Start Content T2 -->	
-            {!! load_content('n_ty.txt') !!}
+            {!! load_content('n_ty.txt', false, true) !!}
             <!-- End Content T2 -->	
             <div class="clear"></div>
         </div>
@@ -366,7 +365,7 @@
     <script type="text/javascript">
         //<![CDATA[ 
         var __ud = '710168';
-        var NewsUrl = 'https://news.7m.com.cn/news/20251213/710168.shtml';
+        var NewsUrl = '/Article/details/710168.shtml';
         var NewsTitle = '齐尔克泽向曼联提离队申请 罗马希望3000万签他';
         var NewsContent = '意大利足球记者埃莱奥诺拉·特罗塔透露，齐尔克泽已经向曼联提出离队申请。埃莱奥诺拉·特罗塔表示：“在过去两个多月时间，齐尔克泽都被确认是罗马的首选锋线引援目标。这名荷兰前锋已 …… 详细:';
         var NewsPic;
@@ -473,44 +472,42 @@
             var space = encodeURIComponent(' ');
             var share_to_url = '';
             switch (type) {
-                case 1: //��Ѷ΢��
+                case 1:
                     share_to_url = '//share.v.t.qq.com/index.php?c=share&a=index&url=' + webNewsUrl + '&appkey=801095887' + picStr + '&assname=sport-7m&title=' + webNewsTitle + enter + webNewsContent;
                     break;
-                case 2: //����΢��
+                case 2:
                     share_to_url = '//v.t.sina.com.cn/share/share.php?url=' + webNewsUrl + '&ralateUid=1845054955&appkey=1159106614' + picStr + '&title=' + webNewsTitle + enter + webNewsContent;
                     break;
-                case 3: //����΢��
+                case 3:
                     var imagesStr = (webNewsPic) ? '&images=' + webNewsPic : '';
                     share_to_url = '//t.163.com/article/user/checkLogin.do?link=//www.7m.com.cn/&source=' + encodeURIComponent('7M') + '&info=' + webNewsTitle + space + webNewsContent + webNewsUrl + '&togImg=true' + imagesStr + '&' + new Date().getTime();
                     break;
-                case 4: //QQ�ռ�
+                case 4:
                     var picsStr = (webNewsPic) ? '&pics=' + webNewsPic : '';
                     share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + webNewsUrl + '&showcount=0&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=7M��������' + picsStr;
                     break;
-                case 5: //������
+                case 5:
                     share_to_url = '//share.renren.com/share/buttonshare.do?link=' + webNewsUrl + '&title=' + webNewsTitle;
                     break;
-                case 6: //�ٶ��Ѳ�
+                case 6:
                     share_to_url = '//cang.baidu.com/do/add?it=' + NewsTitle + '&iu=' + NewsUrl + '&dc=' + NewsContent + webNewsUrl + '&tn=��������,��������,7M����';
                     break;
-                case 7: //è���ƿ�
+                case 7:
                     share_to_url = '//tk.mop.com/api/post.htm?url=' + webNewsUrl + '&desc=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle;
                     break;
-                case 8: //����
-                    //share_to_url = '//www.douban.com/recommend/?url='+webNewsUrl+'&sel='+webNewsContent+webNewsUrl+'&title='+webNewsTitle+'&v=1';
-                    //��ʽ2��
+                case 8:
                     share_to_url = '//shuo.douban.com/!service/share?href=' + webNewsUrl + '&name=' + webNewsTitle + '&image=' + webNewsPic;
                     break;
-                case 9: //���΢��
+                case 9:
                     share_to_url = '//t.ifeng.com/interface.php?_c=share&_a=share&sourceUrl=' + webNewsUrl + '&title=' + webNewsTitle + picStr + '&source=1';
                     break;
-                case 10: //MSN
+                case 10:
                     share_to_url = 'https://profile.live.com/P.mvc#!/badge?url=' + webNewsUrl;
                     break;
-                case 11: //�Խ���
+                case 11:
                     share_to_url = '//share.jianghu.taobao.com/share/addShare.htm?url=' + webNewsUrl;
                     break;
-                case 12: //QQУ��/������
+                case 12:
                     share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=' + webNewsUrl + '&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=news.7m.com.cn&pics=' + webNewsPic;
                     break;
                 default:
