@@ -3,9 +3,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 7M足球新闻</title>
-    <meta name="keywords" content="齐尔克泽,曼联,罗马">
-    <meta name="description" content="齐尔克泽向曼联提离队申请 罗马希望3000万签他">
+    <title>@if(isset($article) && isset($article['title'])){{ $article['title'] }}@else齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 7M足球新闻@endif</title>
+    <meta name="keywords" content="@if(isset($article) && isset($article['keywords']) && is_array($article['keywords'])){{ implode(',', $article['keywords']) }}@elseif(isset($article) && isset($article['keywords'])){{ $article['keywords'] }}@else齐尔克泽,曼联,罗马@endif">
+    <meta name="description" content="@if(isset($article) && isset($article['description'])){{ $article['description'] }}@elseif(isset($article) && isset($article['summary'])){{ $article['summary'] }}@elseif(isset($article) && isset($article['title'])){{ $article['title'] }}@else齐尔克泽向曼联提离队申请 罗马希望3000万签他@endif">
     <link href="/detail/static/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/detail/static/css/nav.css" rel="stylesheet" type="text/css" />
     <link href="/detail/static/css/ny.css" rel="stylesheet" type="text/css" />
