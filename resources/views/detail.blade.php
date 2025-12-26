@@ -1,542 +1,579 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="//www.w3.org/1999/xhtml">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>@if(isset($article) && isset($article['title'])){{ $article['title'] }}@else齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 7M足球新闻@endif</title>
-    <meta name="keywords" content="@if(isset($article) && isset($article['keywords']) && is_array($article['keywords'])){{ implode(',', $article['keywords']) }}@elseif(isset($article) && isset($article['keywords'])){{ $article['keywords'] }}@else齐尔克泽,曼联,罗马@endif">
-    <meta name="description" content="@if(isset($article) && isset($article['description'])){{ $article['description'] }}@elseif(isset($article) && isset($article['summary'])){{ $article['summary'] }}@elseif(isset($article) && isset($article['title'])){{ $article['title'] }}@else齐尔克泽向曼联提离队申请 罗马希望3000万签他@endif">
-    <link href="/detail/static/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="/detail/static/css/nav.css" rel="stylesheet" type="text/css" />
-    <link href="/detail/static/css/ny.css" rel="stylesheet" type="text/css" />
-    <link href="/detail/static/css/tipbj.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/detail/static/js/jquery.js"></script>
-    <script type="text/javascript" src="/detail/static/js/header.js"></script>
-    <script type="text/javascript" src="/detail/static/js/search.js"></script>
-    <script type="text/javascript" src="/detail/static/js/scrollimg.js"></script>
-    <script type="text/javascript" src="/detail/static/js/commom.js"></script>
-    <script type="text/javascript" src="/detail/static/js/vote.js"></script>
-
-    <script>
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        var bIsMobile = bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM;
-        if (bIsMobile) {
-            try {
-                var loc = window.location.toString().split("/");
-                var bhdir = loc[5].replace(".shtml", "").split("_");
-                var bhnum = bhdir[0].split("?");
-            } catch (e) {}
-        }
-    </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据_赛事分析 - 7M体育 - 开元国际app下载</title>
+	<searchtitle style="display:none">7M比分网_足球篮球比分直播_中超/欧冠/CBA赛程查询_实时赛程数据 - 7M体育 - 开元国际app下载</searchtitle>
+	<meta name="keywords" content="7M足球比分, 足球实时比分, NBA赛程, 英超直播, 篮球即时比分,比分直播, 免费赛事数据,棒球比分,美式足球比分,足球资料库,体育新闻,篮球资料库,积分榜,射手榜,球队阵容, 开元国际app下载" />
+	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事，实时比分直播，涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据与积分榜。免费查询赛事预测，支持手机APP实时比分提醒！" />
+	<meta name="Baiduspider" content="index,follow" />
+	<meta name="googlebot" content="index,follow" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="7M足球新闻">
+	<meta name="copyright" content="7M足球新闻">
+	<link id="skin" rel="stylesheet" href="/css/blue.css" type="text/css">
+	<link href="/css/style.css?t=202308081148" type="text/css" rel="stylesheet" media="all" />
+	<link href="/css/app-download.css" type="text/css" rel="stylesheet" media="all" />
+	<script src="/js/common.js"></script>
+	<script src="/js/minjs.js"></script>
+	<script src="/js/cookiemin.js"></script>
+	<script src="/js/skin.js" defer></script>
+	<script src="/js/7mhomead.js" defer></script>
+	<link rel="apple-touch-icon" href="/img/ipad_icon.png" />
+	<link id="ipad" rel="stylesheet" type="text/css">
+	<script src="/js/line.js" defer></script>
+	<script src="/js/index-optimized.js" defer></script>
+	<meta name="baidu-site-verification" content="codeva-HcfM2YXMCr" />
+	<script src="/js/iframe.js"></script>
 </head>
 
-<body oncontextmenu="return false" onselectstart="return false" oncopy="return false">
-    <script type="text/javascript" src="/detail/static/js/acpl.js"></script>
-    <script type="text/javascript" src="/detail/static/js/os_hidden_flag.js"></script>
-
-    <div class="t_bg_t">
-        <div class="header">
-            <div class="t_menu">
-                <div style="float:left; margin-left:10px;">
-                    <a href="{{ domain('main') }}" class="white_lnk12">7M首页</a>
-                </div>
-            </div>
-            <div class="m_menu">
-                <div class="t_m_logo"><a href="{{ domain('Article/details/news') }}">
-                    <img src="/detail/static/picture/news_logo.gif" border="0" alt="7M足球新闻Logo" title="7M足球新闻" loading="eager"></a>
-                </div>
-                <div class="t_m_text">
-                    <table border="0" cellpadding="2" cellspacing="0" width="100%" class="head">
-                        <tr>
-                            <td width="100%">
-                                <div id="divMenu1" style="position: absolute; display: none;"></div>
-                                <div id="divMenu2" style="position: absolute; display: none; "></div>
-                                <div id="divMenu">
-                                    <table border="0" width="100%" align="right">
-                                        <tr>
-                                            <td class="head1">
-                                                <a href="{{ domain('Article/details/bf') }}" target="_blank" onmouseover="ShowMenu(this)" style="position:relative" onmouseout="CloseMenu()">足球比分</a>|
-                                                <a href="{{ domain_url('Article/details/data', 'result_data/index_gb.shtml') }}" target="_blank">足球完场</a>|
-                                                <a href="{{ domain_url('Article/details/data', 'fixture_data/default_gb.shtml?date=1') }}" target="_blank">足球赛程</a>|
-                                                <a href="{{ domain('Article/details/news') }}" target="_blank">足球资讯</a>|
-                                                <a href="{{ domain_url('Article/details/data', 'database/index_gb.htm') }}" target="_blank">资料库</a>|
-                                                <a href="{{ domain_url('freelive', 'apply_jt.shtm') }}" target="_blank">免费调用</a>|
-                                                <a href="{{ domain_url('app', 'm/download.html?ct=default') }}" target="_blank">APP下载</a>|
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="head2">
-                                                <a href="{{ domain_url('Article/details/basket', 'default_gb.aspx') }}" target="_blank">篮球比分</a>|
-                                                <a href="{{ domain_url('Article/details/bdata', 'Result_data/index_gb.htm') }}" target="_blank">篮球完场</a>|
-                                                <a href="{{ domain_url('Article/details/bdata', 'Fixture_data/default_gb.aspx?date=1') }}" target="_blank">篮球赛程</a>|
-                                                <a href="{{ domain('Article/details/lq') }}" target="_blank">篮球资讯</a>|
-                                                <a href="{{ domain_url('Article/details/bab', 'default_gb.aspx') }}" target="_blank">棒球比分</a>|
-                                                <a href="{{ domain_url('Article/details/amf', 'default_gb.aspx') }}" target="_blank">美式足球比分</a>|
-                                                <a href="{{ domain('Article/details/tennis') }}" target="_blank">网球比分</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <script language="javascript">
-                                        showheader();
-                                    </script>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="clr"></div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            if ((typeof(WORDS_HIDDEN_ALL) != 'undefined' && WORDS_HIDDEN_ALL.BASE_HIDDEN_ALL != true) || os_hidden_flag != 'true') {}
-        });
-    </script>
-    <div class="menu">
-        <ul>
-            <li class="m_li"><a href="{{ route('home') }}">首页</a></li>
-            <li class="m_li_a"><a href="/Article/details/list/1/index.shtml">国际足球</a></li>
-            <li class="m_li"><a href="/Article/details/list/2/index.shtml">中国足球</a></li>
-            <li class="m_li"><a href="/Article/details/list/3/index.shtml">转会动态</a></li>
-            <li class="m_li"><a href="/Article/details/list/5/index.shtml">赛前分析</a></li>
-            <li class="m_li"><a href="/Article/details/list/7m/index.shtml">7M制造</a></li>
-            <li class="m_li"><a href="/Article/details/prediction/index.shtml">赛事推介</a></li>
-            <li class="m_li"><a href="/Article/details/report/index_gb.shtml">足球情报</a></li>
-            <li class="rss_li"><a href="/rss.xml" target="_blank" rel="nofollow"><img src="/detail/static/picture/rss.gif" alt="RSS订阅" title="RSS订阅" loading="lazy"></a></li>
-        </ul>
-    </div>
-    <div>
-        <ul class="smenu">
-            <li class="s_li">
-                <a href="/Article/details/list/6/index.shtml" class="xza">英超</a>
-                <a href="/Article/details/list/7/index.shtml" class="">意甲</a>
-                <a href="/Article/details/list/8/index.shtml" class="">西甲</a>
-                <a href="/Article/details/list/9/index.shtml" class="">德甲</a>
-                <a href="/Article/details/list/10/index.shtml" class="">欧冠</a>
-                <a href="/Article/details/list/11/index.shtml" class="">欧联</a>
-            </li>
-        </ul>
-    </div>
-    <div class="news">
-        <div class="n_t">
-            <div class="n_tz">
-                <div class="ad_a">
-                </div>
-                <div class="ny_bt"> 您的位置:<a href="{{ route('home') }}">7M足球新闻</a>&gt; <a href="#">{{ isset($category) ? $category : '国际足球' }}</a>&gt;
-                    <a href="#">{{ isset($subcategory) ? $subcategory : '英超' }}</a> &gt; {{ isset($team) ? $team : '曼彻斯特联' }} &gt;
-                    正文
-                </div>
-                <!-- Start Content -->	
-                <div class="ny_zw">
-                    <!-- Start noidungchinh -->	
-                    @if(isset($article) && $article)
-                        <div class="zw_bt">
-                            <p class="ba">
-                                {{ $article['title'] ?? '齐尔克泽向曼联提离队申请 罗马希望3000万签他' }}
-                            </p>
-                            <p class="bb">
-                                <a href="{{ domain('main') }}" target="_blank">www.shinobu.com.cn</a> 
-                                &nbsp;&nbsp;
-                                @if(isset($article['publishTime']))
-                                    {{ date('Y年m月d日', strtotime($article['publishTime'])) }}
-                                @else
-                                    2025年12月13日
-                                @endif
-                                &nbsp;&nbsp;来源：
-                                @if(isset($article['source']['name']))
-                                    {{ $article['source']['name'] }}
-                                @else
-                                    直播吧
-                                @endif
-                            </p>
-                        </div>
-                        <div class="zw">
-                            @if(isset($article['image']) && $article['image'])
-                                <p align="center">
-                                    @php
-                                        $imagePath = $article['image'];
-                                        if (!str_starts_with($imagePath, '/img/') && !str_starts_with($imagePath, 'http')) {
-                                            $imagePath = '/detail/static/picture/' . basename($imagePath);
-                                        }
-                                    @endphp
-                                    <img border="0" alt="{{ $article['title'] ?? '' }}" src="{{ $imagePath }}" />
-                                </p>
-                                <br />
-                            @endif
-                            @if(isset($article['contentParagraphs']) && is_array($article['contentParagraphs']))
-                                @foreach($article['contentParagraphs'] as $paragraph)
-                                    {{ $paragraph }}<br />
-                                    <br />
-                                @endforeach
-                            @elseif(isset($article['summary']))
-                                {{ $article['summary'] }}
-                            @else
-                                　　意大利足球记者埃莱奥诺拉·特罗塔透露，齐尔克泽已经向曼联提出离队申请。<br />
-                                <br />
-                                　　埃莱奥诺拉·特罗塔表示："在过去两个多月时间，齐尔克泽都被确认是罗马的首选锋线引援目标。这名荷兰前锋已经向曼联提出了离队申请，目前正在等待俱乐部的答复。转会总价约3000万欧元，包括租借和强制买断费用。"<br />
-                                <br />
-                                　　齐尔克泽本赛季在曼联只出场9次并打进1球，他希望回到自己成名的意甲联赛，为明年世界杯的参赛资格做最后一搏。而罗马也需要在冬季引进一名新前锋，补强进攻不力的短板，罗马体育总监马萨拉此前已经和齐尔克泽的经纪人进行过会谈。
-                            @endif
-                        </div>
-                    @else
-                        <div class="zw_bt">
-                            <p class="ba">
-                                齐尔克泽向曼联提离队申请 罗马希望3000万签他
-                            </p>
-                            <p class="bb"><a href="{{ domain('main') }}" target="_blank">www.shinobu.com.cn</a> &nbsp;&nbsp;2025年12月13日
-                                &nbsp;&nbsp;来源：直播吧 </p>
-                        </div>
-                        <div class="zw">
-                            <p align="center">
-                                <img border="0" alt="" src="/detail/static/picture/20251213101314_91817.jpg" /></p>
-                            <br />
-                            　　意大利足球记者埃莱奥诺拉·特罗塔透露，齐尔克泽已经向曼联提出离队申请。<br />
-                            <br />
-                            　　埃莱奥诺拉·特罗塔表示："在过去两个多月时间，齐尔克泽都被确认是罗马的首选锋线引援目标。这名荷兰前锋已经向曼联提出了离队申请，目前正在等待俱乐部的答复。转会总价约3000万欧元，包括租借和强制买断费用。"<br />
-                            <br />
-                            　　齐尔克泽本赛季在曼联只出场9次并打进1球，他希望回到自己成名的意甲联赛，为明年世界杯的参赛资格做最后一搏。而罗马也需要在冬季引进一名新前锋，补强进攻不力的短板，罗马体育总监马萨拉此前已经和齐尔克泽的经纪人进行过会谈。
-                        </div>
-                    @endif
-                    <!-- End noidungchinh -->	
-                    <!--文字-->
-
-                    <!--投票-->
-
-                    <div class="ny_tbox">
-                        <p class="bc" style="display:;">更多关于"
-                            <a href="https://www.baidu.com/s?wd=%E9%BD%90%E5%B0%94%E5%85%8B%E6%B3%BD+site%3Anews.7m.com.cn" target="_blank">齐尔克泽</a>
-                            <a href="https://www.baidu.com/s?wd=%E6%9B%BC%E8%81%94+site%3Anews.7m.com.cn" target="_blank">曼联</a>
-                            <a href="https://www.baidu.com/s?wd=%E7%BD%97%E9%A9%AC+site%3Anews.7m.com.cn" target="_blank">罗马</a>"的新闻
-                        </p>
-                        <div class="clear"></div>
-
+<body>
+	<div class="box">
+		<div id="main">
+			<div class="header">
+				<div class="header_l">
+				    <a href="/" title="7m体育"></a></div>
+				<div class="header_r">
+					<div class="top">
+						<div class="top_l" style="width:auto;">
+						    <a href="javascript:void(0);" onclick="setHome(this);" rel="nofollow">设为首页</a>&nbsp;|&nbsp;
+						    <a href="javascript:addFavor();" rel="nofollow">加入收藏</a>&nbsp;|&nbsp;
+						    <a href="{{ domain('sitemap') }}" target="_blank">网站导航</a>&nbsp;|&nbsp;
+						    <a href="{{ domain('mobile') }}">手机版</a>&nbsp;</div>
+						<div class="top_r">
+							<div class="top_r1">
+							</div>
+							<div id="divUser_1" class="top_r2" style="display:none;">
+							    <span id="spnTimePart"></span>
+							    <a id="lnkUser" target="_blank" class="user"></a> 欢迎您！ |&nbsp;&nbsp;
+							    <a href="javascript:logout()" rel="nofollow">退出</a>
+							</div>
+							<div id="divUser_2" class="top_r2" style="display:none;">
+								<a id="lnkLogin" href="javascript:window.open('{{ domain_url('accounts', 'login.html?lang=gb&url=') }}'+window.location.href)" rel="nofollow">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="javascript:window.open('{{ domain_url('accounts', 'reg_phone.html?lang=gb&url=') }}'+window.location.href)" rel="nofollow">注册</a>
+							</div>
+						</div>
+					</div>
+					<script src="/js/menu.js" defer></script>
+					<div class="menu">
+                    <div>
+                        <strong>
+                            <a href="{{ domain_url('Article', 'details/123422.html') }}" target="_blank" class="to-mobile-link-fb-live">
+                                足球
+                            </a>
+                        </strong>
+                        <a
+                            id="lnkMenu1"
+                            onMouseOver="showMenu('lnkMenu1','mnu1',-105,true)"
+                            onmousemove="focuMenu('mnu1')"
+                            onMouseOut="closeMenu('mnu1')"
+                            href="{{ domain_url('Article', 'details/123433.html') }}"
+                            target="_blank"
+                            class="to-mobile-link-fb-live">即时比分</a>
+                            <a href="{{ domain_url('Article', 'details/result_data/') }}" target="_blank" class="to-mobile-link-fb-result">完场</a>
+                            <a href="{{ domain_url('Article', 'details/fixture_data/') }}" target="_blank" class="to-mobile-link-fb-future">赛程</a>
+                            <a href="{{ domain_url('Article', 'details/database/index_big.htm') }}" target="_blank" class="to-mobile-link-fb-data">资料库</a><br /><strong>
+                            <a href="{{ domain_url('Article', 'details/12345.shtml') }}"
+                                target="_blank"
+                                class="to-mobile-link-bb-live">篮球</a></strong>
+                            <a href="{{ domain_url('Article', 'default_big.aspx?b=w3ekjibqwer') }}"
+                            target="_blank"
+                            class="to-mobile-link-bb-live">即时比分</a>
+                            <a href="{{ domain_url('Article', 'details/result_data/') }}" target="_blank" class="to-mobile-link-bb-result">完场</a>
+                            <a href="{{ domain_url('Article', 'details/fixture_data/') }}" target="_blank" class="to-mobile-link-bb-future">赛程</a>
+                            <a href="{{ domain_url('Article', 'details/database/index_big_28.htm') }}" target="_blank" class="to-mobile-link-bb-data">资料库
+                            </a>
                     </div>
-                    <!--更多关于结束-->
-                    <div class="ad_e">
-                        <!-- content.a -->
-                    </div>
-                    <!--相关推介-->
-
-                    <div id="div-recommend" style="display: none;">
-                        <div class="ny_b" style="position: relative;margin-top: 40px">相关推介<a class="more_a" href="https://tips.7m.com.cn/" rel="nofollow" target="_blank" aria-label="更多推介">更多推介</a></div>
-                        <div class="infoUl">
-                            <ul id="ul-recommend"></ul>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="ny_b">相关新闻</div>
-                    <!-- Start Content ny_xg -->	
-                    {!! load_content('ny_xg.txt', true) !!}
-                    <!-- End Content ny_xg -->	
-                    <div class="clear"></div>
-                    <div class="ny_b">曼彻斯特联动态</div>
-                    <div class="ny_xg">
-
-                        <div class="ny_pbt">
-                            <a href="/Article/details/710064.shtml" target="_blank"><img src="/detail/static/picture/2025121210265826771.jpg" alt="官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯" title="官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯" loading="lazy" /></a>
-                            <p><a href="/Article/details/710064.shtml" target="_blank">官方:边锋转型中卫 曼联签下13岁后卫索克拉蒂斯</a></p>
-                            <div class="jxa">曼联官方宣布签下13岁中卫索克拉蒂斯（Socrates）。索克拉蒂斯来自伦敦精英青训学院（EliteLondonAcademy），此前他在阿森纳、热刺以及水晶宫都有试训经 ……
-                            <a href="/Article/details/710064.shtml" target="_blank">[详细]</a></div>
-                        </div>
-
-                        <div class="ny_pbt">
-                            <a href="/Article/details/710030.shtml" target="_blank"><img src="/detail/static/picture/2025121209472532013.jpg" alt="曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式" title="曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式" loading="lazy" /></a>
-                            <p><a href="/Article/details/710030.shtml" target="_blank">曼联无意签下39岁拉莫斯 不再重蹈C罗高薪老将模式</a></p>
-                            <div class="jxa">现年39岁的拉莫斯与蒙特雷合同将于本月底到期后离队。据ESPN消息人士透露，曼联已经明确无意签下拉莫斯。外界一度将其与老特拉福德联系在一起，但曼联方面否认了相关传闻，双方 ……<a href="/Article/details/710030.shtml" target="_blank">[详细]</a></div>
-                        </div>
-
-                        <ul>
-
-                            <li>
-                                <a href="/Article/details/710011.shtml" target="_blank">多古：曼联现在更像团队 我对来球队的第一年满意</a>
-                                <span class="gz_fa">12-11</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/710006.shtml" target="_blank">名宿：B费配得上队长袖标 但他需要控制比赛节奏</a>
-                                <span class="gz_fa">12-11</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/709847.shtml" target="_blank">经纪人:谢什科说要是当初没选曼联 会后悔一辈子</a>
-                                <span class="gz_fa">12-10</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/709826.shtml" target="_blank">罗马冬窗想签前锋 首选齐尔克泽</a>
-                                <span class="gz_fa">12-09</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/709825.shtml" target="_blank">官方：B费当选曼联4-1狼队的队内最佳</a>
-                                <span class="gz_fa">12-09</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/709810.shtml" target="_blank">记者:芒特非常优秀 他在无球状态下的贡献被忽视</a>
-                                <span class="gz_fa">12-09</span>
-                            </li>
-
-                            <li>
-                                <a href="/Article/details/709808.shtml" target="_blank">巴特:曼联把梅努毁了 我很担心切尔西会签下他</a>
-                                <span class="gz_fa">12-09</span>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="ny_xg">
-                    <!-- Start Content T1 -->	
+						<div class="line"></div>
+						<div><a href="{{ domain('Article') }}" target="_blank">足球新闻</a><br /><a id="lnkMenu5" onMouseOver="showMenu('lnkMenu5','mnu5',-5,true)" onmousemove="focuMenu('mnu5')" onMouseOut="closeMenu('mnu5')" href="{{ domain('Article') }}" target="_blank">篮球新闻</a></div>
+						<div class="line"></div>
+						<div><a href="{{ domain('tv') }}" target="_blank">节目预告</a><br />
+							<a href="{{ domain('freelive') }}" target="_blank">比分调用</a>
+						</div>
+						<div class="line"></div>
+						<div>
+							<a href="{{ domain('Article') }}" target="_blank">文字赛况</a>
+							<br />
+							<a href="{{ domain_url('Article', 'report/index_gb.shtml') }}" target="_blank">情报局</a>
+						</div>
+						<div class="line"></div>
+						<div><a id="lnkMenu3" onMouseOver="showMenu('lnkMenu3','mnu3',-5,true)" onmousemove="focuMenu('mnu3')" onMouseOut="closeMenu('mnu3')" href="{{ domain('tennis') }}">其它比分</a>
+						<br>
+						</div>
+						<div class="line"></div>
+						<div class="new_con">
+						</div>
+						<div class="line" style="display: none"></div>
+						<div class="new_con"><a style="display: none" href="{{ domain('photo') }}" target="_blank">图库</a><br /><a style="display: none" href="{{ domain('video') }}" target="_blank">视频</a></div>
+						<div class="line" style="display: none"></div>
+						<div class="more_c"><a id="lnkMenu4" href="javascript:void(0)" rel="nofollow" onclick="showMenu('lnkMenu4','mnu4',-27,true)" onMouseOut="closeMenu('mnu4')">更多内容</a></div>
+					</div>
+					<div id="mnu1" class="flayer1" style="display:none; z-index:100; position:absolute" onmouseover="focuMenu('mnu1')" onmouseout="closeMenu('mnu1')">
+						<div class="flayer1_t"></div>
+						<div class="flayer1_d">
+							<div class="flayer1_trbg"><span class="left">单栏></span><span class="right"><a href="{{ domain_url('Article', 'default_ft.aspx?view=all') }}" target="_blank" class="to-mobile-link-fb-live">完全版</a><a href="{{ domain_url('Article', 'default_ft.aspx?view=simplify') }}" target="_blank" class="to-mobile-link-fb-live">精简版</a></span></div>
+							<div class="flayer1_tr"><span class="left">分栏></span><span class="right"><a href="{{ domain_url('Article', 'default_split_ft.aspx?view=all') }}" target="_blank" class="to-mobile-link-bb-live">完全版</a><a href="{{ domain_url('Article', 'default_split_ft.aspx?view=simplify') }}" target="_blank" class="to-mobile-link-bb-live">精简版</a></span></div>
+						</div>
+					</div>
+					<div id="mnu2" class="flayer3" style="display:none; z-index:100; position:absolute" onmouseover="focuMenu('mnu2')" onmouseout="closeMenu('mnu2')">
+						<div class="flayer3_t" onmouseover="focuMenu('mnu2')"><a href="{{ domain('wlive') }}" target="_blank">足球</a>&nbsp;|&nbsp;<a href="{{ domain('Article') }}" target="_blank">篮球</a></div>
+						<div class="flayer3_d"></div>
+					</div>
+					<div id="mnu3" class="flayer2" style="display:none; z-index:100; position:absolute" onmouseover="focuMenu('mnu3')" onmouseout="closeMenu('mnu3')">
+						<div class="flayer2_t"></div>
+						<div class="flayer2_d" style="width:260px;"><a href="{{ domain('Article') }}" target="_blank">棒球比分</a>&nbsp;|&nbsp;<a href="{{ domain('tennis') }}" target="_blank">网球比分</a>&nbsp;|&nbsp;<a href="{{ domain('amf') }}" target="_blank">美式足球比分</a></div>
+					</div>
+					<ul id="mnu4" class="flayer4" style="display:none; z-index:100; position:absolute" onmouseover="focuMenu('mnu4')" onmouseout="closeMenu('mnu4')">
+						<li><a href="{{ domain('app') }}" target="_blank">应用</a></li>
+						<li><a href="{{ domain_url('Article', 'transfer/index_gb.htm') }}" target="_blank">五大联赛转会</a></li>
+					</ul>
+					<div id="mnu5" class="flayer1" style="display:none; z-index:100; position:absolute;" onmouseover="focuMenu('mnu5')" onmouseout="closeMenu('mnu5')">
+						<div class="flayer2_t"></div>
+						<div class="flayer2_d" style="width:46px;"><a href="{{ domain_url('Article', 'nba/index.shtml') }}" target="_blank">NBA</a></div>
+					</div>
+					<div class="recom">
+						<div class="r_icon"></div>
+						<ul class="recom_l" id="recom_l" onmouseout="go_scroll=true" onmousemove="go_scroll=false">
+							<li><a href="{{ domain_url('Article', 'details/news/710117.shtml') }}" target="_blank"><span class="r_events">西甲前瞻：皇家社会 VS 赫罗纳</span></a></li>
+							<li><a href="{{ domain_url('Article', 'details/news/710127.shtml') }}" target="_blank"><span class="r_events">德甲前瞻：柏林联合 VS 莱比锡红牛</span></a></li>
+							<li><a href="{{ domain_url('Article', 'details/news/709996.shtml') }}" target="_blank"><span class="r_events">欧会杯前瞻：波兹南莱赫 VS 美因茨</span></a></li>
+							<li><a href="{{ domain_url('Article', 'details/news/709995.shtml') }}" target="_blank"><span class="r_events">欧罗巴赛事前瞻：凯尔特人 VS 罗马</span></a></li>
+						</ul>
+						<script src="/js/recommend.js"></script>
+						<div class="skin">
+							<a href="#" onClick="changecss('css/blue.css')" rel="nofollow" class="skin_blue" title="蓝色主题"></a>
+							<a href="#" onClick="changecss('css/red.css')" rel="nofollow" class="skin_red" title="红色主题"></a>
+							<a href="#" onClick="changecss('css/green.css')" rel="nofollow" class="skin_green" title="绿色主题"></a>
+							<a href="#" onClick="changecss('css/gray.css')" rel="nofollow" class="skin_gray" title="灰色主题"></a>
+							<a href="#" onClick="changecss('css/purple.css')" rel="nofollow" class="skin_purple" title="紫色主题"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bigScreen"></div>
+			<div class="content_t">
+				<div class="left">
+					<!-- Start Content T2 -->	
 					{!! load_content('content_t2.txt', true) !!}
+					<!-- End Content T2 -->	
+
+					<!-- Start Content T1 -->	
+					{!! load_content('content_t1.txt', true) !!}
 					<!-- End Content T1 -->	
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <!-- End Content -->	
-            </div>
-            <!-- Start Content T2 -->	
-            {!! load_content('n_ty.txt', false, true) !!}
-            <!-- End Content T2 -->	
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="bottom">
-        <div class="bottom_a">
-            <a href="javascript:" onclick="window.open('{{ domain_url('help', 'sm_gb.htm') }}','','width=560,height=260,scrollbars=yes');">本站声明</a>|
+				</div>
+				<!-- Start Content T3 -->	
+				{!! load_content('content_t3.txt', true) !!}
+				<!-- End Content T3 -->	
+			</div>
+			<div class="b_line"></div>
+			<div class="a_d7" id="m2"></div>
+			<div class="content_m">
 
-            <a href="javascript:" onclick="window.open('{{ domain_url('help', 'jump.aspx?l=gb&page=sentmessage&t=0') }}','','width=450,height=528,scrollbars=yes');">联系我们</a>|
+				<div id="iframe-content-wrapper" style="width:100%; min-height:249px; overflow:auto;">
+					{!! load_iframe_content('https://data.7m.com.cn/transfer/homepage.html?t=' . date('Y-m-d,H:i:s')) !!}
+				</div>
 
-            <a href="javascript:" onclick="window.open('{{ domain_url('help', 'jump.aspx?l=gb&page=sentmessage&t=1') }}','','width=450,height=528,scrollbars=yes');">报告错误</a>|
+				<div class="b_line"></div>
+				<div class="left">
+					<!-- Start Content M2 -->	
+					{!! load_content('content_m2.txt', true) !!}
+					<!-- End Content M3 -->	
 
-            <a href="{{ domain('sitemap') }}" target="_blank">网站导航</a>|
-
-            <a href="#top">返回页顶</a>
-        </div>
-        <p>提醒：第三方机构可能在7M体育宣传他们的产品或服务，7M体育将不保证其宣传信息的准确。
-            <br />您跟第三方机构的任何交易与7M体育无关，7M体育将不会对可能引起的任何损失负责。
-            <br />Copyright © 2003 - <script language="javascript">
-                document.write((new Date()).getFullYear());
-            </script> 版权所有 www.7m.com.cn All Rights Reserved. 保留全部权利.
-        </p>
-        <a href="//www.miibeian.gov.cn/" target="_blank">粤ICP备08004827号</a>
-    </div>
-    <div style="position:absolute;display:none; width:300px; height:100px;filter:alpha(opacity=80); opacity: 0.8;z-index:999;" id="divTip" onmouseover="clearTimeout(timer);this.style.display=''" onmouseout="timer=setTimeout('hideTip()',1000)">
-        <div id="tipbj1"></div>
-        <div id="tipbg1">
-            <a target="_blank" id="a1" style="padding-left: 20px;">本站搜索<font style="color:#FF0000;font-weight:bold" id="f1"></font>的资料</a><br />
-            <a target="_blank" id="a2" style="background: url(/detail/static/images/sicon1.gif) no-repeat left;padding-left: 20px;">搜索百度关于<font style="color:#FF0000;font-weight:bold" id="f2"></font>的新闻</a><br />
-            <a target="_blank" id="a3" style="background: url(/detail/static/images/sicon2.gif) no-repeat left;padding-left: 20px;">搜索Google关于<font style="color:#FF0000;font-weight:bold" id="f3"></font>的新闻</a>
-        </div>
-        <div id="tipbj2"></div>
-    </div>
-    <script type="text/javascript" src="/detail/static/js/newstip.js"></script>
-    <div style="display:none">
-        <script type="text/javascript" src="/detail/static/js/count.js"></script>
-        <script>
-            var loc = window.location.toString();
-            //新闻
-            if (loc.indexOf("/news/") != -1) {
-                var regMatch = /([0-9]+).shtml/.exec(loc);
-                if (regMatch != null) {
-                    document.write('<script type="text/javascript" src="/detail/static/js/count.js' + regMatch[1] + '"><\/script>');
-                }
-            }
-            //推介
-            if (loc.indexOf("/prediction/data/") != -1) {
-                var regMatch = /([0-9]+).shtml/.exec(loc);
-                if (regMatch != null) {
-                    document.write('<script type="text/javascript" src="/detail/static/js/count.js' + regMatch[1] + '"><\/script>');
-                }
-            }
-        </script>
-    </div>
-    <!-- designed on 2010-11-15, by fhx,xy,wdf, ver 1.1.0 -->
-    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=676133"></script>
-    <script type="text/javascript" id="bdshell_js"></script>
-    <script type="text/javascript">
-        //<![CDATA[ 
-        var __ud = '710168';
-        var NewsUrl = '/Article/details/710168.shtml';
-        var NewsTitle = '齐尔克泽向曼联提离队申请 罗马希望3000万签他';
-        var NewsContent = '意大利足球记者埃莱奥诺拉·特罗塔透露，齐尔克泽已经向曼联提出离队申请。埃莱奥诺拉·特罗塔表示：“在过去两个多月时间，齐尔克泽都被确认是罗马的首选锋线引援目标。这名荷兰前锋已 …… 详细:';
-        var NewsPic;
-
-        function loadJs(fileUrl, callback, jsID) {
-            var oHead = document.getElementsByTagName('HEAD').item(0);
-            if (jsID) try {
-                oHead.removeChild(document.getElementById(jsID));
-            } catch (e) {}
-            var oScript = document.createElement("script");
-            if (jsID) oScript.id = jsID;
-            if (document.addEventListener) {
-                oScript.onload = callback;
-                oScript.onerror = callback;
-            } else {
-                oScript.onreadystatechange = function() {
-                    loadJsReady(oScript, callback);
-                };
-            }
-            oScript.charset = "utf-8";
-            oScript.type = "text/javascript";
-            oScript.src = fileUrl;
-            oHead.appendChild(oScript);
-        }
-
-        function loadJsReady(obj, callBack) {
-            if (obj.readyState == "loaded") {
-                callBack();
-            }
-        }
-
-        function readGetReady() {
-
-        }
-
-        loadJs("//news.7m.com.cn/news/read-get.php?__ud=" + __ud + "&" + Number(new Date()), readGetReady);
-
-        if (jQuery) {
-            $(document).ready(function() {
-                var imgSrc = $('img', 'div.zw').attr('src');
-                if (imgSrc) {
-                    imgSrc = encodeURIComponent('//news.7m.com.cn' + imgSrc.toString());
-                    $('#sina_url').attr('href', $('#sina_url').attr('href') + '&pic=' + imgSrc);
-                    $('#qq_url').attr('href', $('#qq_url').attr('href') + '&pic=' + imgSrc);
-                    NewsPic = imgSrc;
-                }
-                $("span.tx_wb", "div.wb_box").click(function() {
-                    share_to(1);
-                });
-                $("span.xl_wb", "div.wb_box").click(function() {
-                    share_to(2);
-                });
-                $("span.wy_wb", "div.wb_box").click(function() {
-                    share_to(3);
-                });
-                $("span.qqkj", "div.wb_box").click(function() {
-                    share_to(4);
-                });
-                $("span.more_wb").mouseover(function() {
-                    $("#share_more").show();
-                });
-                $("span.more_wb").mouseleave(function() {
-                    $("#share_more").hide();
-                });
-                $("#share_more").mouseover(function() {
-                    $("#share_more").show();
-                });
-                $("#share_more").mouseleave(function() {
-                    $("#share_more").hide();
-                });
-
-                var url = location.toString();
-                if (url.indexOf("?wb") == -1) {
-                    $("div[t='7m']").hide();
-                    $("div[t='baidu']").show();
-                } else {
-                    $("div[t='7m']").show();
-                    $("div[t='baidu']").hide();
-                }
-
-            });
-        }
-
-        function on_Wangyi() {
-            var url = 'link=//www.7m.com.cn/&source=' + encodeURIComponent('7M') + '&info=' + encodeURIComponent(Wangyi_content) + ' ' + encodeURIComponent(document.location.href);
-            var imgSrc = $('img', 'div.zw').attr('src');
-            if (imgSrc) {
-                imgSrc = encodeURIComponent('//news.7m.com.cn' + imgSrc.toString());
-                url = url + '&togImg=true&images=' + imgSrc;
-            }
-            window.open('//t.163.com/article/user/checkLogin.do?' + url + '&' + new Date().getTime(), 'newwindow', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no');
-        }
-
-
-        function share_to(type) {
-            var webNewsUrl = encodeURIComponent(NewsUrl);
-            var webNewsTitle = encodeURIComponent(NewsTitle);
-            var webNewsContent = encodeURIComponent(NewsContent);
-            var webNewsPic = NewsPic;
-            var picStr = (webNewsPic) ? '&pic=' + webNewsPic : '';
-
-            var webUrl = encodeURIComponent('//news.7m.com.cn');
-            var enter = encodeURIComponent(String.fromCharCode(13));
-            var space = encodeURIComponent(' ');
-            var share_to_url = '';
-            switch (type) {
-                case 1:
-                    share_to_url = '//share.v.t.qq.com/index.php?c=share&a=index&url=' + webNewsUrl + '&appkey=801095887' + picStr + '&assname=sport-7m&title=' + webNewsTitle + enter + webNewsContent;
-                    break;
-                case 2:
-                    share_to_url = '//v.t.sina.com.cn/share/share.php?url=' + webNewsUrl + '&ralateUid=1845054955&appkey=1159106614' + picStr + '&title=' + webNewsTitle + enter + webNewsContent;
-                    break;
-                case 3:
-                    var imagesStr = (webNewsPic) ? '&images=' + webNewsPic : '';
-                    share_to_url = '//t.163.com/article/user/checkLogin.do?link=//www.7m.com.cn/&source=' + encodeURIComponent('7M') + '&info=' + webNewsTitle + space + webNewsContent + webNewsUrl + '&togImg=true' + imagesStr + '&' + new Date().getTime();
-                    break;
-                case 4:
-                    var picsStr = (webNewsPic) ? '&pics=' + webNewsPic : '';
-                    share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + webNewsUrl + '&showcount=0&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=7M��������' + picsStr;
-                    break;
-                case 5:
-                    share_to_url = '//share.renren.com/share/buttonshare.do?link=' + webNewsUrl + '&title=' + webNewsTitle;
-                    break;
-                case 6:
-                    share_to_url = '//cang.baidu.com/do/add?it=' + NewsTitle + '&iu=' + NewsUrl + '&dc=' + NewsContent + webNewsUrl + '&tn=��������,��������,7M����';
-                    break;
-                case 7:
-                    share_to_url = '//tk.mop.com/api/post.htm?url=' + webNewsUrl + '&desc=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle;
-                    break;
-                case 8:
-                    share_to_url = '//shuo.douban.com/!service/share?href=' + webNewsUrl + '&name=' + webNewsTitle + '&image=' + webNewsPic;
-                    break;
-                case 9:
-                    share_to_url = '//t.ifeng.com/interface.php?_c=share&_a=share&sourceUrl=' + webNewsUrl + '&title=' + webNewsTitle + picStr + '&source=1';
-                    break;
-                case 10:
-                    share_to_url = 'https://profile.live.com/P.mvc#!/badge?url=' + webNewsUrl;
-                    break;
-                case 11:
-                    share_to_url = '//share.jianghu.taobao.com/share/addShare.htm?url=' + webNewsUrl;
-                    break;
-                case 12:
-                    share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=' + webNewsUrl + '&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=news.7m.com.cn&pics=' + webNewsPic;
-                    break;
-                default:
-
-                    break;
-            }
-            window.open(share_to_url);
-        }
-
-        function share_exit() {
-            $('#share_more').hide();
-        }
-
-        //����2022���籭Banner����
-        function loadWc2022imgReady() {
-            if (typeof(wc2022img) != 'undefined' && wc2022img != '') {
-                $('.zw').append('<p align="center"><br/><a href="https://2022.7m.com.cn/gb/intelligencePromotion/?from=cnnews" target="_blank"><img src="' + wc2022img + '"></a></p>');
-            }
-        }
-
-        loadJs('/interface/getwc2022img.php', loadWc2022imgReady);
-        var bds_config = {
-            'bdText': NewsTitle + String.fromCharCode(13) + NewsContent
-        };
-        document.getElementById("bdshell_js").src = "//bdimg.share.baidu.com//detail/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
-        //]]>
-    </script>
+					<!-- Start Content M1 -->	
+					{!! load_content('content_m1.txt', true) !!}
+					<!-- End Content M1 -->	
+				</div>
+				<div class="content_m3">
+					<div class="data2">
+						<div class="data2_title">近期赛事资料库</div>
+						<div class="data2_con">
+							<div class="fdata_t">
+								<div class="fdata_tl"><a href="{{ domain_url('Article', 'details/index_soccer.htm') }}" target="_blank">足球资料库</a></div>
+								<div class="fdata_tr">
+									<a href="{{ domain_url('Article', 'details/standing_gb.shtml') }}" target="_blank">积分统计</a>
+									<a href="{{ domain_url('Article', 'details/odds_way_gb.shtml') }}" target="_blank">指数统计</a>
+								</div>
+							</div>
+							<ul class="fdata_list">
+								<li><a href="{{ domain_url('Article', 'details/92/gb/index.shtml') }}" title="英格兰超级联赛" target="_blank"><span class="fdicon1"></span><span class="icon_name">英超</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/34/gb/index.shtml') }}" title="意大利甲组联赛" target="_blank"><span class="fdicon2"></span><span class="icon_name">意甲</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/85/gb/index.shtml') }}" title="西班牙甲组联赛" target="_blank"><span class="fdicon3"></span><span class="icon_name">西甲</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/39/gb/index.shtml') }}" title="德国甲组联赛" target="_blank"><span class="fdicon4"></span><span class="icon_name">德甲</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/93/gb/index.shtml') }}" title="法国甲组联赛" target="_blank"><span class="fdicon5"></span><span class="icon_name">法甲</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/152/gb/index.shtml') }}" title="中国超级联赛" target="_blank"><span class="fdicon6"></span><span class="icon_name">中超</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/74/gb/index.shtml') }}" title="欧洲联赛冠军杯" target="_blank"><span class="fdicon7"></span><span class="icon_name">欧冠杯</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/58/gb/index.shtml') }}" title="欧罗巴联赛" target="_blank"><span class="fdicon8"></span><span class="icon_name">欧罗巴</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/1667/gb/index.shtml') }}" title="欧会杯" target="_blank"><span class="fdicon9"></span><span class="icon_name">欧会杯</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/149/gb/index.shtml') }}" title="世界杯" target="_blank"><span class="fdicon10"></span><span class="icon_name">世界杯</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/161/gb/index.shtml') }}" title="亚洲足球锦标赛" target="_blank"><span class="fdicon11"></span><span class="icon_name">亚洲杯</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/139/gb/index.shtml') }}" title="亚洲联赛冠军杯" target="_blank"><span class="fdicon12"></span><span class="icon_name">亚冠杯</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/102/gb/index.shtml') }}" title="日本职业联赛" target="_blank"><span class="fdicon13"></span><span class="icon_name">日联</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/250/gb/index.shtml') }}" title="韩国职业联赛" target="_blank"><span class="fdicon14"></span><span class="icon_name">韩职联</span></a></li>
+								<li><a href="{{ domain_url('Article', 'details/339/gb/index.shtml') }}" title="澳大利亚甲级联赛" target="_blank"><span class="fdicon15"></span><span class="icon_name">澳A联</span></a></li>
+							</ul>
+							<ul class="fdata_list2">
+								<li><a href="{{ domain_url('Article', 'details/160/gb/index.shtml') }}" target="_blank" title="巴西甲组联赛">巴甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/191/gb/index.shtml') }}" target="_blank" title="墨西哥联赛">墨联</a></li>
+								<li><a href="{{ domain_url('Article', 'details/96/gb/index.shtml') }}" target="_blank" title="西班牙乙级联赛">西乙</a></li>
+								<li><a href="{{ domain_url('Article', 'details/88/gb/index.shtml') }}" target="_blank" title="葡萄牙超级联赛">葡超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/100/gb/index.shtml') }}" target="_blank" title="比利时甲级联赛">比甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/421/gb/index.shtml') }}" target="_blank" title="波黑超级联赛">波黑超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/293/gb/index.shtml') }}" target="_blank" title="冰岛超级联赛">冰岛超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/394/gb/index.shtml') }}" target="_blank" title="摩洛哥超级联赛">摩洛超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/1044/gb/index.shtml') }}" target="_blank" title="美国冠军联赛">美冠联</a></li>
+								<li><a href="{{ domain_url('Article', 'details/315/gb/index.shtml') }}" target="_blank" title="秘鲁甲组联赛">秘鲁甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/192/gb/index.shtml') }}" target="_blank" title="智利甲组联赛">智甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/326/gb/index.shtml') }}" target="_blank" title="哥伦比亚甲组联赛">哥伦甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/1266/gb/index.shtml') }}" target="_blank" title="巴西丙组联赛">巴丙</a></li>
+								<li><a href="{{ domain_url('Article', 'details/422/gb/index.shtml') }}" target="_blank" title="巴拉圭甲级联赛">巴拉甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/520/gb/index.shtml') }}" target="_blank" title="萨尔瓦多超级联赛">萨尔超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/460/gb/index.shtml') }}" target="_blank" title="洪都拉斯甲组联赛">洪都甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/424/gb/index.shtml') }}" target="_blank" title="玻利维亚甲组联赛">玻利甲</a></li>
+								<li><a href="{{ domain_url('Article', 'details/426/gb/index.shtml') }}" target="_blank" title="委内瑞拉超级联赛">委内超</a></li>
+								<li><a href="{{ domain_url('Article', 'details/812/gb/index.shtml') }}" target="_blank" title="哥伦比亚乙组联赛">哥伦乙</a></li>
+								<li><a href="{{ domain_url('Article', 'details/461/gb/index.shtml') }}" target="_blank" title="哥斯达黎加甲组联赛">哥斯甲</a></li>
+							</ul>
+							<div class="bdata_t">
+								<div class="bdata_tl">
+								    <a href="{{ domain_url('Article', 'details/database/index_gb_28.htm') }}" target="_blank">篮球资料库</a></div>
+							</div>
+							<ul class="bdata_list">
+								<li>
+								    <a href="{{ domain_url('Article', 'details/3/gb/index.shtml') }}" title="美国男子职业篮球联赛" target="_blank">
+								        <span class="bdicon1"></span>
+								        <span class="icon_name">NBA</span>
+								    </a>
+								</li>
+								<li>
+								    <a href="{{ domain_url('Article', 'details/4/gb/index.shtml') }}" title="中国男子篮球职业联赛" target="_blank">
+								        <span class="bdicon3"></span>
+								        <span class="icon_name">CBA</span>
+								    </a>
+								</li>
+								<li>
+								    <a href="{{ domain_url('Article', 'details/9/gb/index.shtml') }}" title="美国女子职业篮球联赛" target="_blank">
+								        <span class="bdicon2"></span>
+								        <span class="icon_name">WNBA</span>
+								    </a>
+								</li>
+							</ul>
+							<div class="basedata_t">
+								<div class="basedata_tl">
+								    <a href="{{ domain_url('Article', 'details/database/gb/') }}" target="_blank">棒球资料库</a>
+								</div>
+							</div>
+							<ul class="basedata_list">
+								<li>
+								    <a href="{{ domain_url('Article', 'details/2/default_gb.shtml') }}" title="美职联盟" target="_blank">
+								        <span class="basedicon1"></span>
+								        <span class="icon_name">美职联盟</span>
+								    </a>
+								</li>
+								<li>
+								    <a href="{{ domain_url('Article', 'details/3/default_gb.shtml') }}" title="日职联盟" target="_blank">
+								        <span class="basedicon2"></span>
+								        <span class="icon_name">日职联盟</span>
+								    </a>
+								</li>
+								<li>
+								    <a href="{{ domain_url('Article', 'details/1/default_gb.shtml') }}" title="墨职联盟" target="_blank">
+								        <span class="basedicon3"></span>
+								        <span class="icon_name">墨职联盟</span>
+								    </a>
+								</li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="a_d2" id="r1"></div>
+					<script src="//data.7m.com.cn/jfb/js/gb/index.js"></script>
+					<script src="//data.7m.com.cn/shooter/gb/index.js"></script>
+					<script src="/js/soccerrank.js?t=12123123123"></script>
+					<div class="fbtop">
+						<div class="fbtop_title">足球排行榜</div>
+						<div class="fbtop_con">
+							<div class="fbtop_btn">
+								<ul>
+									<li id="lisrank0" class="on" onmouseover="changeSoccerRank(0)">联赛积分榜</li>
+									<li id="lisrank1" onmouseover="changeSoccerRank(1)">联赛射手榜</li>
+								</ul>
+							</div>
+							<div id="divsrank0">
+								<div class="league">
+									<div class="league_l"><select id="selTeamRank" onchange="LoadTeamRank(this.value)"></select></div>
+									<div class="league_r"><a id="lnkTeamRank" target="_blank">详细&raquo;</a></div>
+								</div>
+								<div class="area"><span class="team_t2">球队</span><span class="score">积分</span></div>
+								<div id="soccerRank1_f" class="rank_f">
+									<ul id="soccerRank1_c" class="fbtop_list"></ul>
+								</div>
+								<ul id="soccerRank1_m" style="display:none"></ul>
+							</div>
+							<div id="divsrank1" style="display:none">
+								<div class="league">
+									<div class="league_l"><select id="selShooterRank" onchange="LoadShooterRank(this.value)"></select></div>
+									<div class="league_r"><a id="lnkShooter" target="_blank">详细&raquo;</a></div>
+								</div>
+								<div class="area"><span class="team_t2">球员</span><span class="score2">进球</span></div>
+								<div id="soccerRank2_f" class="rank_f">
+									<ul id="soccerRank2_c" class="fbtop_list"></ul>
+								</div>
+								<ul id="soccerRank2_m" style="display:none"></ul>
+							</div>
+						</div>
+					</div>
+					<script>
+						(function() {
+							function initSoccerRank() {
+								if (typeof(Standings) !== "undefined" && typeof($$) === "function") {
+									var selTeamRank = $$("selTeamRank");
+									if (selTeamRank) {
+										for (var i = 0; i < Standings.length; i++) {
+											selTeamRank.options[selTeamRank.options.length] = new Option(Standings[i][1], Standings[i][0]);
+										}
+										setTimeout(function() {
+											if (typeof LoadTeamRank === "function") {
+												LoadTeamRank("92");
+											}
+										}, 500);
+									}
+								} else {
+									setTimeout(initSoccerRank, 100);
+								}
+							}
+							initSoccerRank();
+						})();
+					</script>
+					<script>
+						window.BDATAHOST = '//bdata.7m.com.cn';
+					</script>
+					<script src="//bdata.7m.com.cn/basketball_match_data/3/gb/rank.js"></script>
+					<script src="/js/basketrank.js"></script>
+					<div class="fbtop">
+						<div class="fbtop_title">篮球排行榜</div>
+						<div class="fbtop_con">
+							<div class="fbtop_btn bbtop_btn" style="line-height:26px;">
+								<a href="{{ domain_url('Article', 'details/3/gb/standings.shtml') }}" target='_blank'>2024 - 2025 NBA东部常规赛排行榜</a>
+							</div>
+							<div>
+								<div class="area"><span class="team_t">球队</span><span class="winning2">胜率</span><span class="score" id="hrank_t">场差</span></div>
+								<div id="hrank0">
+									<div id="hrank0_f" class="rank_b">
+										<ul id="hrank0_c" class="fbtop_list"></ul>
+									</div>
+									<ul id="hrank0_m" style="display:none"></ul>
+								</div>
+							</div>
+							<div class="fbtop_btn bbtop_btn" style="line-height:26px;">
+								<a href="{{ domain_url('Article', 'details/3/gb/standings.shtml') }}" target='_blank'>2024 - 2025 NBA西部常规赛排行榜</a>
+							</div>
+							<div>
+								<div class="area"><span class="team_t">球队</span><span class="winning2">胜率</span><span class="score" id="hrank_t">场差</span></div>
+								<div id="hrank1">
+									<div id="hrank1_f" class="rank_b">
+										<ul id="hrank1_c" class="fbtop_list"></ul>
+									</div>
+									<ul id="hrank1_m" style="display:none"></ul>
+								</div>
+								<div class="bbtop_other"><a href="{{ domain_url('Article', 'details/9/gb/standings.shtml') }}" target="_blank">WNBA排行</a> | <a href="{{ domain_url('Article', 'details/4/gb/standings.shtml') }}" target="_blank">CBA排行</a></div>
+							</div>
+						</div>
+					</div>
+					<script>
+						(function() {
+							function initBasketRank() {
+								if (typeof LoadHoopRank === "function" && typeof e_rank !== "undefined" && typeof w_rank !== "undefined") {
+									LoadHoopRank(0, e_rank);
+									LoadHoopRank(1, w_rank);
+								} else {
+									setTimeout(initBasketRank, 100);
+								}
+							}
+							initBasketRank();
+						})();
+					</script>
+					<div class="a_d3" id="r2"></div>
+				</div>
+			</div>
+			<div class="sus_gg" style="left:0;" id="lf1"></div>
+			<div class="sus_gg" style="right:0;" id="rf1"></div>
+			<script src="//passport.7m.com.cn/js/login_extend.js" defer></script>
+			<div id="divLogin" class="login" style="display:none; z-index:100; position:absolute">
+				<div class="login_title">
+					<div class="lt_left">7m登录</div>
+					<div class="lt_right" onClick="$$('divLogin').style.display='none'"></div>
+				</div>
+				<div class="login_con">
+					<form id="frmLogin" method="post" target="frameLogin" onsubmit="return checkLoginForm()">
+						<div class="logintr">
+							<h3 class="name">帐号</h3><input type="text" onfocus="this.className='on'" onblur="this.className=''" id="userid" name="userid" />
+							<div class="del" style="display:none"></div>
+						</div>
+						<div class="logintr">
+							<h3 class="name">密码</h3><input type="password" onfocus="this.className='on'" onblur="this.className=''" id="userpwd" name="userpwd" />
+							<h3 class="forget"><a href="{{ domain_url('passport', 'resetpwd.php') }}" target="_blank">忘记密码？</a></h3>
+						</div>
+						<div class="logintr2"><input type="checkbox" value="1" name="savelogin" />下次自动登录</div>
+						<div class="logintr3"><input type="submit" value="登录" /></div>
+						<div class="bind_icon"><span>使用合作网站账号</span>
+							<a href="javascript:weibologin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/weibo.png" alt="微博登录" title="微博登录"></a><span onclick="weibologin()" style="cursor:pointer">微博登录</span>
+							<a href="javascript:qqlogin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/qq.png" alt="QQ登录" title="QQ登录"></a><span onclick="qqlogin()" style="cursor:pointer">QQ登录</span>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script src="/js/user.js"></script>
+			<iframe id="frameLogin" name="frameLogin" style="display:none"></iframe>
+			<script>
+				document.getElementById('frameLogin').onload = function() {
+					if (typeof checkLogin === 'function') {
+						checkLogin();
+					}
+				};
+			</script>
+			<div class="nav">
+				<div class="nav_con">
+					<dl>
+						<dt>足球</dt>
+						<dd><a href="{{ domain_url('Article', 'details/default_gb.aspx?line=no') }}" target="_blank">足球单栏比分</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/default_split_gb.aspx?line=no') }}" target="_blank">足球分栏比分</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/result_data/index_gb.shtml') }}" target="_blank">完场赛事</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/fixture_data/default_gb.shtml?date=1') }}" target="_blank">未来赛程</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/database/index_gb.htm') }}" target="_blank">足球资料库</a></dd>
+						<dd><a href="{{ domain('Article') }}" target="_blank">足球新闻</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/list/7m/index.shtml') }}" target="_blank">足球7M制造</a></dd>
+					</dl>
+					<div class="line"></div>
+					<dl>
+						<dt>篮球</dt>
+						<dd><a href="{{ domain_url('Article', 'details/default_gb.aspx') }}" target="_blank">篮球比分</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/result_data/index_gb.htm') }}" target="_blank">完场赛事</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/fixture_data/default_gb.aspx?date=1') }}" target="_blank">未来赛程</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/database/index_gb_28.htm') }}" target="_blank">篮球资料库</a></dd>
+						<dd><a href="{{ domain('Article') }}" target="_blank">篮球新闻</a></dd>
+						<dd><a href="{{ domain('Article') }}" target="_blank">篮球文字赛况</a></dd>
+						<dd><a href="{{ domain_url('Article', 'details/list/7m/index.shtml') }}" target="_blank">篮球7M制造</a></dd>
+					</dl>
+					<div class="line"></div>
+					<dl>
+						<dt>其它体育</dt>
+						<dd><a href="{{ domain_url('tennis', 'default_gb.aspx') }}" target="_blank">网球比分</a></dd>
+						<dd><a href="{{ domain_url('Article', 'default_gb.aspx') }}" target="_blank">棒球比分</a></dd>
+						<dd><a href="{{ domain_url('amf', 'default_gb.aspx') }}" target="_blank">美式足球比分</a></dd>
+						<dd></dd>
+						<dt>热门赛事</dt>
+						<dd>
+							<a href="{{ domain_url('Article', 'details/92/gb/index.shtml') }}" target="_blank">英超</a>&nbsp;&nbsp;
+							<a href="{{ domain_url('Article', 'details/85/gb/index.shtml') }}" target="_blank">西甲</a>&nbsp;&nbsp;
+							<a href="{{ domain_url('Article', 'details/34/gb/index.shtml') }}" target="_blank">意甲</a>&nbsp;&nbsp;
+						</dd>
+						<dd>
+							<a href="{{ domain_url('Article', 'details/39/gb/index.shtml') }}" target="_blank">德甲</a>&nbsp;&nbsp;
+							<a href="{{ domain_url('Article', 'details/93/gb/index.shtml') }}" target="_blank">法甲</a>&nbsp;&nbsp;
+							<a href="{{ domain('Article') }}" target="_blank">更多&raquo;</a>
+						</dd>
+					</dl>
+					<div class="line"></div>
+					<dl>
+						<dt>应用</dt>
+						<dd><a href="{{ domain_url('app', 'soccer/') }}" target="_blank">7M 手机客户端</a></dd>
+						<dd><a href="{{ domain('mobile') }}" target="_blank">7M 手机版</a></dd>
+					</dl>
+					<div class="line"></div>
+					<dl>
+						<dt>其它</dt>
+						<dd><a href="{{ domain_url('Article', 'database/index_gb.htm') }}" target="_blank">赛事资料库</a></dd>
+						<dd><a href="{{ domain_url('Article', 'transfer/index_gb.htm') }}" target="_blank">五大联赛转会</a></dd>
+						<dd><a href="{{ domain_url('freelive', 'apply_jt.shtm') }}" target="_blank">比分调用</a></dd>
+						<dd><a href="{{ domain_url('tv', 'gb/') }}" target="_blank">节目预告</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="linkDiv" class="links">
+				<div class="links_l">友情链接：</div>
+				<div class="links_r" id="linkStr">
+				</div>
+			</div>
+			<div class="join">
+			    <a onclick="window.open('//help.7m.com.cn/jump.aspx?l=gb&page=sentmessage&t=2', '', 'width=450,height=460,scrollbars=yes')" href="javascript:void(0)" rel="nofollow">欢迎Alexa排名1万名以内的网站申请友情链接</a></div>
+			<script src="/js/fun_a_d.js" defer></script>
+			<script>
+				(function() {
+					function ios_callback() {
+						if (typeof regScroll === 'function') {
+							regScroll("sfc", 50, "udbtn163", 0);
+							regScroll("bqc", 50, "udbtn163", 0);
+							regScroll("jqc", 50, "udbtn163", 0);
+							regScroll("nba_live", 50, "udbtn163", 0);
+							regScroll("cba_live", 50, "udbtn163", 0);
+							regScroll("tv", 50, "udbtn163", 0);
+							regScroll("soccerRank1", 50, "udbtn109", 0);
+							regScroll("soccerRank2", 50, "udbtn109", 0);
+							regScroll("hrank0", 50, "udbtn109", 0);
+							regScroll("hrank1", 50, "udbtn109", 0);
+							regScroll("hrank2", 50, "udbtn109", 0);
+							if (typeof $$ === 'function') {
+								var tv_c = $$("tv_c");
+								if (tv_c) {
+									var ddTvs = tv_c.getElementsByTagName("dd");
+									for (var i = 0; i < ddTvs.length; i++) {
+										var spans = ddTvs[i].getElementsByTagName("span");
+										if (spans.length > 0) {
+											spans[spans.length - 1].onclick = function() {
+												if (this.parentNode && this.parentNode.title) {
+													alert(this.parentNode.title);
+												}
+											};
+										}
+									}
+								}
+							}
+						}
+					}
+					
+					function initIos() {
+						if (typeof isIos === 'function' && typeof isAndroid === 'function' && typeof $$ === 'function' && typeof LoadJS === 'function') {
+							if (isIos() || isAndroid()) {
+								var ipad = $$("ipad");
+								if (ipad) {
+									ipad.href = "/css/ipad.css";
+								}
+								LoadJS("/js/scroll_ios.js", ios_callback);
+							}
+						} else {
+							setTimeout(initIos, 100);
+						}
+					}
+					
+					if (document.readyState === 'loading') {
+						document.addEventListener('DOMContentLoaded', initIos);
+					} else {
+						initIos();
+					}
+				})();
+			</script>
+			<div class="copyright">
+				<p class="p1"><a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/help/sm_gb.htm') }}','','width=600,height=300,scrollbars=yes')">本站声明</a>|
+					<a href="about.html" target="_blank">关于我们</a>|
+					<a href="{{ domain_url('Article', 'details/declaration_gb.htm') }}" target="_blank">法律法规</a>|<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=0') }}','','width=450,height=460,scrollbars=yes');">联系我们</a>|<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=1') }}','','width=450,height=460,scrollbars=yes');">报告错误</a>|<a href="#top" rel="nofollow">返回页顶</a>|<a target="_blank" href="{{ domain('sitemap') }}">网站导航</a>
+				</p>
+				<p class="p2"><strong>声明：</strong>本站呈现的所有资料均由7M工作团队编辑发布，版权所有，严禁窃为己作；未经授权切勿转载或建立镜像。否则本<br />站保留追究法律责任的权利。如欲转载、建立镜像、选用或其他任何商业用途，请<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'jump.aspx?l=gb&page=sentmessage&t=2') }}','','width=450,height=465,scrollbars=yes');">联系商谈</a>。谢谢合作！<br /><strong>提醒：</strong>第三方机构可能在7M体育宣传他们的产品或服务，7M体育将不保证其宣传信息的准确性，您跟<br />第三方机构的任何交易与7M体育无关，7M体育将不会对可能引起的任何损失负责。
+				</p>
+				<strong>
+				    <a target="_blank" href="http://beian.miit.gov.cn/">粤ICP备15017686号</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44050702000683" target="_blank">粤公网安备 44050702000683号</a></strong>
+				<script src="/js/addmessagediv.js?l=gb" id="spt_message"></script>
+			</div>
+			<script>
+				(function() {
+					var script = document.createElement('script');
+					script.src = '//count.7m.com.cn/count.js';
+					script.async = false;
+					document.body.appendChild(script);
+				})();
+			</script>
+		</div>
+	</div>
+	<script src="/js/iframee.js"></script>
+	<!--<script src="/js/deletedomain.js"></script>-->
 </body>
-
 </html>
-<script type="text/javascript" language="javascript" src="/detail/static/js/addmessagediv.js"
-    id="spt_message"></script>

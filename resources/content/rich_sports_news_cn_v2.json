@@ -1,10 +1,11 @@
 {
   "version": "2.1",
   "generatedAt": "2025-12-13T18:00:00+08:00",
-  "source": "7m.com.cn",
+  "source": "hyxnet.com",
   "articles": [
     {
-      "id": "art_20251213_710116",
+      "id": "art_20251226_710116",
+      "articleId": "710116",
       "title": "齐尔克泽向曼联提离队申请 罗马希望3000万签他",
       "category": "football_transfer",
       "publishTime": "2025-12-13T10:13:14+08:00",
@@ -24,7 +25,7 @@
       ],
       "keywords": ["齐尔克泽", "曼联", "罗马", "转会", "意甲", "世界杯", "博洛尼亚", "滕哈赫"],
       "image": "/img/details/101345_11991.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/news/20251213/710116.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/Article/Detail/20251226/710116.shtml",
       "stats": {
         "player": {
           "name": "齐尔克泽",
@@ -63,7 +64,8 @@
     },
 
     {
-      "id": "art_20251213_710120",
+      "id": "art_20251226_710120",
+      "articleId": "710120",
       "title": "武磊传射建功 海港3-1胜泰山提前2轮夺中超冠军",
       "category": "chinese_football",
       "publishTime": "2025-12-13T09:45:22+08:00",
@@ -83,7 +85,7 @@
       ],
       "keywords": ["武磊", "上海海港", "中超冠军", "金靴", "山东泰山", "徐根宝", "奥斯卡", "青训"],
       "image": "/img/details/104954_40910.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/news/20251213/710120.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/Article/Detail/20251226/710120.shtml",
       "stats": {
         "match": {
           "home": "上海海港",
@@ -123,6 +125,7 @@
 
     {
       "id": "art_20251212_271145",
+      "articleId": "271145",
       "title": "库里41分难救主 勇士加时121-127不敌国王 福克斯关键5分锁定胜局",
       "category": "nba",
       "publishTime": "2025-12-12T14:20:08+08:00",
@@ -143,7 +146,7 @@
       ],
       "keywords": ["库里", "勇士", "国王", "NBA", "福克斯", "小萨博尼斯", "格林", "加时赛"],
       "image": "/img/details/143056_87082.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/nba/20251212/271145.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/nba/20251212/271145.shtml",
       "stats": {
         "team": {
           "warriors": {
@@ -194,7 +197,7 @@
     },
 
     {
-      "id": "art_20251213_500088",
+      "id": "art_20251226_500088",
       "title": "18岁新星梁少文留洋首秀破门 京媒：中国足球的又一希望 留洋青训双轨制初见成效",
       "category": "chinese_football_youth",
       "publishTime": "2025-12-13T08:10:33+08:00",
@@ -214,7 +217,7 @@
       ],
       "keywords": ["梁少文", "留洋", "葡甲", "北京国安", "青训", "足协", "U20", "头球"],
       "image": "/img/details/153632_17918.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/news/20251213/500088.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/Article/Detail/20251226/500088.shtml",
       "stats": {
         "player": {
           "name": "梁少文",
@@ -255,7 +258,7 @@
     },
 
     {
-      "id": "art_20251213_600231",
+      "id": "art_20251226_600231",
       "title": "CBA全明星首发公布：郭艾伦票王第6次创纪录 周琦胡金秋领衔 姚明宣布新增‘中欧对抗赛’",
       "category": "cba",
       "publishTime": "2025-12-13T11:05:17+08:00",
@@ -275,7 +278,7 @@
       ],
       "keywords": ["CBA", "全明星", "郭艾伦", "周琦", "胡金秋", "姚明", "票王", "青岛", "中欧对抗赛"],
       "image": "/img/details/163733_85036.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/cba/20251213/600231.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/cba/20251226/600231.shtml",
       "stats": {
         "voting": {
           "totalVotes": 28400000,
@@ -310,7 +313,7 @@
     },
 
     {
-      "id": "art_20251213_880451",
+      "id": "art_20251226_880451",
       "title": "火箭探花谢泼德首秀20+8+7创新秀纪录 申京满意搭档：他像年轻版保罗",
       "category": "nba_chinese_focus",
       "publishTime": "2025-12-13T07:30:41+08:00",
@@ -330,7 +333,7 @@
       ],
       "keywords": ["谢泼德", "火箭", "NBA", "新秀", "申京", "乌度卡", "控卫", "中国球迷"],
       "image": "/img/details/175658_30236.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/nba/20251213/880451.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/nba/20251226/880451.shtml",
       "stats": {
         "player": {
           "name": "里德·谢泼德",
@@ -369,7 +372,7 @@
     },
 
     {
-      "id": "art_20251213_990777",
+      "id": "art_20251226_990777",
       "title": "亚洲杯2027筹备启动：中国8城联合申办 5G+AI打造‘智慧球场’ 票价亲民最低80元",
       "category": "football_asian_cup",
       "publishTime": "2025-12-13T15:22:09+08:00",
@@ -389,7 +392,7 @@
       ],
       "keywords": ["亚洲杯2027", "中国主办", "8城", "智慧球场", "5G+AI", "票价", "亚足联", "国足"],
       "image": "/img/details/4092144_82921.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/news/20251213/990777.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/Article/Detail/20251226/990777.shtml",
       "stats": {
         "event": {
           "dates": "2027-06-12至07-10",
@@ -426,7 +429,7 @@
     },
 
     {
-      "id": "art_20251213_112888",
+      "id": "art_20251226_112888",
       "title": "王尚源加盟首尔FC创历史：首位中超球员登陆K联赛 成韩媒焦点‘中国铁腰’",
       "category": "chinese_football_abroad",
       "publishTime": "2025-12-13T16:40:55+08:00",
@@ -446,7 +449,7 @@
       ],
       "keywords": ["王尚源", "首尔FC", "K联赛", "中超", "留洋", "后腰", "中韩足球", "自由转会"],
       "image": "/img/details/175658_30236.jpg",
-      "canonicalUrl": "https://www.7m.com.cn/news/20251213/112888.shtml",
+      "canonicalUrl": "https://www.hyxnet.com/Article/Detail/20251226/112888.shtml",
       "stats": {
         "player": {
           "name": "王尚源",
