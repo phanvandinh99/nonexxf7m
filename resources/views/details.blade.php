@@ -5,12 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>{{ isset($article) && isset($article['title']) ? $article['title'] . ' - 7M足球新闻' : '齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 7M足球新闻' }}</title>
+    <title>{{ isset($article) && isset($article['title']) ? $article['title'] . ' - 足球新闻' : '齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 足球新闻' }}</title>
     <meta name="keywords" content="@php
     if (isset($article) && isset($article['keywords']) && is_array($article['keywords'])) {
-        echo implode(',', $article['keywords']) . ',7M足球新闻,体育资讯,足球新闻';
+        echo implode(',', $article['keywords']) ;
     } elseif (isset($article) && isset($article['keywords'])) {
-        echo $article['keywords'] . ',7M足球新闻';
+        echo $article['keywords'];
     } else {
         echo '齐尔克泽,曼联,罗马,足球新闻,体育资讯';
     }
