@@ -23,7 +23,7 @@ Route::get('/{path}', function ($path) {
     // Cùng URL sẽ luôn trả về cùng một article
     $article = load_article_from_json($fullPath);
     
-    return view('detail', [
+    return view('details', [
         'path' => $fullPath,
         'fullUrl' => $fullUrl,
         'id' => null,
