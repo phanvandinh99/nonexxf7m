@@ -1,16 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="//www.w3.org/1999/xhtml">
+<html xmlns="//www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
 	<title>7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据_赛事分析 - 7M体育</title>
 	<searchtitle style="display:none">7M比分网_足球篮球比分直播_中超/欧冠/CBA赛程查询_实时赛程数据 - 7M体育</searchtitle>
-	<meta name="keywords" content="7M足球比分, 足球实时比分, NBA赛程, 英超直播, 篮球即时比分,比分直播, 免费赛事数据,棒球比分,美式足球比分,足球资料库,体育新闻,篮球资料库,积分榜,射手榜,球队阵容" />
-	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事，实时比分直播，涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据与积分榜。免费查询赛事预测，支持手机APP实时比分提醒！" />
+	<meta name="keywords" content="7M足球比分,足球实时比分,NBA赛程,英超直播,篮球即时比分,比分直播,免费赛事数据,棒球比分,美式足球比分,足球资料库,体育新闻,篮球资料库,积分榜,射手榜,球队阵容,7M体育,足球新闻,篮球新闻" />
+	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事的实时比分直播。涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、射手榜。免费查询赛事预测分析，支持手机APP实时比分提醒，是您了解体育赛事的专业平台。" />
+	<meta name="author" content="7M足球新闻">
+	<meta name="copyright" content="© 2003-2025 7M足球新闻 All Rights Reserved">
+	<meta http-equiv="mobile-agent" content="format=html5; url=https://{{ request()->getHost() }}/" />
+	<link rel="canonical" href="https://{{ request()->getHost() }}/" />
+	<meta name="baidu-site-verification" content="codeva-HcfM2YXMCr" />
+	<meta name="applicable-device" content="pc,mobile" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="renderer" content="webkit" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
 	<meta name="Baiduspider" content="index,follow" />
 	<meta name="googlebot" content="index,follow" />
 	<meta name="robots" content="index,follow" />
-	<meta name="author" content="7M足球新闻">
-	<meta name="copyright" content="7M足球新闻">
+	<!-- Open Graph Tags -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据 - 7M体育" />
+	<meta property="og:description" content="7M足球比分网提供全球足球、篮球赛事的实时比分直播，涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据与积分榜。" />
+	<meta property="og:url" content="https://{{ request()->getHost() }}/" />
+	<meta property="og:image" content="https://{{ request()->getHost() }}/img/ipad_icon.png" />
 	<link id="skin" rel="stylesheet" href="/css/blue.css" type="text/css">
 	<link href="/css/style.css?t=202308081148" type="text/css" rel="stylesheet" media="all" />
 	<link href="/css/app-download.css" type="text/css" rel="stylesheet" media="all" />
@@ -23,8 +39,49 @@
 	<link id="ipad" rel="stylesheet" type="text/css">
 	<script src="/js/line.js" defer></script>
 	<script src="/js/index-optimized.js" defer></script>
-	<meta name="baidu-site-verification" content="codeva-HcfM2YXMCr" />
 	<script src="/js/iframe.js"></script>
+	<!-- JSON-LD Organization Schema -->
+	@php
+		$organizationSchema = [
+			"@context" => "https://schema.org",
+			"@type" => "Organization",
+			"name" => "7M足球新闻",
+			"url" => "https://" . request()->getHost(),
+			"logo" => "https://" . request()->getHost() . "/img/ipad_icon.png",
+			"description" => "7M足球比分网提供全球足球、篮球赛事的实时比分直播，涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、射手榜。",
+			"sameAs" => [
+				"https://" . request()->getHost()
+			],
+			"contactPoint" => [
+				"@type" => "ContactPoint",
+				"contactType" => "Customer Support",
+				"availableLanguage" => "zh-CN"
+			]
+		];
+	@endphp
+	<script type="application/ld+json">
+	{!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+	</script>
+	<!-- JSON-LD WebSite Schema (For Search Action) -->
+	@php
+		$websiteSchema = [
+			"@context" => "https://schema.org",
+			"@type" => "WebSite",
+			"name" => "7M足球新闻",
+			"url" => "https://" . request()->getHost(),
+			"potentialAction" => [
+				"@type" => "SearchAction",
+				"target" => [
+					"@type" => "EntryPoint",
+					"urlTemplate" => "https://" . request()->getHost() . "/search?q={search_term_string}"
+				],
+				"query-input" => "required name=search_term_string"
+			]
+		];
+	@endphp
+	<script type="application/ld+json">
+	{!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+	</script>
 </head>
 
 <body>
@@ -32,7 +89,7 @@
 		<div id="main">
 			<div class="header">
 				<div class="header_l">
-				    <a href="/" title="7m体育"></a></div>
+				    <a href="/" title="7M足球新闻 - 实时比分直播平台"><h1 style="display:none">7M足球新闻 - 全球足球篮球实时比分直播平台</h1></a></div>
 				<div class="header_r">
 					<div class="top">
 						<div class="top_l" style="width:auto;">
@@ -416,8 +473,8 @@
 						<div class="logintr2"><input type="checkbox" value="1" name="savelogin" />下次自动登录</div>
 						<div class="logintr3"><input type="submit" value="登录" /></div>
 						<div class="bind_icon"><span>使用合作网站账号</span>
-							<a href="javascript:weibologin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/weibo.png" alt="微博登录" title="微博登录"></a><span onclick="weibologin()" style="cursor:pointer">微博登录</span>
-							<a href="javascript:qqlogin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/qq.png" alt="QQ登录" title="QQ登录"></a><span onclick="qqlogin()" style="cursor:pointer">QQ登录</span>
+							<a href="javascript:weibologin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/weibo.png" alt="微博登录" title="微博登录" width="32" height="32" loading="lazy"></a><span onclick="weibologin()" style="cursor:pointer">微博登录</span>
+							<a href="javascript:qqlogin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/qq.png" alt="QQ登录" title="QQ登录" width="32" height="32" loading="lazy"></a><span onclick="qqlogin()" style="cursor:pointer">QQ登录</span>
 						</div>
 					</form>
 				</div>
@@ -431,8 +488,39 @@
 					}
 				};
 			</script>
+			<!-- JSON-LD BreadcrumbList Schema -->
+			@php
+				$breadcrumbSchema = [
+					"@context" => "https://schema.org",
+					"@type" => "BreadcrumbList",
+					"itemListElement" => [
+						[
+							"@type" => "ListItem",
+							"position" => 1,
+							"name" => "首页",
+							"item" => "https://" . request()->getHost()
+						],
+						[
+							"@type" => "ListItem",
+							"position" => 2,
+							"name" => "足球",
+							"item" => "https://" . request()->getHost() . "/soccer/"
+						],
+						[
+							"@type" => "ListItem",
+							"position" => 3,
+							"name" => "篮球",
+							"item" => "https://" . request()->getHost() . "/basketball/"
+						]
+					]
+				];
+			@endphp
+			<script type="application/ld+json">
+			{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+			</script>
 			<div class="nav">
 				<div class="nav_con">
+					<nav aria-label="Main Navigation">
 					<dl>
 						<dt>足球</dt>
 						<dd><a href="{{ domain_url('Article', 'details/default_gb.aspx?line=no') }}" target="_blank">足球单栏比分</a></dd>
@@ -487,6 +575,7 @@
 						<dd><a href="{{ domain_url('freelive', 'apply_jt.shtm') }}" target="_blank">比分调用</a></dd>
 						<dd><a href="{{ domain_url('tv', 'gb/') }}" target="_blank">节目预告</a></dd>
 					</dl>
+					</nav>
 				</div>
 			</div>
 			<div id="linkDiv" class="links">
