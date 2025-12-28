@@ -26,8 +26,9 @@
         echo '齐尔克泽向曼联提离队申请 罗马希望3000万签他 - 最新足球新闻资讯';
     }
     @endphp">
-    <meta name="author" content="7M足球新闻">
-    <meta name="copyright" content="© 2003-2025 7M足球新闻 All Rights Reserved">
+    <meta name="author" content="足球新闻">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/details/logo_favicon/favicon-32x32.png">
+    <meta name="copyright" content="© 2003-2025 足球新闻 All Rights Reserved">
     <meta http-equiv="mobile-agent" content="format=html5; url=https://{{ request()->getHost() }}{{ request()->getPathInfo() }}" />
     <link rel="canonical" href="https://{{ request()->getHost() }}{{ request()->getPathInfo() }}" />
     <meta name="baidu-site-verification" content="codeva-wBB5cdhM35" />
@@ -77,11 +78,11 @@
             "datePublished" => isset($article) && isset($article['publishTime']) ? $article['publishTime'] : "2025-12-28T12:00:00+08:00",
             "author" => [
                 "@type" => "Organization",
-                "name" => isset($article) && isset($article['source']['name']) ? $article['source']['name'] : "7M足球新闻"
+                "name" => isset($article) && isset($article['source']['name']) ? $article['source']['name'] : "足球新闻"
             ],
             "publisher" => [
                 "@type" => "Organization",
-                "name" => "7M足球新闻",
+                "name" => "足球新闻",
                 "logo" => [
                     "@type" => "ImageObject",
                     "url" => "https://" . request()->getHost() . "/detail/static/picture/news_logo.gif"
@@ -131,7 +132,7 @@
             </div>
             <div class="m_menu">
                 <div class="t_m_logo"><a href="{{ domain('Article/details/news') }}">
-                    <img src="/detail/static/picture/news_logo.gif" border="0" alt="7M足球新闻Logo" title="7M足球新闻" loading="eager"></a>
+                    <img src="/detail/static/picture/news_logo.gif" border="0" alt="足球新闻Logo" title="足球新闻" loading="eager"></a>
                 </div>
                 <div class="t_m_text">
                     <table border="0" cellpadding="2" cellspacing="0" width="100%" class="head">
@@ -214,7 +215,7 @@
                 </div>
                 <div class="ny_bt">
                     <nav aria-label="面包屑导航">
-                        您的位置:<a href="{{ route('home') }}">7M足球新闻</a>&gt; 
+                        您的位置:<a href="{{ route('home') }}">足球新闻</a>&gt; 
                         <a href="#">{{ isset($category) ? $category : '国际足球' }}</a>&gt;
                         <a href="#">{{ isset($subcategory) ? $subcategory : '英超' }}</a> &gt; 
                         <span>{{ isset($team) ? $team : '曼彻斯特联' }}</span> &gt;
@@ -227,7 +228,7 @@
                         [
                             "@type" => "ListItem",
                             "position" => 1,
-                            "name" => "7M足球新闻",
+                            "name" => "足球新闻",
                             "item" => "https://" . request()->getHost()
                         ],
                         [
@@ -286,8 +287,8 @@
                                         }
                                     @endphp
                                     <img border="0" 
-                                         alt="{{ $article['title'] ?? '7M足球新闻' }}" 
-                                         title="{{ $article['title'] ?? '7M足球新闻' }}"
+                                         alt="{{ $article['title'] ?? '足球新闻' }}" 
+                                         title="{{ $article['title'] ?? '足球新闻' }}"
                                          src="{{ $imagePath }}" 
                                          loading="lazy"
                                          width="600" height="400" />
@@ -656,7 +657,7 @@
                     break;
                 case 4:
                     var picsStr = (webNewsPic) ? '&pics=' + webNewsPic : '';
-                    share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + webNewsUrl + '&showcount=0&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=7M足球新闻' + picsStr;
+                    share_to_url = '//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + webNewsUrl + '&showcount=0&summary=' + webNewsContent + webNewsUrl + '&title=' + webNewsTitle + '&site=足球新闻' + picsStr;
                     break;
                 case 5:
                     share_to_url = '//share.renren.com/share/buttonshare.do?link=' + webNewsUrl + '&title=' + webNewsTitle;
