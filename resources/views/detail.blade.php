@@ -16,8 +16,12 @@
     <script type="text/javascript" src="/detail/static/js/scrollimg.js"></script>
     <script type="text/javascript" src="/detail/static/js/commom.js"></script>
     <script type="text/javascript" src="/detail/static/js/vote.js"></script>
-    <meta http-equiv="mobile-agent" content="format=html5; url=http://m.k73.com/..." />
-    <link rel="canonical" href="http://www.k73.com/down/android/640128.html" />
+    <meta http-equiv="mobile-agent" content="format=html5; url=https://{{ request()->getHost() }}{{ request()->getPathInfo() }}" />
+    <link rel="canonical" href="https://{{ request()->getHost() }}{{ request()->getPathInfo() }}" />
+    <meta name="baidu-site-verification" content="codeva-wBB5cdhM35" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
 
     <script>
         var sUserAgent = navigator.userAgent.toLowerCase();
