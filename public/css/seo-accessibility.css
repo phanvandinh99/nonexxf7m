@@ -1,0 +1,54 @@
+/**
+ * SEO & Accessibility Improvements
+ * Screen reader accessible hidden content
+ */
+
+.sr-only,
+h1[style*="position: absolute"],
+h2[style*="position: absolute"],
+.data2_title,
+.fbtop_title {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Ensure proper semantic heading styles */
+h2.data2_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+h2.fbtop_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Improve link accessibility */
+a[data-action],
+a[data-toggle] {
+    cursor: pointer;
+}
+
+a[data-action]:hover,
+a[data-toggle]:hover {
+    text-decoration: underline;
+}
+
+/* Focus states for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+}
+

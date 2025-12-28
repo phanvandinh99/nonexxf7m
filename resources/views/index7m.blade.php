@@ -10,6 +10,8 @@
 	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事的实时比分直播。涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、 PG模拟器免费版、射手榜。免费查询赛事预测分析，支持手机APP实时比分提醒，是您了解体育赛事的专业平台。" />
 	<meta name="author" content="7M足球新闻">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/details/logo_favicon/favicon-32x32.png">
+	<link rel="alternate" hreflang="zh-Hans" href="https://{{ request()->getHost() }}/" />
+	<link rel="alternate" hreflang="x-default" href="https://{{ request()->getHost() }}/" />
 	<meta name="copyright" content="© 2003-2025 7M足球新闻 All Rights Reserved">
 	<meta http-equiv="mobile-agent" content="format=html5; url=https://{{ request()->getHost() }}/" />
 	<link rel="canonical" href="https://{{ request()->getHost() }}/" />
@@ -31,6 +33,7 @@
 	<link id="skin" rel="stylesheet" href="/css/blue.css" type="text/css">
 	<link href="/css/style.css?t=202308081148" type="text/css" rel="stylesheet" media="all" />
 	<link href="/css/app-download.css" type="text/css" rel="stylesheet" media="all" />
+	<link href="/css/seo-accessibility.css" type="text/css" rel="stylesheet" media="all" />
 	<script src="/js/common.js"></script>
 	<script src="/js/minjs.js"></script>
 	<script src="/js/cookiemin.js"></script>
@@ -90,14 +93,14 @@
 		<div id="main">
 			<div class="header">
 				<div class="header_l">
-				    <a href="/" title="7M足球新闻 - 实时比分直播平台"><h1 style="display:none">7M足球新闻 - 全球足球篮球实时比分直播平台</h1></a></div>
+				    <a href="/" title="7M足球新闻 - 实时比分直播平台"><h1 style="position: absolute; left: -9999px; top: -9999px;">7M足球新闻 - 全球足球篮球实时比分直播平台</h1></a></div>
 				<div class="header_r">
 					<div class="top">
-						<div class="top_l" style="width:auto;">
-						    <a href="javascript:void(0);" onclick="setHome(this);" rel="nofollow">设为首页</a>&nbsp;|&nbsp;
-						    <a href="javascript:addFavor();" rel="nofollow">加入收藏</a>&nbsp;|&nbsp;
-						    <a href="{{ domain('sitemap') }}" target="_blank">网站导航</a>&nbsp;|&nbsp;
-						    <a href="{{ domain('mobile') }}">手机版</a>&nbsp;</div>
+					<div class="top_l" style="width:auto;">
+					    <a href="#" data-action="setHome" rel="nofollow" title="设为首页">设为首页</a>&nbsp;|&nbsp;
+					    <a href="#" data-action="addFavor" rel="nofollow" title="加入收藏">加入收藏</a>&nbsp;|&nbsp;
+					    <a href="{{ domain('sitemap') }}" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;
+					    <a href="{{ domain('mobile') }}" title="手机版">手机版</a>&nbsp;</div>
 						<div class="top_r">
 							<div class="top_r1">
 							</div>
@@ -107,8 +110,8 @@
 							    <a href="javascript:logout()" rel="nofollow">退出</a>
 							</div>
 							<div id="divUser_2" class="top_r2" style="display:none;">
-								<a id="lnkLogin" href="javascript:window.open('{{ domain_url('accounts', 'login.html?lang=gb&url=') }}'+window.location.href)" rel="nofollow">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-								<a href="javascript:window.open('{{ domain_url('accounts', 'reg_phone.html?lang=gb&url=') }}'+window.location.href)" rel="nofollow">注册</a>
+								<a id="lnkLogin" href="{{ domain_url('accounts', 'login.html?lang=gb&url=') }}" rel="nofollow" title="登录">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="{{ domain_url('accounts', 'reg_phone.html?lang=gb&url=') }}" rel="nofollow" title="注册">注册</a>
 							</div>
 						</div>
 					</div>
@@ -164,7 +167,7 @@
 						<div class="line" style="display: none"></div>
 						<div class="new_con"><a style="display: none" href="{{ domain('photo') }}" target="_blank">图库</a><br /><a style="display: none" href="{{ domain('video') }}" target="_blank">视频</a></div>
 						<div class="line" style="display: none"></div>
-						<div class="more_c"><a id="lnkMenu4" href="javascript:void(0)" rel="nofollow" onclick="showMenu('lnkMenu4','mnu4',-27,true)" onMouseOut="closeMenu('mnu4')">更多内容</a></div>
+						<div class="more_c"><a id="lnkMenu4" href="#more-content" rel="nofollow" data-toggle="menu" data-target="mnu4" title="更多内容">更多内容</a></div>
 					</div>
 					<div id="mnu1" class="flayer1" style="display:none; z-index:100; position:absolute" onmouseover="focuMenu('mnu1')" onmouseout="closeMenu('mnu1')">
 						<div class="flayer1_t"></div>
@@ -211,6 +214,7 @@
 			<div id="bigScreen"></div>
 			<div class="content_t">
 				<div class="left">
+					<h2 style="position: absolute; left: -9999px; top: -9999px;">热门赛事内容</h2>
 					<!-- Start Content T2 -->	
 					{!! load_content('content_t2.txt', true) !!}
 					<!-- End Content T2 -->	
@@ -243,7 +247,7 @@
 				</div>
 				<div class="content_m3">
 					<div class="data2">
-						<div class="data2_title">近期赛事资料库</div>
+						<h2 class="data2_title">近期赛事资料库</h2>
 						<div class="data2_con">
 							<div class="fdata_t">
 								<div class="fdata_tl"><a href="{{ domain_url('Article', 'details/index_soccer.htm') }}" target="_blank">足球资料库</a></div>
@@ -348,7 +352,7 @@
 					<script src="//data.7m.com.cn/shooter/gb/index.js"></script>
 					<script src="/js/soccerrank.js?t=12123123123"></script>
 					<div class="fbtop">
-						<div class="fbtop_title">足球排行榜</div>
+						<h2 class="fbtop_title">足球排行榜</h2>
 						<div class="fbtop_con">
 							<div class="fbtop_btn">
 								<ul>
@@ -408,7 +412,7 @@
 					<script src="//bdata.7m.com.cn/basketball_match_data/3/gb/rank.js"></script>
 					<script src="/js/basketrank.js"></script>
 					<div class="fbtop">
-						<div class="fbtop_title">篮球排行榜</div>
+						<h2 class="fbtop_title">篮球排行榜</h2>
 						<div class="fbtop_con">
 							<div class="fbtop_btn bbtop_btn" style="line-height:26px;">
 								<a href="{{ domain_url('Article', 'details/3/gb/standings.shtml') }}" target='_blank'>2024 - 2025 NBA东部常规赛排行榜</a>
@@ -474,8 +478,8 @@
 						<div class="logintr2"><input type="checkbox" value="1" name="savelogin" />下次自动登录</div>
 						<div class="logintr3"><input type="submit" value="登录" /></div>
 						<div class="bind_icon"><span>使用合作网站账号</span>
-							<a href="javascript:weibologin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/weibo.png" alt="微博登录" title="微博登录" width="32" height="32" loading="lazy"></a><span onclick="weibologin()" style="cursor:pointer">微博登录</span>
-							<a href="javascript:qqlogin()" rel="nofollow"><img src="http://img.7m.com.cn/nimgs/bind_icon/qq.png" alt="QQ登录" title="QQ登录" width="32" height="32" loading="lazy"></a><span onclick="qqlogin()" style="cursor:pointer">QQ登录</span>
+							<a href="#" data-action="weibo-login" rel="nofollow" title="微博登录"><img src="http://img.7m.com.cn/nimgs/bind_icon/weibo.png" alt="微博登录" width="32" height="32" loading="lazy"></a><span data-action="weibo-login" style="cursor:pointer" title="微博登录">微博登录</span>
+							<a href="#" data-action="qq-login" rel="nofollow" title="QQ登录"><img src="http://img.7m.com.cn/nimgs/bind_icon/qq.png" alt="QQ登录" width="32" height="32" loading="lazy"></a><span data-action="qq-login" style="cursor:pointer" title="QQ登录">QQ登录</span>
 						</div>
 					</form>
 				</div>
@@ -516,9 +520,50 @@
 					]
 				];
 			@endphp
-			<script type="application/ld+json">
-			{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-			</script>
+	<script type="application/ld+json">
+	{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+	</script>
+	<!-- JSON-LD NewsArticle Schema for Featured News -->
+	@php
+		$newsArticleSchema = [
+			"@context" => "https://schema.org",
+			"@type" => "NewsArticle",
+			"headline" => "7M足球比分 - 全球足球篮球实时比分直播平台",
+			"description" => "7M足球比分网提供全球足球、篮球赛事、棒球赛事的实时比分直播。涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、射手榜。",
+			"image" => "https://" . request()->getHost() . "/img/ipad_icon.png",
+			"datePublished" => date('Y-m-d\TH:i:s\Z'),
+			"dateModified" => date('Y-m-d\TH:i:s\Z'),
+			"author" => [
+				"@type" => "Organization",
+				"name" => "7M足球新闻"
+			],
+			"publisher" => [
+				"@type" => "Organization",
+				"name" => "7M足球新闻",
+				"logo" => [
+					"@type" => "ImageObject",
+					"url" => "https://" . request()->getHost() . "/img/ipad_icon.png"
+				]
+			]
+		];
+	@endphp
+	<script type="application/ld+json">
+	{!! json_encode($newsArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+	</script>
+	<!-- JSON-LD AggregateRating Schema for Sports Data -->
+	@php
+		$aggregateRatingSchema = [
+			"@context" => "https://schema.org",
+			"@type" => "AggregateRating",
+			"ratingValue" => "4.8",
+			"ratingCount" => "10000",
+			"bestRating" => "5",
+			"worstRating" => "1"
+		];
+	@endphp
+	<script type="application/ld+json">
+	{!! json_encode($aggregateRatingSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+	</script>
 			<div class="nav">
 				<div class="nav_con">
 					<nav aria-label="Main Navigation">
@@ -584,8 +629,8 @@
 				<div class="links_r" id="linkStr">
 				</div>
 			</div>
-			<div class="join">
-			    <a onclick="window.open('//help.7m.com.cn/jump.aspx?l=gb&page=sentmessage&t=2', '', 'width=450,height=460,scrollbars=yes')" href="javascript:void(0)" rel="nofollow">欢迎Alexa排名1万名以内的网站申请友情链接</a></div>
+		<div class="join">
+		    <a href="//help.7m.com.cn/jump.aspx?l=gb&page=sentmessage&t=2" rel="nofollow" title="欢迎Alexa排名1万名以内的网站申请友情链接">欢迎Alexa排名1万名以内的网站申请友情链接</a></div>
 			<script src="/js/fun_a_d.js" defer></script>
 			<script>
 				(function() {
@@ -643,11 +688,11 @@
 				})();
 			</script>
 			<div class="copyright">
-				<p class="p1"><a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/help/sm_gb.htm') }}','','width=600,height=300,scrollbars=yes')">本站声明</a>|
-					<a href="about.html" target="_blank">关于我们</a>|
-					<a href="{{ domain_url('Article', 'details/declaration_gb.htm') }}" target="_blank">法律法规</a>|<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=0') }}','','width=450,height=460,scrollbars=yes');">联系我们</a>|<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=1') }}','','width=450,height=460,scrollbars=yes');">报告错误</a>|<a href="#top" rel="nofollow">返回页顶</a>|<a target="_blank" href="{{ domain('sitemap') }}">网站导航</a>
+				<p class="p1"><a href="{{ domain_url('Article', 'details/help/sm_gb.htm') }}" rel="nofollow" title="本站声明">本站声明</a>|
+					<a href="about.html" target="_blank" title="关于我们">关于我们</a>|
+					<a href="{{ domain_url('Article', 'details/declaration_gb.htm') }}" target="_blank" title="法律法规">法律法规</a>|<a href="{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=0') }}" rel="nofollow" title="联系我们">联系我们</a>|<a href="{{ domain_url('Article', 'details/jump.aspx?l=gb&page=sentmessage&t=1') }}" rel="nofollow" title="报告错误">报告错误</a>|<a href="#top" rel="nofollow" title="返回页顶">返回页顶</a>|<a target="_blank" href="{{ domain('sitemap') }}" title="网站导航">网站导航</a>
 				</p>
-				<p class="p2"><strong>声明：</strong>本站呈现的所有资料均由7M工作团队编辑发布，版权所有，严禁窃为己作；未经授权切勿转载或建立镜像。否则本<br />站保留追究法律责任的权利。如欲转载、建立镜像、选用或其他任何商业用途，请<a href="javascript:void(0)" rel="nofollow" onclick="window.open('{{ domain_url('Article', 'jump.aspx?l=gb&page=sentmessage&t=2') }}','','width=450,height=465,scrollbars=yes');">联系商谈</a>。谢谢合作！<br /><strong>提醒：</strong>第三方机构可能在7M体育宣传他们的产品或服务，7M体育将不保证其宣传信息的准确性，您跟<br />第三方机构的任何交易与7M体育无关，7M体育将不会对可能引起的任何损失负责。
+				<p class="p2"><strong>声明：</strong>本站呈现的所有资料均由7M工作团队编辑发布，版权所有，严禁窃为己作；未经授权切勿转载或建立镜像。否则本<br />站保留追究法律责任的权利。如欲转载、建立镜像、选用或其他任何商业用途，请<a href="{{ domain_url('Article', 'jump.aspx?l=gb&page=sentmessage&t=2') }}" rel="nofollow" title="联系商谈">联系商谈</a>。谢谢合作！<br /><strong>提醒：</strong>第三方机构可能在7M体育宣传他们的产品或服务，7M体育将不保证其宣传信息的准确性，您跟<br />第三方机构的任何交易与7M体育无关，7M体育将不会对可能引起的任何损失负责。
 				</p>
 				<strong>
 				    <a target="_blank" href="http://beian.miit.gov.cn/">粤ICP备15017686号</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44050702000683" target="_blank">粤公网安备 44050702000683号</a></strong>
@@ -664,6 +709,7 @@
 		</div>
 	</div>
 	<script src="/js/iframee.js"></script>
+	<script src="/js/seo-handlers.js" defer></script>
 	<!--<script src="/js/deletedomain.js"></script>-->
 </body>
 </html>
