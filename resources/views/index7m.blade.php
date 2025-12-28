@@ -4,11 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-	<title>7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据_赛事分析 - 7M体育</title>
-	<searchtitle style="display:none">7M比分网_足球篮球比分直播_中超/欧冠/CBA赛程查询_实时赛程数据 - 7M体育</searchtitle>
-	<meta name="keywords" content="7M足球比分,足球实时比分,NBA赛程,英超直播,篮球即时比分,比分直播,免费赛事数据,棒球比分,美式足球比分,足球资料库,体育新闻,篮球资料库,积分榜,射手榜,球队阵容,7M体育,足球新闻,篮球新闻" />
-	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事的实时比分直播。涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、射手榜。免费查询赛事预测分析，支持手机APP实时比分提醒，是您了解体育赛事的专业平台。" />
+	<title>7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据_赛事分析 - PG模拟器免费版 - 7M体育</title>
+	<searchtitle style="display:none">7M比分网_足球篮球比分直播_中超/欧冠/CBA赛程查询_实时赛程数据 - PG模拟器免费版 - 7M体育</searchtitle>
+	<meta name="keywords" content="7M足球比分,足球实时比分,NBA赛程,英超直播,篮球即时比分,比分直播,免费赛事数据,棒球比分,美式足球比分,足球资料库,体育新闻,篮球资料库,积分榜,射手榜,球队阵容,7M体育,足球新闻,篮球新闻, PG模拟器免费版" />
+	<meta name="description" content="7M足球比分网提供全球足球、篮球赛事、棒球赛事的实时比分直播。涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据、积分榜、 PG模拟器免费版、射手榜。免费查询赛事预测分析，支持手机APP实时比分提醒，是您了解体育赛事的专业平台。" />
 	<meta name="author" content="7M足球新闻">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/details/logo_favicon/favicon-32x32.png">
 	<meta name="copyright" content="© 2003-2025 7M足球新闻 All Rights Reserved">
 	<meta http-equiv="mobile-agent" content="format=html5; url=https://{{ request()->getHost() }}/" />
 	<link rel="canonical" href="https://{{ request()->getHost() }}/" />
@@ -23,8 +24,8 @@
 	<meta name="robots" content="index,follow" />
 	<!-- Open Graph Tags -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据 - 7M体育" />
-	<meta property="og:description" content="7M足球比分网提供全球足球、篮球赛事的实时比分直播，涵盖英超、欧冠、NBA、CBA等热门联赛最新赛程数据与积分榜。" />
+	<meta property="og:title" content="7M足球比分_足球/篮球实时比分直播_英超/NBA最新赛程数据 - PG模拟器免费版 - 7M体育" />
+	<meta property="og:description" content="7M足球比分网提供全球足球、篮球赛事的实时比分直播，涵盖英超、欧冠、NBA、PG模拟器免费版、CBA等热门联赛最新赛程数据与积分榜。" />
 	<meta property="og:url" content="https://{{ request()->getHost() }}/" />
 	<meta property="og:image" content="https://{{ request()->getHost() }}/img/ipad_icon.png" />
 	<link id="skin" rel="stylesheet" href="/css/blue.css" type="text/css">
