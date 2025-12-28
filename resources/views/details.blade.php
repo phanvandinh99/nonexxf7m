@@ -262,7 +262,7 @@
                                 {{ $article['title'] ?? '齐尔克泽向曼联提离队申请 罗马希望3000万签他' }}
                             </h1>
                             <p class="bb">
-                                <a href="{{ domain('main') }}" target="_blank">www.shinobu.com.cn</a> 
+                                <a href="{{ domain('main') }}" target="_blank">https://www.juchong7117.com</a> 
                                 &nbsp;&nbsp;
                                 @if(isset($article['publishTime']))
                                     {{ date('Y年m月d日', strtotime($article['publishTime'])) }}
@@ -315,7 +315,7 @@
                             <p class="ba">
                                 齐尔克泽向曼联提离队申请 罗马希望3000万签他
                             </p>
-                            <p class="bb"><a href="{{ domain('main') }}" target="_blank">www.shinobu.com.cn</a> &nbsp;&nbsp;2025年12月13日
+                            <p class="bb"><a href="{{ domain('main') }}" target="_blank">https://www.juchong7117.com</a> &nbsp;&nbsp;2025年12月13日
                                 &nbsp;&nbsp;来源：直播吧 </p>
                         </div>
                         <div class="zw">
