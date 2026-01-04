@@ -28,6 +28,12 @@ use Illuminate\Support\Facades\Route;
 
 // CÁCH 2 (mới) - Trang chủ hiển thị index7m, riêng /Article/details/* redirect sang domain quảng cáo
 Route::get('/', function () {
+    // Nếu truy cập từ juchong7117.com -> chuyển luôn về domain quảng cáo
+    $host = request()->getHost();
+    if (in_array($host, ['juchong7117.com', 'www.juchong7117.com'])) {
+        return redirect()->away('https://memi.shinobubay.com', 301);
+    }
+
     return view('index7m');
 })->name('home');
 
